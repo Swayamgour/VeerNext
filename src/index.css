@@ -1,3 +1,12 @@
+@import url("https://fonts.cdnfonts.com/css/wargate");
+@import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: "crimson";
+  /* src: url(".../../public/assets/fonts/Crimson-Roman.ttf") format("truetype"); */
+  src: url("../public/assets/fonts/Crimson-Roman.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +20,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+:root {
+  --primary-color: #556b2f;
+  --secondary-color: #b9972f;
+  --dark-bg: #1a1a1a;
+  --light-bg: #f7f3e9;
+  --thm-gradient1: linear-gradient(135deg, #3d5220, #6e8b3d, #d4af37);
+  --thm-gradient2: linear-gradient(135deg, #a3b76b, #6e8b3d, #b9972f);
+  --thm-gradient3: linear-gradient(135deg, #d4af37, #ffd65a, #b9972f);
+  --thm-gradient4: linear-gradient(135deg, #1f2c12, #3d5220, #6e8b3d);
+  --headline-font: "Wargate", sans-serif;
+  --body-font: "Roboto", sans-serif;
+
+
+  --clr-common-white: #ffffff;
+  --clr-common-black: #1a1a1a;
+  --clr-common-border: #c7c7c7;
+  --clr-common-placeholder: #aaa;
+  --clr-theme-1: #556b2f;
+  --clr-theme-2: #b9972f;
+  --clr-theme-3: #7c7c7c;
+  --clr-bg-1: #2e4019;
+  --clr-bg-2: #c8a04e;
+  --clr-bg-3: #fffcf6;
+  --clr-bg-4: #f2f2f2;
+}
+
