@@ -108,11 +108,13 @@ const BannerSlider = () => {
 
                                 <p className="text-white mt-3">{slide.subText}</p>
 
-                                <div class="mission-cta-buttons wow fadeInUp mt-40" data-wow-delay=".3s">
-                                    <a href="#" data-bs-target="#startJourney" data-bs-toggle="modal" class="mission-btn fill-btn">
+                               
+
+                                <div className="mission-cta-buttons">
+                                    <button className="mission-btn fill-btn">
                                         <span>Start Your Journey</span>
                                         <i class="fas fa-rocket btn-icon"></i>
-                                    </a>
+                                    </button>
                                 </div>
                                 <div class="trust-badge-compact mx-auto">
                                     <i class="fas fa-award badge-icon-compact"></i>

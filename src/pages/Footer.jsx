@@ -12,6 +12,26 @@ const Footer = () => {
 
     }
 
+    const [progress, setProgress] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            const docHeight =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
+
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            setProgress(scrollPercent);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const circumference = 2 * Math.PI * 49;
+    const dashOffset = circumference - (progress / 100) * circumference;
+
     // useEffect(() => {
     //     // PHP jQuery wale 4 sec ka replacement
     //     const timer = setTimeout(() => {
@@ -197,6 +217,8 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
+
+           
             {/* } */}
             {/* <Preloader /> */}
 

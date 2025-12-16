@@ -48,20 +48,21 @@ const MissionCtaSection = ({ onStartMissionClick, onViewExamsClick, onFinancialC
 
                             <div className="mission-cta-buttons wow fadeInUp" data-wow-delay=".3s">
                                 {ctaButtons.map((button, index) => (
-                                    <a 
-                                        key={index}
-                                        href={button.link} 
-                                        className={`mission-btn ${button.className}`}
-                                        onClick={(e) => {
+
+
+                                    <div className="mission-cta-buttons">
+                                        <button onClick={(e) => {
                                             if (button.onClick) {
                                                 e.preventDefault();
                                                 button.onClick(e);
                                             }
-                                        }}
-                                    >
-                                        <span>{button.text}</span>
-                                        <i className={`${button.icon} btn-icon`}></i>
-                                    </a>
+                                        }} className={`mission-btn ${button.className}`}>
+                                            <span>{button.text}</span>
+                                            <i className={`${button.icon} btn-icon`}></i>
+                                        </button>
+                                    </div>
+
+
                                 ))}
                             </div>
                         </div>

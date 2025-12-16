@@ -270,6 +270,10 @@
     line-height: 1.6;
 }
 
+.borderOFBtn {
+    border: 1px solid var(--primary-color);
+}
+
 .mission-cta-buttons {
     display: flex;
     justify-content: center;
@@ -359,5 +363,10 @@
 
     .pricing-text {
         height: 8rem;
+    }
+
+    .logo-white img {
+        height: 100px;
+        width: auto;
     }
 }

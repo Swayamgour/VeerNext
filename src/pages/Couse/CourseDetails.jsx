@@ -150,9 +150,9 @@ const CourseDetails = () => {
                                 <nav aria-label="Breadcrumbs" className="breadcrumb-trail breadcrumbs">
                                     <ul className="trail-items">
                                         <li className="trail-item trail-begin">
-                                            <Link to="/">
+                                            {/* <Link to="/"> */}
                                                 <span>home</span>
-                                            </Link>
+                                            {/* </Link> */}
                                         </li>
                                         <li className="trail-item trail-end">
                                             <span>Course Details</span>

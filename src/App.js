@@ -28,21 +28,40 @@ import Layout from './pages/components/Layout';
 import CourseDetails from './pages/Couse/CourseDetails';
 import Courses from './pages/Couse/Courses';
 import Preloader from './pages/components/Preloader';
+import { useEffect, useState } from 'react';
+import SidebarMenu from './pages/components/SidebarMenu';
+import UserDashboard from './pages/Profile/UserDashboard';
 
 
 
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // 4 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // 👉 Show preloader first
+  if (loading) {
+    return <Preloader />;
+  }
+
+  // 👉 Show routes after 4 sec
   return (
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Courses" element={<Courses />} />
         <Route path="/CourseDetails" element={<CourseDetails />} />
-
+        <Route path="/Profile" element={<UserDashboard />} />
       </Routes>
     </Layout>
-    // <Preloader />
+
   );
 }
 

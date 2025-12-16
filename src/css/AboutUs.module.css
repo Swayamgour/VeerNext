@@ -1,0 +1,253 @@
+.aboutContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideInFromTop 1s ease-out forwards;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.aboutContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1a6aa2, #2d91c2, #1a6aa2);
+    animation: borderGrow 1.2s ease-out;
+}
+
+@keyframes borderGrow {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: #1a3a5f;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(26, 106, 162, 0.3);
+    }
+
+    100% {
+        text-shadow: 0 0 20px rgba(26, 106, 162, 0.6), 0 0 30px rgba(26, 106, 162, 0.4);
+    }
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #2d91c2;
+    border-radius: 2px;
+}
+
+.intro {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+.missionSection {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+    border-left: 5px solid #1a6aa2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+.missionTitle {
+    color: #1a6aa2;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.missionTitle::before {
+    content: '🎯';
+    font-size: 1.2rem;
+}
+
+.missionText {
+    color: #34495e;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.servicesSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    animation: fadeInUp 1s ease-out 0.7s forwards;
+    opacity: 0;
+}
+
+.serviceCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 3px solid transparent;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-top-color: #2d91c2;
+}
+
+.serviceIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.serviceTitle {
+    color: #1a3a5f;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.serviceDescription {
+    color: #5d6d7e;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.tagline {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #1a3a5f;
+    font-weight: 600;
+    padding: 1.5rem;
+    background: rgba(26, 106, 162, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #1a6aa2;
+    border-right: 4px solid #1a6aa2;
+    animation: fadeInUp 1s ease-out 0.9s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.militaryBadge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #1a3a5f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutContainer {
+        padding: 2rem 1rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .intro {
+        font-size: 1.1rem;
+    }
+
+    .servicesSection {
+        grid-template-columns: 1fr;
+    }
+
+    .militaryBadge {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 1rem;
+        justify-content: center;
+    }
+}

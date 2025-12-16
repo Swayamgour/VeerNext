@@ -142,7 +142,7 @@ const DashboardSlider = () => {
                                         <p className="vtx-slide-desc">{slide.description}</p>
 
                                         <div className={`mission-cta-buttons d-inline-block ${isWOWLoaded ? 'wow fadeInUp' : ''}`} data-wow-delay=".3s">
-                                            <a
+                                            {/* <a
                                                 href="#"
                                                 data-bs-toggle="modal"
                                                 data-bs-target="#vtxDemoModal"
@@ -150,7 +150,14 @@ const DashboardSlider = () => {
                                             >
                                                 <span>{slide.ctaText}</span>
                                                 <i className="fas fa-play-circle btn-icon"></i>
-                                            </a>
+                                            </a> */}
+
+                                            <div className="mission-cta-buttons">
+                                                <button className="mission-btn fill-btn">
+                                                    <span>{slide.ctaText}</span>
+                                                    <i className="fas fa-play-circle btn-icon"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
