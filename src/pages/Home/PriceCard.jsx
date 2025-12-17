@@ -19,10 +19,10 @@ const PriceCard = ({ iconClass, title, text, tagText, buttonText, buttonLink = "
                 </div>
                 <div className="pricing-btn">
                     <span className="price-tag">{tagText}</span>
-                    <a href={buttonLink} className="fill-btn" onClick={(e) => { e.preventDefault(); /* Custom logic here */ }}>
+                    <div className="fill-btn" onClick={(e) => { e.preventDefault(); /* Custom logic here */ }}>
                         {buttonText}
                         <i className="fas fa-arrow-right"></i> {/* Replaced flaticon-040-right */}
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,7 +68,8 @@ const OfferSection = () => {
                         <div className="bd-section-title-wrapper">
                             <div className="bd-section-subtitle">
                                 Empowering Your Next Mission Beyond the Uniform
-                                <i className="fas fa-star"></i> {/* Replaced flaticon-001-bullet with a star */}
+                                {/* <i className="fas fa-star"></i> Replaced flaticon-001-bullet with a star */}
+                                <img src={'/assets/img/icons/icon-2/bullet.png'} />
                             </div>
                             <h3 className="bd-section-title mb-60">
                                 What we offer?

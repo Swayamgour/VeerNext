@@ -1,48 +1,26 @@
 import React, { useEffect, useRef } from 'react';
+import useCountUp from '../components/useCountUp';
+// import RiotPoliceIcon from "../../img/";
 
-// --- Placeholder Asset Imports ---
-// import '/assets/img/shape/x-frame.png' from '/assets/img/shape/x-frame.png';
-// import '/assets/img/about/abt2.webp' from '/assets/img/about/abt2.webp';
-// import '/assets/img/shape/round-1.png' from '/assets/img/shape/round-1.png';
 
-/**
- * AboutArea Component
- * Renders the "Why VeerNXT?" section with image and statistics.
- */
-const AboutArea = ({ veteransHelped, successfulTransitions }) => {
-    // Note: The 'odometer' effect requires external JS (Odometer.js) initialized in useEffect.
-    // For now, we display the numbers directly.
 
-    // Example useEffect setup (if using Odometer.js or WOW.js):
-    /*
-    const odometersRef = useRef([]);
+const AboutArea = () => {
 
-    useEffect(() => {
-        // Initialization logic for Odometer.js (example pseudocode)
-        // odometersRef.current.forEach(el => {
-        //     const od = new Odometer({ el, value: 0 });
-        //     od.update(el.getAttribute('data-count'));
-        // });
-        
-        // Initialization logic for WOW.js (example pseudocode)
-        // if (typeof window !== 'undefined' && window.WOW) {
-        //     new window.WOW().init();
-        // }
-    }, []);
-    */
 
     const stats = [
         {
-            count: veteransHelped,
+            count: '1250 ',
             label: 'Veterans Helped',
-            iconClass: 'fas fa-users', // Replaced flaticon-032-riot-police
+            iconClass: '/assets/img/icons/riot-police.png',
         },
         {
-            count: successfulTransitions,
+            count: '350 ',
             label: 'Successful Transitions',
-            iconClass: 'fas fa-check-circle', // Replaced flaticon-027-check
+            iconClass: '/assets/img/icons/check.png',
         },
     ];
+
+
 
     return (
         <section className="about-area pt-60 pb-30 p-relative bg-white z-index-2 fix">
@@ -108,18 +86,21 @@ const AboutArea = ({ veteransHelped, successfulTransitions }) => {
                                 <div className="border-box">
                                     <div className="row">
                                         {stats.map((stat, index) => (
+
                                             <div className="col-xl-6 col-md-6" key={index}>
                                                 <div className="about-info">
                                                     <div className="about-info-icon">
-                                                        <i className={stat.iconClass}></i>
+
+                                                        <img src={stat.iconClass} />
                                                     </div>
-                                                    <div className="about-info-text">
-                                                        <span>
+                                                    <div className="about-info-text ">
+                                                        <span className="odometer" >
                                                             {/* The number is displayed directly, awaiting external Odometer script */}
                                                             <span
                                                                 className="odometer"
                                                                 data-count={stat.count}
                                                             >
+                                                                {/* {useCountUp(stat.count, 1500)} */}
                                                                 {stat.count}
                                                             </span>
                                                             +
@@ -143,13 +124,13 @@ const AboutArea = ({ veteransHelped, successfulTransitions }) => {
 };
 
 // Example Usage of the component:
-/*
-const MyPage = () => (
-    <AboutArea 
-        veteransHelped={1250} 
-        successfulTransitions={350} 
-    />
-);
-*/
+
+// const MyPage = () => (
+//     <AboutArea
+//         veteransHelped={1250}
+//         successfulTransitions={350}
+//     />
+// );
+
 
 export default AboutArea;

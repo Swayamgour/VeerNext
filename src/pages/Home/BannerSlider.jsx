@@ -58,18 +58,27 @@ const BannerSlider = () => {
 
 
     return (
-        <section className="banner-area banner-area1 position-relative">
+
+        // <div class="banner-area banner-area1 pos-rel z-index-2">
+
+        <section className="banner-area banner-area1 pos-rel z-index-2">
+            {/* banner-area banner-area1 pos-rel z-index-2 */}
+
+            <div className="line_wrap banner-line">
+                <div className="line_item"></div>
+            </div>
+
 
             <Swiper
                 modules={[Autoplay, Pagination, EffectFade]}
                 slidesPerView={1}
                 loop={true}
                 effect="fade"
-                speed={1000}
-                autoplay={{
-                    delay: 6000,
-                    disableOnInteraction: false,
-                }}
+                // speed={1000}
+                // autoplay={{
+                //     delay: 6000,
+                //     disableOnInteraction: false,
+                // }}
                 pagination={{
                     clickable: true,
                     el: ".slider-pagination",
@@ -100,15 +109,24 @@ const BannerSlider = () => {
 
                             {/* Content */}
                             <div className="container">
-                                <h1 className="banner-title text-white">
-                                    {slide.title.part1}{" "}
-                                    <span className="marked-text">{slide.title.marked}</span>{" "}
-                                    {slide.title.part2}
+
+
+                                <h1 className="banner-title">
+                                    <span className="title-anim-part-1">
+                                        <span> {slide.title.part1}{" "} </span>
+                                    </span>
+                                    <span className="title-anim-part-2">
+                                        <span><span className="marked-text">{slide.title.marked} </span> {slide.title.part2}</span>
+                                    </span>
                                 </h1>
 
                                 <p className="text-white mt-3">{slide.subText}</p>
 
-                               
+                                <div class="armado-shape">
+                                    <span class="stroke-text">VeerNXT</span>
+                                </div>
+
+
 
                                 <div className="mission-cta-buttons">
                                     <button className="mission-btn fill-btn">
@@ -137,6 +155,7 @@ const BannerSlider = () => {
             {/* Pagination */}
             <div className="slider-pagination text-center mt-4"></div>
         </section>
+        // </div>
     );
 };
 

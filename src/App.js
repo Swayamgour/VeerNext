@@ -3,7 +3,7 @@ import './App.css';
 // import HeaderHome from './pages/Header';
 
 import './css/preloader.css'
-import './css/bootstrap.css'
+// import './css/bootstrap.css'
 import './css/meanmenu.css'
 import './css/animate.min.css'
 import './css/swiper-bundle.css'
@@ -18,8 +18,10 @@ import './css/default.css'
 import './css/style.css'
 import './css/custom.css'
 import './css/how-work.css'
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -31,6 +33,7 @@ import Preloader from './pages/components/Preloader';
 import { useEffect, useState } from 'react';
 import SidebarMenu from './pages/components/SidebarMenu';
 import UserDashboard from './pages/Profile/UserDashboard';
+import Career from './pages/careerTransition/Career';
 
 
 
@@ -59,6 +62,7 @@ function App() {
         <Route path="/Courses" element={<Courses />} />
         <Route path="/CourseDetails" element={<CourseDetails />} />
         <Route path="/Profile" element={<UserDashboard />} />
+        <Route path="/Career" element={<Career />} />
       </Routes>
     </Layout>
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Preloader = () => {
-    const text = ["V", "E", "E", "R", "N", "X", "T"];
+    const text = ["V", "e", "e", "r", "N", "X", "T"];
 
     return (
         <div id="preloader">

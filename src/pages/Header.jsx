@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SidebarMenu from './components/SidebarMenu';
 import SideToggle from './components/SideToggle';
 
+const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
+    const navigate = useNavigate();
 
-const Header = ({ toggleOffsetContent, toggleSideToggle }) => {
-    const navigate = useNavigate()
     return (
         <header>
-            <div id="header-sticky" className="header-main header-main2">
+            <div
+                id="header-sticky"
+                className={`header-main header-main2 ${showSticky ? 'sticky' : ''}`}
+            >
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-xl-12 col-lg-12">
@@ -16,14 +19,15 @@ const Header = ({ toggleOffsetContent, toggleSideToggle }) => {
                                 <div className="header-main-left header-main-left-header2">
                                     <div onClick={() => navigate('/')} className="header-logo header2-logo">
                                         <div className="logo-white">
-                                            <img src={'/assets/img/logo/logo.png'} alt="logo-img" />
+                                            <img src="/assets/img/logo/logo.png" alt="logo-img" />
                                         </div>
                                     </div>
                                 </div>
+
                                 <div className="header-main-right header-main-right-header2">
                                     <div className="main-menu main-menu2 d-none d-xl-block">
-                                        <nav id="mobile-menu">
-                                            <ul>
+                                        <nav>
+                                            <ul className='m-0'>
                                                 <li onClick={() => navigate('/')}>Home</li>
                                                 <li onClick={() => navigate('/Courses')}>Services</li>
                                                 <li>About us</li>
@@ -32,24 +36,18 @@ const Header = ({ toggleOffsetContent, toggleSideToggle }) => {
                                             </ul>
                                         </nav>
                                     </div>
-                                    <div className="menu-bar">
-                                        {/* Offset Button (full-page) - Desktop Only */}
-                                        <button className="offset-btn d-none d-xl-inline-block" onClick={toggleOffsetContent}>
-                                            <div className="dot-icon">
-                                                <img src={"/assets/img/icons/side-toggle.png"} alt="img not found" />
-                                                {/* <h1>hey</h1> */}
 
-                                            </div>
+                                    <div className="menu-bar">
+                                        <button className="offset-btn d-none d-xl-inline-block" onClick={toggleOffsetContent}>
+                                            <img src="/assets/img/icons/side-toggle.png" alt="toggle" />
                                         </button>
-                                        {/* Side Toggle Button (mobile/smaller) - Mobile Only */}
+
                                         <button className="side-toggle d-xl-none" onClick={toggleSideToggle}>
-                                            <div className="dot-icon">
-                                                <img src={"/assets/img/icons/side-toggle.png"} alt="img not found" />
-                                                {/* <h1>hello</h1> */}
-                                            </div>
+                                            <img src="/assets/img/icons/side-toggle.png" alt="toggle" />
                                         </button>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -59,33 +57,57 @@ const Header = ({ toggleOffsetContent, toggleSideToggle }) => {
     );
 };
 
-
-
 const HeaderHome = () => {
     const [isOffsetOpen, setIsOffsetOpen] = useState(false);
     const [isSideOpen, setIsSideOpen] = useState(false);
 
+    const [showSticky, setShowSticky] = useState(false);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    // 🔥 SCROLL DIRECTION LOGIC
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            // ❌ Top par sticky nahi
+            if (currentScrollY === 0) {
+                setShowSticky(false);
+            }
+            // 🔼 Scroll UP (but not top)
+            else if (currentScrollY < lastScrollY) {
+                setShowSticky(true);
+            }
+            // 🔽 Scroll DOWN
+            else {
+                setShowSticky(false);
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollY]);
+
+
     const toggleOffsetContent = () => {
         setIsOffsetOpen(!isOffsetOpen);
-        // Ensure only one is open at a time
         setIsSideOpen(false);
     };
 
     const toggleSideToggle = () => {
         setIsSideOpen(!isSideOpen);
-        // Ensure only one is open at a time
         setIsOffsetOpen(false);
     };
 
-    // The overlay is only active if at least one panel is open
     const isOverlayActive = isOffsetOpen || isSideOpen;
 
     return (
         <>
-            {/* Header Area */}
             <Header
                 toggleOffsetContent={toggleOffsetContent}
                 toggleSideToggle={toggleSideToggle}
+                showSticky={showSticky}
             />
 
             <SidebarMenu
@@ -98,18 +120,12 @@ const HeaderHome = () => {
                 toggleSideToggle={toggleSideToggle}
             />
 
-
-
-            {/* Overlays */}
             {isOverlayActive && (
                 <>
-                    {/* These overlays usually hide the main content when a menu is open */}
                     <div className={`offcanvas-overlay ${isOffsetOpen ? 'active' : ''}`} onClick={toggleOffsetContent}></div>
                     <div className={`offcanvas-overlay-white ${isSideOpen ? 'active' : ''}`} onClick={toggleSideToggle}></div>
                 </>
             )}
-
-            {/* <StartJ */}
         </>
     );
 };

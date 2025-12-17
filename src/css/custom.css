@@ -370,3 +370,7 @@
         width: auto;
     }
 }
+
+.odometer {
+    color: var(--primary-color);
+}
