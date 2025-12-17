@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Flaticon replacement: Assuming flaticon-001-bullet is a decorative icon, replaced with a simple star.
 // Assuming flaticon-040-right is a right arrow, replaced with fas fa-arrow-right.
@@ -7,6 +8,7 @@ import React from 'react';
  * Reusable PriceCard Component
  */
 const PriceCard = ({ iconClass, title, text, tagText, buttonText, buttonLink = "#" }) => {
+    const navigate = useNavigate()
     return (
         <div className="col-lg-4 col-md-6">
             <div className="price-card price-card-default">
@@ -19,7 +21,7 @@ const PriceCard = ({ iconClass, title, text, tagText, buttonText, buttonLink = "
                 </div>
                 <div className="pricing-btn">
                     <span className="price-tag">{tagText}</span>
-                    <div className="fill-btn" onClick={(e) => { e.preventDefault(); /* Custom logic here */ }}>
+                    <div className="fill-btn cursor" onClick={(e) => { e.preventDefault(); navigate(buttonLink)/* Custom logic here */ }}>
                         {buttonText}
                         <i className="fas fa-arrow-right"></i> {/* Replaced flaticon-040-right */}
                     </div>
@@ -40,7 +42,8 @@ const OfferSection = () => {
             text: 'Access 500+ central & state govt exams, AI-powered career mapping, VR interview prep, CV building, soft skills & English training.',
             tagText: 'Explore Exams',
             buttonText: 'Explore Exams',
-            link: '#', // Replace with actual link
+            link: '/Career', // Replace with actual link
+
         },
         {
             iconClass: 'fas fa-shield-alt',

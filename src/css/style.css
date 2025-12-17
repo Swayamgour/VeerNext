@@ -1827,6 +1827,8 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 }
 
+
+
 .main-menu nav>ul>li:hover>a {
     color: var(--clr-theme-2);
     display: flex;
@@ -1850,6 +1852,10 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     .main-menu ul li {
         margin: 0px 13px;
     }
+}
+
+.cursor {
+    cursor: pointer;
 }
 
 .main-menu ul li {
