@@ -13,7 +13,7 @@ const UserDashboard = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     position: 'relative',
-                    padding: '100px 0'
+                    // padding: '100px 0'
                 }}
             >
                 <div className="page-title-shape">
