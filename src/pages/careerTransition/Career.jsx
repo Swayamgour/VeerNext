@@ -57,9 +57,9 @@ function Career() {
                 <OpportunitySection />
                 <BenefitsSection />
                 <HowItWorks />
-                {/* <ReportSnapshot /> */}
-                {/* <Testimonials /> */}
-                {/* <CTA /> */}
+                <ReportSnapshot />
+                <Testimonials />
+                <CTA />
             </div>
         </>
 

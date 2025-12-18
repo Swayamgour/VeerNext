@@ -98,10 +98,10 @@ const Footer = () => {
                                     </div>
                                     <div className="footer-links">
                                         <ul className="p-0">
-                                            <li onClick={() => handleNavigate("/")}>Home</li>
-                                            <li onClick={() => handleNavigate("/services")}>Service</li>
-                                            <li onClick={() => handleNavigate("/about")}>About Us</li>
-                                            <li onClick={() => handleNavigate("/contact")}>Contacts</li>
+                                            <li className='cursor'  onClick={() => handleNavigate("/")}>Home</li>
+                                            <li className='cursor' onClick={() => handleNavigate("/services")}>Service</li>
+                                            <li className='cursor' onClick={() => handleNavigate("/about")}>About Us</li>
+                                            <li className='cursor' onClick={() => handleNavigate("/contact")}>Contacts</li>
                                         </ul>
                                     </div>
                                 </div>

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, EffectCards, EffectCoverflow } from 'swiper/modules';
 import styles from '../../css/career.module.css';
 import {
     FaClipboardList,
@@ -8,10 +10,23 @@ import {
     FaTrophy,
     FaArrowRight,
     FaCheckCircle,
-    FaUserShield
+    FaUserShield,
+    FaPlay,
+    FaChevronLeft,
+    FaChevronRight
 } from 'react-icons/fa';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-cards';
+import 'swiper/css/effect-coverflow';
+
 const HowItWorks = () => {
+    const swiperRef = useRef(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [isWOWLoaded, setIsWOWLoaded] = useState(false);
+
     const steps = [
         {
             number: '1',
@@ -20,7 +35,12 @@ const HowItWorks = () => {
             icon: <FaClipboardList />,
             color: 'step1',
             time: '2 Minutes',
-            features: ['Personal Details', 'Service History', 'Career Goals']
+            features: ['Personal Details', 'Service History', 'Career Goals'],
+            image: '/assets/img/how-it-works/form-fill.jpg',
+            imageAlt: 'Soldier filling form',
+            videoDemo: '#',
+            stats: '98% Completion Rate',
+
         },
         {
             number: '2',
@@ -29,7 +49,11 @@ const HowItWorks = () => {
             icon: <FaRobot />,
             color: 'step2',
             time: 'Instant Analysis',
-            features: ['Skills Assessment', 'Interest Mapping', 'Military Credit']
+            features: ['Skills Assessment', 'Interest Mapping', 'Military Credit'],
+            image: '/assets/img/how-it-works/ai-scan.jpg',
+            imageAlt: 'AI Analysis Dashboard',
+            videoDemo: '#',
+            stats: '500+ Data Points Analyzed',
         },
         {
             number: '3',
@@ -38,7 +62,11 @@ const HowItWorks = () => {
             icon: <FaFileAlt />,
             color: 'step3',
             time: '24 Hours',
-            features: ['Exam Recommendations', 'Skill Gap Analysis', 'Timeline Planning']
+            features: ['Exam Recommendations', 'Skill Gap Analysis', 'Timeline Planning'],
+            image: '/assets/img/how-it-works/report.jpg',
+            imageAlt: 'Personalized Report',
+            videoDemo: '#',
+            stats: '15+ Career Paths Suggested',
         },
         {
             number: '4',
@@ -47,7 +75,11 @@ const HowItWorks = () => {
             icon: <FaGraduationCap />,
             color: 'step4',
             time: 'Daily Progress',
-            features: ['Mock Tests', 'Study Material', 'Daily Tasks']
+            features: ['Mock Tests', 'Study Material', 'Daily Tasks'],
+            image: '/assets/img/how-it-works/training.jpg',
+            imageAlt: 'Structured Training',
+            videoDemo: '#',
+            stats: '1000+ Practice Questions',
         },
         {
             number: '5',
@@ -56,9 +88,44 @@ const HowItWorks = () => {
             icon: <FaTrophy />,
             color: 'step5',
             time: 'Career Success',
-            features: ['Job Placement', 'Interview Prep', 'Career Support']
+            features: ['Job Placement', 'Interview Prep', 'Career Support'],
+            image: '/assets/img/how-it-works/success.jpg',
+            imageAlt: 'Career Success Celebration',
+            videoDemo: '#',
+            stats: '85% Success Rate',
         }
     ];
+
+    // Sample images array if you don't have actual images
+    const sampleImages = [
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w-800&q=80',
+        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+    ];
+
+    useEffect(() => {
+        const initWOW = () => {
+            if (typeof window.WOW === "function") {
+                new window.WOW().init();
+                setIsWOWLoaded(true);
+            }
+        };
+
+        if (!window.WOW) {
+            const script = document.createElement("script");
+            script.src = "https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js";
+            script.onload = initWOW;
+            document.body.appendChild(script);
+        } else {
+            initWOW();
+        }
+    }, []);
+
+
+
+
 
     return (
         <section className={styles.howItWorksSection}>
@@ -66,10 +133,12 @@ const HowItWorks = () => {
 
                 {/* Section Header */}
                 <div className={styles.howItWorksHeader}>
-                    <div className={styles.howItWorksHeaderDecorator}>
-                        <div className={styles.howItWorksDecLine}></div>
-                        <span className={styles.howItWorksDecText}>THE PROCESS</span>
-                        <div className={styles.howItWorksDecLine}></div>
+                   
+
+                    <div className={styles.headerDecorator}>
+                        <div className={styles.decLine}></div>
+                        <span className={styles.decText}>The Process </span>
+                        <div className={styles.decLine}></div>
                     </div>
 
                     <h2 className={styles.sectionTitle}>
@@ -81,57 +150,72 @@ const HowItWorks = () => {
                     </p>
                 </div>
 
-                {/* Timeline Container */}
-                <div className={styles.timelineContainer}>
-                    <div className={styles.timelineLine}></div>
 
-                    <div className={styles.howItWorksSteps}>
+                <div className={styles.interactiveSteps}>
+                    <div className={styles.stepImageGallery}>
+                        <Swiper
+                            modules={[Navigation, Autoplay]}
+                            effect="fade"
+                            spaceBetween={0}
+                            slidesPerView={1}
+                            loop={true}
+                            autoplay={{
+                                delay: 2000,
+                                disableOnInteraction: false,
+                            }}
+                            onSlideChange={(swiper) => {
+                                setActiveIndex(swiper.realIndex);
+                            }}
+                            onSwiper={(swiper) => {
+                                swiperRef.current = swiper;
+                            }}
+                            className={styles.gallerySwiper}
+                        >
+
+                            {steps.map((step, index) => (
+                                <SwiperSlide key={index}>
+                                    <div
+                                        className={styles.gallerySlide}
+                                        style={{ backgroundImage: `url(${'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80' || sampleImages[index]})` }}
+                                    >
+                                        <div className={styles.galleryOverlay}>
+                                            <div className={styles.galleryContent}>
+                                                <div className={styles.galleryStepBadge}>
+                                                    Step {step.number}
+                                                </div>
+                                                <h3>{step.title}</h3>
+                                                <p>{step.description}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+
+                    <div className={styles.stepSelector}>
                         {steps.map((step, index) => (
-                            <div key={index} className={`${styles.howItWorksStepCard} ${styles[step.color]}`}>
+                            <button
+                                key={index}
+                                className={`${styles.stepSelectorBtn} ${activeIndex === index ? styles.active : ''}`}
+                                onClick={() => {
+                                    setActiveIndex(index);
+                                    // swiperRef.current?.swiper.slideTo(index);
 
-                                {/* Step Header */}
-                                <div className={styles.stepHeader}>
-                                    <div className={styles.stepNumberContainer}>
-                                        <div className={styles.stepNumber}>
-                                            {step.number}
-                                        </div>
-                                        <div className={styles.stepIcon}>
-                                            {step.icon}
-                                        </div>
-                                    </div>
+                                    swiperRef.current.slideToLoop(index);
 
-                                    <div className={styles.stepTime}>
-                                        <span>{step.time}</span>
-                                    </div>
+                                }}
+                            >
+
+
+                                <div className={`${styles.selectorIcon} ${activeIndex === index ? styles.active : ''}`}  >
+                                    {step.icon}
                                 </div>
-
-                                {/* Step Content */}
-                                <div className={styles.stepContent}>
-                                    <h3 className={styles.cardTitle}>
-                                        {step.title}
-                                    </h3>
-                                    <p className={styles.howItWorksStepDescription}>
-                                        {step.description}
-                                    </p>
+                                <div className={`${styles.selectorText} ${activeIndex === index ? styles.active : ''}`} >
+                                    <h5>{step.title}</h5>
+                                    <p>{step.time}</p>
                                 </div>
-
-                                {/* Features List */}
-                                <div className={styles.stepFeatures}>
-                                    {step.features.map((feature, idx) => (
-                                        <div key={idx} className={styles.stepFeature}>
-                                            <FaCheckCircle className={styles.stepFeatureIcon} />
-                                            <span>{feature}</span>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* Connection Arrow */}
-                                {index < steps.length - 1 && (
-                                    <div className={styles.stepConnector}>
-                                        <FaArrowRight className={styles.connectorArrow} />
-                                    </div>
-                                )}
-                            </div>
+                            </button>
                         ))}
                     </div>
                 </div>
@@ -147,18 +231,15 @@ const HowItWorks = () => {
                     </div>
                 </div>
 
-               
-
-
+                {/* CTA Section */}
                 <div className={styles.ctaSection}>
                     <div className={styles.ctaContent}>
                         <h3>Ready to Start Your Journey?</h3>
                         <p>Get your personalized career transition report in just 24 hours</p>
                     </div>
 
-
                     <div className="mission-cta-buttons">
-                        <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
+                        <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn">
                             <span>Generate My Career Transition Report</span>
                             <FaArrowRight />
                         </button>
@@ -171,16 +252,37 @@ const HowItWorks = () => {
                         </div>
                         <div className={styles.ctaFeature}>
                             <FaCheckCircle className={styles.ctaFeatureIcon} />
-                            <span className='text-white' >Free Career Assessment</span>
+                            <span className='text-white'>Free Career Assessment</span>
                         </div>
                         <div className={styles.ctaFeature}>
                             <FaCheckCircle className={styles.ctaFeatureIcon} />
-                            <span className='text-white' >100% Confidential</span>
+                            <span className='text-white'>100% Confidential</span>
                         </div>
                     </div>
                 </div>
 
             </div>
+
+            {/* Inline CSS for Swiper Components */}
+            <style jsx>{`
+                .howItWorksSection {
+                    position: relative;
+                    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+                    overflow: hidden;
+                }
+                
+                .howItWorksSection::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: 
+                        radial-gradient(circle at 10% 20%, rgba(30, 58, 138, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, rgba(219, 39, 119, 0.15) 0%, transparent 40%);
+                }
+            `}</style>
         </section>
     );
 };

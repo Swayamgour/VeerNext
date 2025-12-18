@@ -79,23 +79,29 @@ const ReportSnapshot = () => {
 
                 {/* Section Header */}
                 <div className={styles.reportSnapshotHeader}>
-                    <div className={styles.reportSnapshotHeaderDecorator}>
+                    {/* <div className={styles.reportSnapshotHeaderDecorator}>
                         <div className={styles.reportSnapshotDecLine}></div>
                         <span className={styles.reportSnapshotDecText}>REPORT DETAILS</span>
                         <div className={styles.reportSnapshotDecLine}></div>
+                    </div> */}
+
+                    <div className={styles.headerDecorator}>
+                        <div className={styles.decLine}></div>
+                        <span className={styles.decText}>Report Details </span>
+                        <div className={styles.decLine}></div>
                     </div>
 
-                    <h2 className={styles.reportSnapshotTitle}>
-                        Your Personalized Career <span className={styles.reportSnapshotTitleHighlight}>Report</span>
+                    <h2 className={styles.sectionTitle}>
+                        Your Personalized Career <span className={styles.titleHighlight}>Report</span>
                     </h2>
 
-                    <p className={styles.reportSnapshotSubtitle}>
+                    <p className={styles.benefitsSectionSubtitle}>
                         Comprehensive analysis and roadmap for your successful transition
                     </p>
                 </div>
 
                 {/* Report Preview */}
-                <div className={styles.reportPreview}>
+                {/* <div className={styles.reportPreview}>
                     <div className={styles.reportPreviewHeader}>
                         <div className={styles.reportPreviewIcon}>
                             <FaFileAlt />
@@ -107,25 +113,25 @@ const ReportSnapshot = () => {
                     </div>
 
                     <div className={styles.reportPreviewStats}>
-                        <div className={styles.reportStat}>
+                        <div className={styles.benefitsSectionCard}>
                             <div className={styles.reportStatNumber}>9+</div>
                             <div className={styles.reportStatLabel}>Comprehensive Sections</div>
                         </div>
-                        <div className={styles.reportStat}>
+                        <div className={styles.benefitsSectionCard}>
                             <div className={styles.reportStatNumber}>500+</div>
                             <div className={styles.reportStatLabel}>Data Points Analyzed</div>
                         </div>
-                        <div className={styles.reportStat}>
+                        <div className={styles.benefitsSectionCard}>
                             <div className={styles.reportStatNumber}>24h</div>
                             <div className={styles.reportStatLabel}>Delivery Time</div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Features Grid */}
                 <div className={styles.reportFeaturesGrid}>
                     {reportFeatures.map((feature, index) => (
-                        <div key={index} className={styles.reportFeatureCard}>
+                        <div key={index} className={styles.benefitsSectionCard}>
                             <div className={styles.reportFeatureHeader}>
                                 <div className={styles.reportFeatureIcon}>
                                     {feature.icon}
@@ -143,7 +149,7 @@ const ReportSnapshot = () => {
                                 {feature.description}
                             </p>
 
-                            <div className={styles.reportFeatureNumber}>
+                            <div className={styles.benefitsCardNumber}>
                                 0{index + 1}
                             </div>
                         </div>
@@ -165,20 +171,28 @@ const ReportSnapshot = () => {
                     <div className={styles.reportCtaSection}>
                         <div className={styles.reportCtaContent}>
                             <h3>Want to See a Sample Report?</h3>
-                            <p>Download a sample report to understand what you'll receive</p>
+                            <p className="text-center">Download a sample report to understand what you'll receive</p>
                         </div>
 
                         <div className={styles.reportCtaButtons}>
-                            <button className={styles.reportPrimaryCta}>
-                                <FaDownload className={styles.ctaIcon} />
-                                <span>Download Sample Report</span>
-                                <FaArrowRight className={styles.ctaArrow} />
-                            </button>
 
-                            <button className={styles.reportSecondaryCta}>
-                                <span>Generate My Report</span>
-                                <FaArrowRight className={styles.ctaArrow} />
-                            </button>
+
+                            <div className="mission-cta-buttons">
+                                <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
+                                    <FaDownload className={styles.ctaIcon} />
+                                    <span>Download Sample Report</span>
+                                    <FaArrowRight className={styles.ctaArrow} />
+                                </button>
+                            </div>
+
+                            <div className="mission-cta-buttons">
+                                <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
+                                    <span>Generate My Report</span>
+                                    <FaArrowRight className={styles.ctaArrow} />
+                                </button>
+                            </div>
+
+
                         </div>
 
                         <div className={styles.reportCtaNote}>

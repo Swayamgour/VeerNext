@@ -1,4 +1,3 @@
-
 :root {
     --vtx-primary: #556b2f;
     --vtx-secondary: #d4af37;
@@ -262,6 +261,7 @@
         height: 40px;
         margin-right: 10px;
     }
+
     .vtx-step-icon {
         font-size: 1.1rem;
     }
@@ -281,12 +281,10 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(212, 175, 55, 0.3),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(212, 175, 55, 0.3),
+            transparent);
 }
 
 /* Swiper Custom Styles - Image Focused */
@@ -400,8 +398,8 @@
 .vtx-slider-nav {
     position: absolute;
     top: 50%;
-    left: 30px;
-    right: 30px;
+    left: -70px;
+    right: -70px;
     transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
@@ -524,6 +522,7 @@
 }
 
 @media (max-width: 576px) {
+
     .vtx-how-section,
     .vtx-dashboard-section {
         padding: 70px 0;
@@ -601,12 +600,14 @@
     padding: 5px;
     margin-right: 15px;
 }
-.key-feature-card-icon img{
-    height:100%;
+
+.key-feature-card-icon img {
+    height: 100%;
     width: 100%;
     object-fit: contain;
 }
-.key-feature-card:hover .key-feature-card-icon img{
+
+.key-feature-card:hover .key-feature-card-icon img {
     filter: drop-shadow(3px 3px 2px rgb(157, 157, 157));
     transform: scale(1.03);
 }
@@ -633,6 +634,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -647,18 +649,23 @@
 .key-feature-card:nth-child(1) {
     animation-delay: 0.1s;
 }
+
 .key-feature-card:nth-child(2) {
     animation-delay: 0.2s;
 }
+
 .key-feature-card:nth-child(3) {
     animation-delay: 0.3s;
 }
+
 .key-feature-card:nth-child(4) {
     animation-delay: 0.4s;
 }
+
 .key-feature-card:nth-child(5) {
     animation-delay: 0.5s;
 }
+
 .key-feature-card:nth-child(6) {
     animation-delay: 0.6s;
 }

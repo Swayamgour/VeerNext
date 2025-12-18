@@ -57,10 +57,16 @@ const BenefitsSection = () => {
 
                 {/* Section Header */}
                 <div className={styles.benefitsHeader}>
-                    <div className={styles.benefitsHeaderDecorator}>
+                    {/* <div className={styles.benefitsHeaderDecorator}>
                         <div className={styles.benefitsDecLine}></div>
-                        <span className={styles.benefitsDecText}>EXCLUSIVE FEATURES</span>
+                        <span className={styles.benefitsDecText}></span>
                         <div className={styles.benefitsDecLine}></div>
+                    </div> */}
+
+                    <div className={styles.headerDecorator}>
+                        <div className={styles.decLine}></div>
+                        <span className={styles.decText}>Exclusive Features </span>
+                        <div className={styles.decLine}></div>
                     </div>
 
                     <h2 className={styles.sectionTitle}>
