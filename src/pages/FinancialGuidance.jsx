@@ -8,56 +8,95 @@ import "swiper/css/pagination";
 // import "swiper/css";
 // import "swiper/css/pagination";
 import "swiper/css/virtual";
+import AllPageHeader from './components/AllPageHeader';
 
 
 function FinancialGuidance() {
+
+    const missions = [
+        {
+            number: "01",
+            title: "Sewa Nidhi Strategy",
+            icon: "fas fa-piggy-bank",
+            desc: "Learn how to maximize your Sewa Nidhi funds with smart investment approaches.",
+            duration: "3 Minutes",
+        },
+        {
+            number: "02",
+            title: "Financial Traps",
+            icon: "fas fa-traffic-light",
+            desc: "5 common financial traps to avoid for better wealth management.",
+            duration: "3 Minutes",
+        },
+        {
+            number: "03",
+            title: "SIP Investments",
+            icon: "fas fa-chart-line",
+            desc: "How Systematic Investment Plans grow your money over time.",
+            duration: "3 Minutes",
+        },
+        {
+            number: "04",
+            title: "Government Schemes",
+            icon: "fas fa-shield-alt",
+            desc: "Safe, government-backed investment options with guaranteed returns.",
+            duration: "3 Minutes",
+        },
+        {
+            number: "05",
+            title: "Insurance Basics",
+            icon: "fas fa-umbrella",
+            desc: "Essential insurance knowledge for financial protection.",
+            duration: "3 Minutes",
+        },
+        {
+            number: "06",
+            title: "Emergency Fund",
+            icon: "fas fa-first-aid",
+            desc: "How to build and maintain a financial safety net.",
+            duration: "3 Minutes",
+        },
+        {
+            number: "07",
+            title: "Wealth Building",
+            icon: "fas fa-gem",
+            desc: "Long-term strategies for sustainable wealth creation.",
+            duration: "3 Minutes",
+        }
+    ];
+
+    const testimonialSlides = [
+        {
+            img: "https://i.pravatar.cc/150?img=12",
+            name: "Col. Rajiv Verma",
+            role: "Retd. Indian Army",
+            text:
+                "VeerNXT helped me turn my Sewa Nidhi into a disciplined financial plan. I now save and invest with confidence, clarity, and a mission-driven approach that keeps my family financially secure for the long term.",
+        },
+        {
+            img: "https://i.pravatar.cc/150?img=32",
+            name: "Major Sunita Singh",
+            role: "Financial Mentor",
+            text:
+                "VeerNXT helped me turn my Sewa Nidhi into a disciplined financial plan. I now save and invest with confidence, clarity, and a mission-driven approach that keeps my family financially secure for the long term.",
+        },
+    ];
+
+
+
+
     return (
         <>
+            <AllPageHeader props="Financial Guidance" />
 
-            <section
-                className="page-title-area"
-                style={{
-                    backgroundImage: "url('/assets/img/bg/page-title-bg.jpg')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    position: 'relative',
-                    // padding: '100px 0'
-                }}
-            >
-                <div className="page-title-shape">
-                    <img className="shape-cube" src="/assets/img/shape/cube-shape.png" alt="cube shape" />
-                </div>
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-8">
-                            <div className="page-title-wrapper">
-                                <h1 className="page-title mb-10">Financial Guidance</h1>
-                            </div>
-                            <div className="breadcrumb-menu">
-                                <nav aria-label="Breadcrumbs" className="breadcrumb-trail breadcrumbs">
-                                    <ul className="trail-items">
-                                        <li className="trail-item trail-begin">
-                                            {/* <Link to="/"> */}
-                                            <span>home</span>
-                                            {/* </Link> */}
-                                        </li>
-                                        <li className="trail-item trail-end">
-                                            <span>Financial Guidance </span>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
 
             <section className="fn-hero">
                 <div className="container">
                     <div className="row align-items-center">
 
                         <div className="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-                            <h1 className="fn-hero-title">
+                            <h1 style={{ color: 'var(--' }} className="fn-hero-title">
                                 Secure Your Sewa Nidhi. Build a Prosperous <span>Civilian Life.</span>
                             </h1>
 
@@ -829,70 +868,48 @@ function FinancialGuidance() {
                             </div>
                         </div>
                     </div>
-                    <div className="row justify-content-center">
+                    <div className="row justify-content-center mt-40">
                         <div className="col-xl-7 col-lg-8 col-md-10 col-12">
 
                             <Swiper
                                 direction="vertical"
-                                modules={[ Autoplay]}
+                                modules={[Autoplay]}
                                 slidesPerView={1}
                                 spaceBetween={30}
                                 loop={true}
-                                // pagination={{ clickable: true }}
                                 autoplay={{
                                     delay: 2000,
                                     disableOnInteraction: false,
                                 }}
-                                style={{ height: "480px" }}
+                                style={{
+                                    height: "480px",
+                                }}
                             >
+                                {testimonialSlides.map((item, i) => (
+                                    <SwiperSlide style={{
+                                        // height: "480px",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                    }} key={i}>
+                                        <div className="fn-quote-outer-box">
+                                            <i className="fa fa-quote-left fn-quote-left-icon"></i>
+                                            <i className="fa fa-quote-right fn-quote-right-icon"></i>
 
-                                {/* Slide 1 */}
-                                <SwiperSlide>
-                                    <div className="fn-quote-outer-box">
-                                        <i className="fa fa-quote-left fn-quote-left-icon"></i>
-                                        <i className="fa fa-quote-right fn-quote-right-icon"></i>
+                                            <div className="fn-quote-inner-box text-center">
+                                                <div className="fn-quote-profile-img mb-4">
+                                                    <img src={item.img} alt={item.name} />
+                                                    <h4 className="mt-3 mb-1">{item.name}</h4>
+                                                    <span>{item.role}</span>
+                                                </div>
 
-                                        <div className="fn-quote-inner-box text-center">
-                                            <div className="fn-quote-profile-img mb-4">
-                                                <img src="https://i.pravatar.cc/150?img=12" alt="" />
-                                                <h4 className="mt-3 mb-1">Col. Rajiv Verma</h4>
-                                                <span>Retd. Indian Army</span>
+                                                <p className="fn-quote-text">“{item.text}”</p>
                                             </div>
-
-                                            <p className="fn-quote-text">
-                                                “VeerNXT helped me turn my Sewa Nidhi into a disciplined
-                                                financial plan. I now save and invest with confidence,
-                                                clarity, and a mission-driven approach that keeps my
-                                                family financially secure for the long term.”
-                                            </p>
                                         </div>
-                                    </div>
-                                </SwiperSlide>
-
-                                {/* Slide 2 */}
-                                <SwiperSlide>
-                                    <div className="fn-quote-outer-box">
-                                        <i className="fa fa-quote-left fn-quote-left-icon"></i>
-                                        <i className="fa fa-quote-right fn-quote-right-icon"></i>
-
-                                        <div className="fn-quote-inner-box text-center">
-                                            <div className="fn-quote-profile-img mb-4">
-                                                <img src="https://i.pravatar.cc/150?img=32" alt="" />
-                                                <h4 className="mt-3 mb-1">Major Sunita Singh</h4>
-                                                <span>Financial Mentor</span>
-                                            </div>
-
-                                            <p className="fn-quote-text">
-                                                “VeerNXT helped me turn my Sewa Nidhi into a disciplined
-                                                financial plan. I now save and invest with confidence,
-                                                clarity, and a mission-driven approach that keeps my
-                                                family financially secure for the long term.”
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-
+                                    </SwiperSlide>
+                                ))}
                             </Swiper>
+
                         </div>
                     </div>
 
@@ -912,150 +929,42 @@ function FinancialGuidance() {
                     </div>
 
                     <div className="row col-12 gy-4 mx-auto">
-                        {/* <!-- Card 1 --> */}
+                        {missions.map((item, i) => (
+                            <div className="col-lg-4 col-md-6 col-sm-6" key={i}>
+                                <div className="fn-learn-bootcamp-card float-animation">
+                                    <div className="fn-learn-bootcamp-card-number">{item.number}</div>
 
-                        <div className="col-lg-4 col-md-6 col-sm-6">
-                            <div className="fn-learn-bootcamp-card float-animation">
-                                <div className="fn-learn-bootcamp-card-number">01</div>
-                                <div className="fn-learn-bootcamp-card-icon">
-                                    <i className="fas fa-piggy-bank"></i>
-                                </div>
-                                <h3 className="fn-learn-bootcamp-card-title">Sewa Nidhi Strategy</h3>
-                                <p className="fn-learn-bootcamp-card-desc">
-                                    Learn how to maximize your Sewa Nidhi funds with
-                                    smart investment approaches.
-                                </p>
-                                <div className="fn-learn-bootcamp-card-dura">
-                                    <i className="fas fa-clock me-2"></i> 3 Minutes
-                                </div>
+                                    <div className="fn-learn-bootcamp-card-icon">
+                                        <i className={item.icon}></i>
+                                    </div>
 
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6">
-                            {/* <!-- Card 2 --> */}
-                            <div className="fn-learn-bootcamp-card float-animation">
-                                <div className="fn-learn-bootcamp-card-number">02</div>
-                                <div className="fn-learn-bootcamp-card-icon">
-                                    <i className="fas fa-traffic-light"></i>
-                                </div>
-                                <h3 className="fn-learn-bootcamp-card-title">Financial Traps</h3>
-                                <p className="fn-learn-bootcamp-card-desc">
-                                    5 common financial traps to avoid for better wealth
-                                    management.
-                                </p>
-                                <div className="fn-learn-bootcamp-card-dura">
-                                    <i className="fas fa-clock me-2"></i> 3 Minutes
+                                    <h3 className="fn-learn-bootcamp-card-title">{item.title}</h3>
+
+                                    <p className="fn-learn-bootcamp-card-desc">{item.desc}</p>
+
+                                    <div className="fn-learn-bootcamp-card-dura">
+                                        <i className="fas fa-clock me-2"></i> {item.duration}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6">
-                            {/* <!-- Card 3 --> */}
-                            <div
-                                className="fn-learn-bootcamp-card float-animation"
-                            // style="animation-delay: 0.4s"
-                            >
-                                <div className="fn-learn-bootcamp-card-number">03</div>
-                                <div className="fn-learn-bootcamp-card-icon">
-                                    <i className="fas fa-chart-line"></i>
-                                </div>
-                                <h3 className="fn-learn-bootcamp-card-title">SIP Investments</h3>
-                                <p className="fn-learn-bootcamp-card-desc">
-                                    How Systematic Investment Plans grow your money over
-                                    time.
-                                </p>
-                                <div className="fn-learn-bootcamp-card-dura">
-                                    <i className="fas fa-clock me-2"></i> 3 Minutes
-                                </div>
+                        ))}
 
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6">
-                            {/* <!-- Card 4 --> */}
-                            <div className="fn-learn-bootcamp-card float-animation">
-                                <div className="fn-learn-bootcamp-card-number">04</div>
-                                <div className="fn-learn-bootcamp-card-icon">
-                                    <i className="fas fa-shield-alt"></i>
-                                </div>
-                                <h3 className="fn-learn-bootcamp-card-title">Government Schemes</h3>
-                                <p className="fn-learn-bootcamp-card-desc">
-                                    Safe, government-backed investment options with
-                                    guaranteed returns.
-                                </p>
-                                <div className="fn-learn-bootcamp-card-dura">
-                                    <i className="fas fa-clock me-2"></i> 3 Minutes
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6">
-                            {/* <!-- Card 5 --> */}
-                            <div className="fn-learn-bootcamp-card float-animation">
-                                <div className="fn-learn-bootcamp-card-number">05</div>
-                                <div className="fn-learn-bootcamp-card-icon">
-                                    <i className="fas fa-umbrella"></i>
-                                </div>
-                                <h3 className="fn-learn-bootcamp-card-title">Insurance Basics</h3>
-                                <p className="fn-learn-bootcamp-card-desc">
-                                    Essential insurance knowledge for financial
-                                    protection.
-                                </p>
-                                <div className="fn-learn-bootcamp-card-dura">
-                                    <i className="fas fa-clock me-2"></i> 3 Minutes
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6">
-                            {/* <!-- Card 6 --> */}
-                            <div className="fn-learn-bootcamp-card float-animation">
-                                <div className="fn-learn-bootcamp-card-number">06</div>
-                                <div className="fn-learn-bootcamp-card-icon">
-                                    <i className="fas fa-first-aid"></i>
-                                </div>
-                                <h3 className="fn-learn-bootcamp-card-title">Emergency Fund</h3>
-                                <p className="fn-learn-bootcamp-card-desc">
-                                    How to build and maintain a financial safety net.
-                                </p>
-                                <div className="fn-learn-bootcamp-card-dura">
-                                    <i className="fas fa-clock me-2"></i> 3 Minutes
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6">
-                            {/* <!-- Card 7 --> */}
-                            <div className="fn-learn-bootcamp-card float-animation">
-                                <div className="fn-learn-bootcamp-card-number">07</div>
-                                <div className="fn-learn-bootcamp-card-icon">
-                                    <i className="fas fa-gem"></i>
-                                </div>
-                                <h3 className="fn-learn-bootcamp-card-title">Wealth Building</h3>
-                                <p className="fn-learn-bootcamp-card-desc">
-                                    Long-term strategies for sustainable wealth
-                                    creation.
-                                </p>
-                                <div className="fn-learn-bootcamp-card-dura">
-                                    <i className="fas fa-clock me-2"></i> 3 Minutes
-                                </div>
-
-                            </div>
-                        </div>
+                        {/* last button section */}
                         <div className="col-lg-4 col-md-6 col-sm-6 d-flex align-items-center">
-                            {/* <!-- Card 7 --> */}
-                            <div className=" float-animation ">
-                                <div className="col-12 mt-40 text-center wow  fadeInUp" data-wow-delay="0.3s">
+                            <div className="float-animation">
+                                <div className="col-12 mt-40 text-center wow fadeInUp" data-wow-delay="0.3s">
                                     <button className="fill-btn">
                                         Start All 7 Missions <i className="fas fa-play-circle ms-2"></i>
                                     </button>
+
                                     <p className="mt-3 text-muted text-center">
                                         7 Missions • 3 Minutes Each • 21 Minutes Total
                                     </p>
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
+
                     {/* <!-- Start All Button --> */}
 
                 </div>

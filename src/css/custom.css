@@ -314,7 +314,7 @@
 .fn-hero-title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-color);
     line-height: 1.25;
     margin-bottom: 1.5rem;
 }
@@ -1314,14 +1314,14 @@
 .fn-learn-bootcamp-card-title {
     font-size: 1.4rem;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--primary-color);
     margin-bottom: 15px;
     transition: all 0.3s ease;
     letter-spacing: 1px;
 }
 
 .fn-learn-bootcamp-card:hover .fn-learn-bootcamp-card-title {
-    color: var(--secondary);
+    color: var(--secondary-color);
 }
 
 .fn-learn-bootcamp-card-desc {
@@ -1335,7 +1335,7 @@
     display: inline-flex;
     align-items: center;
     background: rgba(185, 151, 47, 0.1);
-    color: var(--secondary);
+    color: var(--secondary-color);
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.9rem;

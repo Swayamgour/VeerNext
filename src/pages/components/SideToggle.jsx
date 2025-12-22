@@ -32,10 +32,7 @@ const SideToggle = ({ isSideOpen, toggleSideToggle }) => {
                     <div className=" main-menu2 main-menu  d-xl-block">
                         <nav id="mobile-menu">
                             <ul>
-                                {/* <li>Home</li>
-                                <li>Services</li>
-                                <li>About us</li>
-                                <li>Contact us</li> */}
+                                
                                 <li onClick={() => navigate('/')}>Home</li>
                                 <li onClick={() => navigate('/Courses')}>Services</li>
                                 <li onClick={() => navigate('/About')}>About us</li>
