@@ -29,10 +29,42 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
                                         <nav>
                                             <ul className='m-0'>
                                                 <li onClick={() => navigate('/')}>Home</li>
-                                                <li onClick={() => navigate('/Courses')}>Services</li>
+                                                {/* <li onClick={() => navigate('/Courses')}>Services</li> */}
+
+                                                <li className="cs-nav-item-dropdown">
+                                                    <span className="cs-nav-item-link">Services</span>
+
+                                                    <ul className="cs-nav-submenu">
+                                                        <li style={{ color: 'var(--primary-color)', fontSize: '13px' }} onClick={() => navigate('/CareerTransition')}>
+                                                            <span>Career Transition</span>
+                                                        </li>
+                                                        <li style={{ color: 'var(--primary-color)', fontSize: '13px' }} onClick={() => navigate('/FinancialGuidance')}>
+                                                            <span>Financial Guidance</span>
+                                                        </li>
+                                                        <li style={{ color: 'var(--primary-color)', fontSize: '13px' }} onClick={() => navigate('/CommunityPage')}>
+                                                            <span>Connect And Thrive</span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+
+
                                                 <li onClick={() => navigate('/About')}>About us</li>
-                                                <li>Contact us</li>
-                                                <li onClick={() => navigate('/Profile')}>Profile</li>
+                                                <li onClick={() => navigate('/ContactUS')}>Contact us</li>
+                                                {/* <li onClick={() => navigate('/Profile')}>Login</li> */}
+                                                <li className="cs-nav-item-dropdown">
+                                                    <span className="cs-nav-item-link">Login</span>
+
+                                                    <ul className="cs-nav-submenu">
+                                                        <li style={{ color: 'var(--primary-color)', fontSize: '13px' }} onClick={() => navigate('/login')}>
+                                                            <span>student Login </span>
+                                                        </li>
+                                                        <li style={{ color: 'var(--primary-color)', fontSize: '13px' }} onClick={() => navigate('/Profile')}>
+                                                            <span>Profile</span>
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
                                             </ul>
                                         </nav>
                                     </div>

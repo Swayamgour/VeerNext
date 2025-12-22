@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 const SideToggle = ({ isSideOpen, toggleSideToggle }) => {
     const sideInfoClass = `side-info side-info-army ${isSideOpen ? 'info-open' : ''}`;
     // <div className={`side-info side-info-army ${isSideOpen ? "info-open" : ""}`}>
+
+    const navigate = useNavigate()
 
 
     return (
@@ -28,10 +32,15 @@ const SideToggle = ({ isSideOpen, toggleSideToggle }) => {
                     <div className=" main-menu2 main-menu  d-xl-block">
                         <nav id="mobile-menu">
                             <ul>
-                                <li>Home</li>
+                                {/* <li>Home</li>
                                 <li>Services</li>
                                 <li>About us</li>
+                                <li>Contact us</li> */}
+                                <li onClick={() => navigate('/')}>Home</li>
+                                <li onClick={() => navigate('/Courses')}>Services</li>
+                                <li onClick={() => navigate('/About')}>About us</li>
                                 <li>Contact us</li>
+                                <li onClick={() => navigate('/Profile')}>Profile</li>
                             </ul>
                         </nav>
                     </div>

@@ -42,7 +42,7 @@ const OfferSection = () => {
             text: 'Access 500+ central & state govt exams, AI-powered career mapping, VR interview prep, CV building, soft skills & English training.',
             tagText: 'Explore Exams',
             buttonText: 'Explore Exams',
-            link: '/Career', // Replace with actual link
+            link: '/CareerTransition', // Replace with actual link
 
         },
         {

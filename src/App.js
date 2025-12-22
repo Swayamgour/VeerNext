@@ -37,6 +37,8 @@ import Career from './pages/careerTransition/Career';
 import FinancialGuidance from './pages/FinancialGuidance';
 import CommunityPage from './pages/CommunityPage/CommunityPage';
 import About from './pages/About';
+import Login from './pages/Login';
+import ContactUs from './pages/Contact';
 
 
 
@@ -65,10 +67,12 @@ function App() {
         <Route path="/Courses" element={<Courses />} />
         <Route path="/CourseDetails" element={<CourseDetails />} />
         <Route path="/Profile" element={<UserDashboard />} />
-        <Route path="/Career" element={<Career />} />
+        <Route path="/CareerTransition" element={<Career />} />
         <Route path="/FinancialGuidance" element={<FinancialGuidance />} />
         <Route path="/CommunityPage" element={<CommunityPage />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/ContactUS" element={<ContactUs />} />
       </Routes>
     </Layout>
 
