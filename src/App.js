@@ -34,6 +34,9 @@ import { useEffect, useState } from 'react';
 import SidebarMenu from './pages/components/SidebarMenu';
 import UserDashboard from './pages/Profile/UserDashboard';
 import Career from './pages/careerTransition/Career';
+import FinancialGuidance from './pages/FinancialGuidance';
+import CommunityPage from './pages/CommunityPage/CommunityPage';
+import About from './pages/About';
 
 
 
@@ -63,6 +66,9 @@ function App() {
         <Route path="/CourseDetails" element={<CourseDetails />} />
         <Route path="/Profile" element={<UserDashboard />} />
         <Route path="/Career" element={<Career />} />
+        <Route path="/FinancialGuidance" element={<FinancialGuidance />} />
+        <Route path="/CommunityPage" element={<CommunityPage />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </Layout>
 

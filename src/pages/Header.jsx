@@ -30,7 +30,7 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
                                             <ul className='m-0'>
                                                 <li onClick={() => navigate('/')}>Home</li>
                                                 <li onClick={() => navigate('/Courses')}>Services</li>
-                                                <li>About us</li>
+                                                <li onClick={() => navigate('/About')}>About us</li>
                                                 <li>Contact us</li>
                                                 <li onClick={() => navigate('/Profile')}>Profile</li>
                                             </ul>

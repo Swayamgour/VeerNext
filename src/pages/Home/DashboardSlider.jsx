@@ -124,7 +124,7 @@ const DashboardSlider = () => {
                             disableOnInteraction: false,
                         }}
                         onSlideChange={handleSlideChange}
-                        className="swiper"
+                        className="swiper "
                     >
                         {slidesData.map((slide) => (
                             <SwiperSlide key={slide.id}>

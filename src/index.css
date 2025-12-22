@@ -34,6 +34,13 @@ code {
   --headline-font: "Wargate", sans-serif;
   --body-font: "Roboto", sans-serif;
 
+  --safe-color: #27ae60;
+  --growth-color: #2980b9;
+  --protection-color: #c0392b;
+  --skills-color: #8e44ad;
+  --gold-color: #f39c12;
+  --emergency-color: #d35400;
+
 
   --clr-common-white: #ffffff;
   --clr-common-black: #1a1a1a;
@@ -47,4 +54,3 @@ code {
   --clr-bg-3: #fffcf6;
   --clr-bg-4: #f2f2f2;
 }
-
