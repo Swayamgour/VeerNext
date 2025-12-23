@@ -8,7 +8,9 @@ import "swiper/css/pagination";
 // import "swiper/css";
 // import "swiper/css/pagination";
 import "swiper/css/virtual";
-import AllPageHeader from './components/AllPageHeader';
+import AllPageHeader from '../components/AllPageHeader';
+import { useNavigate } from 'react-router-dom';
+import styles from '../../css/career.module.css';
 
 
 function FinancialGuidance() {
@@ -65,6 +67,7 @@ function FinancialGuidance() {
         }
     ];
 
+
     const testimonialSlides = [
         {
             img: "https://i.pravatar.cc/150?img=12",
@@ -81,6 +84,9 @@ function FinancialGuidance() {
                 "VeerNXT helped me turn my Sewa Nidhi into a disciplined financial plan. I now save and invest with confidence, clarity, and a mission-driven approach that keeps my family financially secure for the long term.",
         },
     ];
+
+
+    const navigate = useNavigate()
 
 
 
@@ -109,7 +115,7 @@ function FinancialGuidance() {
 
                             <div className="fn-hero-action">
                                 {/* <a href="#" className="fill-btn"> */}
-                                <span className="fill-btn">
+                                <span onClick={() => navigate('/FinancialPlanningPlatform')} className="fill-btn">
                                     Generate My Personal Money Plan
                                     <i className="fas fa-chart-line btn-icon"></i>
                                 </span>
@@ -133,16 +139,41 @@ function FinancialGuidance() {
 
 
             <!-- Why Financial Guidance Matters Start--> */}
-            <section className="features-area pt-70 pb-70 p-relative bg-white z-index-2">
-                <div className="container">
 
-                    <div className="bd-section-title-wrapper wow fadeInUp" data-wow-delay="0.1s">
-                        <div className="bd-section-subtitle">
-                            Your Sewa Nidhi Is Not Just Money. It’s Your Launchpad.
-                            <img src="/assets/img/icons/icon-2/bullet.png" />
+            <section className={styles.benefitsSection}>
+                <div className={styles.benefitsContainer}>
+
+                    {/* Section Header */}
+                    <div className={styles.benefitsHeader}>
+
+
+                        <div className={styles.headerDecorator}>
+                            <div className={styles.decLine}></div>
+                            <span className={styles.decText}>
+                                WHY FINANCIAL GUIDANCE MATTERS
+                            </span>
+                            <div className={styles.decLine}></div>
                         </div>
-                        <h3 className="bd-section-title mb-60 ">WHY FINANCIAL GUIDANCE MATTERS</h3>
+
+                        <h2 className={styles.sectionTitle}>
+                            Your Sewa Nidhi Is Not Just Money. It’s Your Launchpad.
+                        </h2>
+
+                        {/* <p className={styles.benefitsSectionSubtitle}>
+                            Comprehensive tools and resources designed specifically for your transition journey
+                        </p> */}
                     </div>
+
+                    {/* <section className="features-area pt-70 pb-70 p-relative bg-white z-index-2">
+                        <div className="container">
+
+                            <div className="bd-section-title-wrapper wow fadeInUp" data-wow-delay="0.1s">
+                                <div className="bd-section-subtitle">
+                                    Your Sewa Nidhi Is Not Just Money. It’s Your Launchpad.
+                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
+                                </div>
+                                <h3 className="bd-section-title mb-60 ">WHY FINANCIAL GUIDANCE MATTERS</h3>
+                            </div> */}
                     {/* <!-- Financial Cards --> */}
                     <div className="row g-4">
                         {/* <!-- C/ard 1 --> */}
@@ -207,7 +238,7 @@ function FinancialGuidance() {
                             <div className="bd-section-title-wrapper">
                                 <div className="bd-section-subtitle">
                                     Our Offering
-                                    <img src="/assets/img/icons/icon-2/bullet.png" />
+                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
                                 </div>
                                 <h3 className="bd-section-title mb-40">WHAT VEERNXT GIVES YOU</h3>
                             </div>
@@ -392,17 +423,40 @@ function FinancialGuidance() {
 
 
             <!-- How work flow start  --> */}
-            <section className="features-area pt-70 pb-40 p-relative bg-white z-index-2">
-                <div className="container">
 
-                    <div className="bd-section-title-wrapper">
-                        <div className="bd-section-subtitle">
-                            Simple. Transparent. Designed For Soldiers.
-                            <img src="/assets/img/icons/icon-2/bullet.png" />
+            <section className={styles.benefitsSection}>
+                <div className={styles.benefitsContainer}>
+
+                    {/* Section Header */}
+                    <div className={styles.benefitsHeader}>
+
+
+                        <div className={styles.headerDecorator}>
+                            <div className={styles.decLine}></div>
+                            <span className={styles.decText}>HOW IT WORKS </span>
+                            <div className={styles.decLine}></div>
                         </div>
-                        <h3 className="bd-section-title mb-60 ">HOW IT WORKS
-                        </h3>
+
+                        <h2 className={styles.sectionTitle}>
+                            Simple. Transparent. Designed For Soldiers.
+                        </h2>
+
+                        {/* <p className={styles.benefitsSectionSubtitle}>
+                            Comprehensive tools and resources designed specifically for your transition journey
+                        </p> */}
                     </div>
+
+                    {/* <section className="features-area pt-70 pb-40 p-relative bg-white z-index-2">
+                        <div className="container">
+
+                            <div className="bd-section-title-wrapper">
+                                <div className="bd-section-subtitle">
+                                    Simple. Transparent. Designed For Soldiers.
+                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
+                                </div>
+                                <h3 className="bd-section-title mb-60 ">HOW IT WORKS
+                                </h3>
+                            </div> */}
                     {/* <!-- Workflow --> */}
                     <div className="fn-how-it-work mt-80">
                         {/* <!-- Step 1 --> */}
@@ -492,17 +546,44 @@ function FinancialGuidance() {
 
 
             <!-- Money plan Preview start  --> */}
-            <section className="features-area pt-70 pb-40 p-relative bg-white z-index-2">
-                <div className="container">
 
-                    <div className="bd-section-title-wrapper">
-                        <div className="bd-section-subtitle">
-                            Explore our strategic financial plans designed specifically for armed forces personnel.
-                            <img src="/assets/img/icons/icon-2/bullet.png" />
+            <section className={styles.benefitsSection}>
+                <div className={styles.benefitsContainer}>
+
+                    {/* Section Header */}
+                    <div className={styles.benefitsHeader}>
+
+
+                        <div className={styles.headerDecorator}>
+                            <div className={styles.decLine}></div>
+                            <span className={styles.decText}>Money Plan </span>
+                            <div className={styles.decLine}></div>
                         </div>
-                        <h3 className="bd-section-title mb-60 ">Money Plan
-                        </h3>
+
+                        <h2 className={styles.sectionTitle}>
+                            {/* Simple. Transparent. Designed For Soldiers. */}
+                            Explore our strategic financial plans designed specifically for armed forces personnel.
+                        </h2>
+
+                        {/* <p className={styles.benefitsSectionSubtitle}>
+                            Comprehensive tools and resources designed specifically for your transition journey
+                        </p> */}
                     </div>
+
+
+
+                    {/* <section className="features-area pt-70 pb-40 p-relative bg-white z-index-2">
+                        <div className="container">
+
+                            <div className="bd-section-title-wrapper">
+                                <div className="bd-section-subtitle">
+                                    Explore our strategic financial plans designed specifically for armed forces personnel.
+                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
+                                </div>
+                                <h3 className="bd-section-title mb-60 ">Money Plan
+                                </h3>
+                            </div>
+                            */}
                     <div className="row g-4">
 
                         <div className="col-lg-4 col-md-6  wow fadeInLeft" data-wow-delay="0.6s">
@@ -558,7 +639,7 @@ function FinancialGuidance() {
                                     </div>
                                 </div>
 
-                                <div className="fn-money-plan-cta">
+                                <div onClick={() => navigate('/MoneyPlanView')} className="fn-money-plan-cta">
                                     <button className="fill-btn">
                                         View Example <i className="fas fa-arrow-right"></i>
                                     </button>
@@ -618,7 +699,7 @@ function FinancialGuidance() {
                                     </div>
                                 </div>
 
-                                <div className="fn-money-plan-cta">
+                                <div onClick={() => navigate('/MoneyPlanView')} className="fn-money-plan-cta">
                                     <button className="fill-btn">
                                         View Example <i className="fas fa-arrow-right"></i>
                                     </button>
@@ -678,7 +759,7 @@ function FinancialGuidance() {
                                     </div>
                                 </div>
 
-                                <div className="fn-money-plan-cta">
+                                <div onClick={() => navigate('/MoneyPlanView')} className="fn-money-plan-cta">
                                     <button className="fill-btn">
                                         View Example <i className="fas fa-arrow-right"></i>
                                     </button>
@@ -692,17 +773,41 @@ function FinancialGuidance() {
 
 
             <!-- Featured Tools & Modules start  --> */}
-            <section className="features-area pt-70 pb-40 p-relative bg-white z-index-2">
-                <div className="container">
-                    <div className="bd-section-title-wrapper">
-                        <div className="bd-section-subtitle">
+
+            <section className={styles.benefitsSection}>
+                <div className={styles.benefitsContainer}>
+
+                    {/* Section Header */}
+                    <div className={styles.benefitsHeader}>
+
+
+                        <div className={styles.headerDecorator}>
+                            <div className={styles.decLine}></div>
+                            <span className={styles.decText}>Featured Tools & Modules </span>
+                            <div className={styles.decLine}></div>
+                        </div>
+
+                        <h2 className={styles.sectionTitle}>
                             Mission-ready financial systems built for disciplined
                             civilian success.
-                            <img src="/assets/img/icons/icon-2/bullet.png" />
-                        </div>
-                        <h3 className="bd-section-title mb-60 ">Featured Tools & Modules
-                        </h3>
+                        </h2>
+
+                        {/* <p className={styles.benefitsSectionSubtitle}>
+                            Comprehensive tools and resources designed specifically for your transition journey
+                        </p> */}
                     </div>
+
+                    {/* <section className="features-area pt-70 pb-40 p-relative bg-white z-index-2">
+                        <div className="container">
+                            <div className="bd-section-title-wrapper">
+                                <div className="bd-section-subtitle">
+                                    Mission-ready financial systems built for disciplined
+                                    civilian success.
+                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
+                                </div>
+                                <h3 className="bd-section-title mb-60 ">Featured Tools & Modules
+                                </h3>
+                            </div> */}
                     <div className="row g-4">
                         <div className="col-lg-3 col-md-6  wow fadeInUp" data-wow-delay="0.2s">
                             <div className="fn-feature-tool-card">
@@ -759,17 +864,39 @@ function FinancialGuidance() {
             {/* <!--Featured Tools & Modules end -->
 
             <!-- why agniveer trust start  --> */}
-            <section className="features-area pt-70 pb-40 p-relative bg-white z-index-2">
-                <div className="container">
-                    <div className="bd-section-title-wrapper">
-                        <div className="bd-section-subtitle">
-                            Built with military integrity, designed for soldier success
-                            {/* <img src="/assets/img/icons/icon-2/bullet.png" /> */}
-                            <img src="/assets/img/icons/icon-2/bullet.png" />
+
+            <section className={styles.benefitsSection}>
+                <div className={styles.benefitsContainer}>
+
+                    {/* Section Header */}
+                    <div className={styles.benefitsHeader}>
+
+
+                        <div className={styles.headerDecorator}>
+                            <div className={styles.decLine}></div>
+                            <span className={styles.decText}>WHY AGNIVEERS TRUST US </span>
+                            <div className={styles.decLine}></div>
                         </div>
-                        <h3 className="bd-section-title mb-60 ">WHY AGNIVEERS TRUST US
-                        </h3>
+
+                        <h2 className={styles.sectionTitle}>
+                            Built with military integrity, designed for soldier success
+                        </h2>
+
+                        {/* <p className={styles.benefitsSectionSubtitle}>
+                            Comprehensive tools and resources designed specifically for your transition journey
+                        </p> */}
                     </div>
+
+                    {/* <section className="features-area pt-70 pb-40 p-relative bg-white z-index-2">
+                        <div className="container">
+                            <div className="bd-section-title-wrapper">
+                                <div className="bd-section-subtitle">
+                                    Built with military integrity, designed for soldier success
+                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
+                                </div>
+                                <h3 className="bd-section-title mb-60 ">WHY AGNIVEERS TRUST US
+                                </h3>
+                            </div> */}
 
                     <div className="row gy-4 col-12 mx-auto">
                         <div className="col-lg-6">
@@ -873,10 +1000,11 @@ function FinancialGuidance() {
 
                             <Swiper
                                 direction="vertical"
-                                modules={[Autoplay]}
+                                modules={[Autoplay, Pagination]}
                                 slidesPerView={1}
                                 spaceBetween={30}
                                 loop={true}
+                                pagination={{ clickable: true }}
                                 autoplay={{
                                     delay: 2000,
                                     disableOnInteraction: false,
@@ -916,17 +1044,41 @@ function FinancialGuidance() {
                 </div>
             </section>
 
-            <section className="features-area pt-70 pb-70 p-relative bg-white z-index-2">
+
+            <section className={styles.benefitsSection}>
+                <div className={styles.benefitsContainer}>
+
+                    {/* Section Header */}
+                    <div className={styles.benefitsHeader}>
+
+
+                        <div className={styles.headerDecorator}>
+                            <div className={styles.decLine}></div>
+                            <span className={styles.decText}>  Learn in 7 Short Missions </span>
+                            <div className={styles.decLine}></div>
+                        </div>
+
+                        <h2 className={styles.sectionTitle}>
+                            Financial Learning Bootcamp
+                        </h2>
+
+                        {/* <p className={styles.benefitsSectionSubtitle}>
+                            Comprehensive tools and resources designed specifically for your transition journey
+                        </p> */}
+                    </div>
+
+
+                    {/* <section className="features-area pt-70 pb-70 p-relative bg-white z-index-2">
                 <div className="container">
 
                     <div className="bd-section-title-wrapper">
                         <div className="bd-section-subtitle">
                             Learn in 7 Short Missions
-                            <img src="/assets/img/icons/icon-2/bullet.png" />
+                            <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
                         </div>
                         <h3 className="bd-section-title mb-60 ">Financial Learning Bootcamp
                         </h3>
-                    </div>
+                    </div> */}
 
                     <div className="row col-12 gy-4 mx-auto">
                         {missions.map((item, i) => (
@@ -990,7 +1142,7 @@ function FinancialGuidance() {
 
                                 <div className="mission-cta-buttons wow fadeInUp" data-wow-delay=".3s">
                                     {/* <a href="#" > */}
-                                    <span className="mission-btn fill-btn" >Generate My Personal Money Plan
+                                    <span onClick={() => navigate('/FinancialPlanningPlatform')} className="mission-btn fill-btn" >Generate My Personal Money Plan
                                         <i className="fas fa-chart-line btn-icon"></i>
                                     </span>
 
@@ -1010,8 +1162,32 @@ function FinancialGuidance() {
                 </div>
             </section>
             {/* <!-- bottom CTA center end --> */}
+
+
+            <style>{`
+                        .swiper-pagination-bullet {
+                          width: 10px;
+                          height: 10px;
+                          background: rgba(0, 0, 0, 0.3);
+                          opacity: 1;
+                          transition: all 0.3s ease;
+                        }
+
+                        .swiper-pagination-bullet-active {
+                          background: var(--primary-color);
+                          transform: scale(1.4);
+                        }
+
+                        .swiper-vertical > .swiper-pagination-bullets {
+                          right: 10px;
+                        }
+                    `}
+            </style>
         </>
     )
 }
+
+
+
 
 export default FinancialGuidance

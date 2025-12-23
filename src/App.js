@@ -34,11 +34,13 @@ import { useEffect, useState } from 'react';
 import SidebarMenu from './pages/components/SidebarMenu';
 import UserDashboard from './pages/Profile/UserDashboard';
 import Career from './pages/careerTransition/Career';
-import FinancialGuidance from './pages/FinancialGuidance';
+import FinancialGuidance from './pages/FinancialGuidance/FinancialGuidance';
 import CommunityPage from './pages/CommunityPage/CommunityPage';
 import About from './pages/About';
 import Login from './pages/Login';
 import ContactUs from './pages/Contact';
+import FinancialPlanningPlatform from './pages/FinancialGuidance/FinancialPlanningPlatform';
+import MoneyPlanView from './pages/FinancialGuidance/MoneyPlanView';
 
 
 
@@ -73,6 +75,8 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/ContactUS" element={<ContactUs />} />
+        <Route path="/FinancialPlanningPlatform" element={<FinancialPlanningPlatform />} />
+        <Route path="/MoneyPlanView" element={<MoneyPlanView />} />
       </Routes>
     </Layout>
 

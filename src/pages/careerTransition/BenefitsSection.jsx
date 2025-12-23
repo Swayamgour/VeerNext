@@ -52,7 +52,7 @@ const BenefitsSection = () => {
     ];
 
     return (
-        <section className={styles.benefitsSection}>
+        <section className={styles.opportunitySection}>
             <div className={styles.benefitsContainer}>
 
                 {/* Section Header */}

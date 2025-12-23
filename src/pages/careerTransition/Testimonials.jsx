@@ -87,6 +87,25 @@ const Testimonials = () => {
     }
   ];
 
+
+  const testimonialFeaturesData = [
+    {
+      icon: <FaUserShield />,
+      title: "100% Verified",
+      description: "Every testimonial is verified and authenticated",
+    },
+    {
+      icon: <FaAward />,
+      title: "Real Results",
+      description: "Documented success stories with proof",
+    },
+    {
+      icon: <FaRegClock />,
+      title: "Recent Success",
+      description: "Updated weekly with new success stories",
+    },
+  ];
+
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
   };
@@ -110,7 +129,7 @@ const Testimonials = () => {
 
   return (
     <>
-      <section className={styles.testimonialsSection}>
+      <section className={styles.opportunitySection}>
         <div className={styles.container}>
           {/* Section Header */}
           <div className={styles.sectionHeader}>
@@ -129,7 +148,7 @@ const Testimonials = () => {
             </p>
           </div>
 
-         
+
 
           {/* Swiper Testimonials */}
           <div className={styles.testimonialSwiperContainer}>
@@ -149,7 +168,7 @@ const Testimonials = () => {
 
             <Swiper
               ref={swiperRef}
-              modules={[Navigation,  Autoplay, EffectCoverflow]}
+              modules={[Navigation, Autoplay, EffectCoverflow]}
               spaceBetween={30}
               slidesPerView={1}
               centeredSlides={true}
@@ -271,39 +290,26 @@ const Testimonials = () => {
               ))}
             </Swiper>
 
-          
-           
+
+
           </div>
 
           {/* Additional Features */}
           <div className={styles.testimonialFeatures}>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <FaUserShield />
+            {testimonialFeaturesData.map((item, index) => (
+              <div className={styles.featureCard} key={index}>
+                <div className={styles.benefitsIconContainer}>
+                  {/* <div className={styles.benefitsIconBg}></div> */}
+                  <div className={styles.benefitsIcon}>
+                    {item.icon}
+                  </div>
+                </div>
+                <div className={styles.featureContent}>
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
+                </div>
               </div>
-              <div className={styles.featureContent}>
-                <h4>100% Verified</h4>
-                <p>Every testimonial is verified and authenticated</p>
-              </div>
-            </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <FaAward />
-              </div>
-              <div className={styles.featureContent}>
-                <h4>Real Results</h4>
-                <p>Documented success stories with proof</p>
-              </div>
-            </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <FaRegClock />
-              </div>
-              <div className={styles.featureContent}>
-                <h4>Recent Success</h4>
-                <p>Updated weekly with new success stories</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

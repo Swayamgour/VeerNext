@@ -5,6 +5,8 @@ import SideToggle from './components/SideToggle';
 
 const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
     const navigate = useNavigate();
+    const [openDropdown, setOpenDropdown] = useState(null);
+
 
     return (
         <header>
@@ -31,7 +33,7 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
                                                 <li onClick={() => navigate('/')}>Home</li>
                                                 {/* <li onClick={() => navigate('/Courses')}>Services</li> */}
 
-                                                <li className="cs-nav-item-dropdown">
+                                                {/* <li className="cs-nav-item-dropdown">
                                                     <span className="cs-nav-item-link">Services</span>
 
                                                     <ul className="cs-nav-submenu">
@@ -45,26 +47,86 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
                                                             <span>Connect And Thrive</span>
                                                         </li>
                                                     </ul>
+                                                </li> */}
+
+                                                {console.log(openDropdown)}
+
+                                                <li
+                                                    className={`cs-nav-item-dropdown ${openDropdown === 'services' ? 'open' : ''}`}
+                                                    onMouseEnter={() => setOpenDropdown('services')}
+                                                    onMouseLeave={() => setOpenDropdown(null)}
+                                                >
+                                                    <span className="cs-nav-item-link">Services</span>
+
+                                                    <ul className="cs-nav-submenu">
+                                                        <li
+                                                            style={{ color: 'var(--primary-color)', fontSize: '13px' }}
+                                                            onClick={() => {
+                                                                navigate('/CareerTransition');
+                                                                setOpenDropdown(null); // 🔥 CLOSE dropdown
+                                                            }}
+                                                        >
+                                                            <span>Career Transition</span>
+                                                        </li>
+
+                                                        <li
+                                                            style={{ color: 'var(--primary-color)', fontSize: '13px' }}
+                                                            onClick={() => {
+                                                                navigate('/FinancialGuidance');
+                                                                setOpenDropdown(null);
+                                                            }}
+                                                        >
+                                                            <span>Financial Guidance</span>
+                                                        </li>
+
+                                                        <li
+                                                            style={{ color: 'var(--primary-color)', fontSize: '13px' }}
+                                                            onClick={() => {
+                                                                navigate('/CommunityPage');
+                                                                setOpenDropdown(null);
+                                                            }}
+                                                        >
+                                                            <span>Connect And Thrive</span>
+                                                        </li>
+                                                    </ul>
                                                 </li>
+
 
 
 
                                                 <li onClick={() => navigate('/About')}>About us</li>
                                                 <li onClick={() => navigate('/ContactUS')}>Contact us</li>
                                                 {/* <li onClick={() => navigate('/Profile')}>Login</li> */}
-                                                <li className="cs-nav-item-dropdown">
+                                                <li
+                                                    className={`cs-nav-item-dropdown ${openDropdown === 'login' ? 'open' : ''}`}
+                                                    onMouseEnter={() => setOpenDropdown('login')}
+                                                    onMouseLeave={() => setOpenDropdown(null)}
+                                                >
                                                     <span className="cs-nav-item-link">Login</span>
 
                                                     <ul className="cs-nav-submenu">
-                                                        <li style={{ color: 'var(--primary-color)', fontSize: '13px' }} onClick={() => navigate('/login')}>
-                                                            <span>student Login </span>
-                                                        </li>
-                                                        <li style={{ color: 'var(--primary-color)', fontSize: '13px' }} onClick={() => navigate('/Profile')}>
-                                                            <span>Profile</span>
+                                                        <li
+                                                            style={{ color: 'var(--primary-color)', fontSize: '13px' }}
+                                                            onClick={() => {
+                                                                navigate('/login');
+                                                                setOpenDropdown(null); // 🔥 CLOSE dropdown
+                                                            }}
+                                                        >
+                                                            <span>Student Login</span>
                                                         </li>
 
+                                                        <li
+                                                            style={{ color: 'var(--primary-color)', fontSize: '13px' }}
+                                                            onClick={() => {
+                                                                navigate('/Profile');
+                                                                setOpenDropdown(null); // 🔥 CLOSE dropdown
+                                                            }}
+                                                        >
+                                                            <span>Profile</span>
+                                                        </li>
                                                     </ul>
                                                 </li>
+
                                             </ul>
                                         </nav>
                                     </div>

@@ -74,7 +74,7 @@ const ReportSnapshot = () => {
     const categories = ['All', 'Strategy', 'Assessment', 'Validation', 'Analysis', 'Resources', 'Planning', 'Career'];
 
     return (
-        <section className={styles.reportSnapshotSection}>
+        <section className={styles.opportunitySection}>
             <div className={styles.reportSnapshotContainer}>
 
                 {/* Section Header */}

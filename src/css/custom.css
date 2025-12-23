@@ -2179,7 +2179,7 @@
     }
 
     .img_insidespinner {
-        top: 50px;
+        top: 60px;
     }
 
     .pricing-text {
@@ -2264,7 +2264,7 @@
 .cs-nav-submenu {
     list-style: none;
     padding: 10px 0;
-    min-width: 200px;
+    /* min-width: 200px; */
     background: #fff;
     /* border-radius: 8px; */
     border: 1px solid lightgrey;
@@ -2281,11 +2281,11 @@
 }
 
 /* On hover show */
-.cs-nav-item-dropdown:hover .cs-nav-submenu {
+/* .cs-nav-item-dropdown:hover .cs-nav-submenu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-}
+} */
 
 /* List item style */
 .cs-nav-submenu li {
@@ -2305,3 +2305,70 @@
     display: block;
     width: 100%;
 }
+
+
+/* Tabs Styles */
+.tabsContainer {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    min-width: min-content;
+}
+
+.tabButton {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    color: #666;
+}
+
+.tabButton:hover {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.activeTab {
+    background: var(--primary-color, #3b82f6);
+    color: white;
+}
+
+.activeTab:hover {
+    background: var(--primary-color, #3b82f6);
+    color: white;
+}
+
+.tabContent {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.cs-nav-submenu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+
+.cs-nav-item-dropdown.open .cs-nav-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+

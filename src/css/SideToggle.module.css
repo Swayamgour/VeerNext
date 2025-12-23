@@ -1,0 +1,334 @@
+.fix {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    max-width: 300px;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+
+
+
+.sideInfo {
+    background: var(--clr-common-black);
+    height: 100%;
+    padding: 30px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.sideInfoArmy {
+    background: var(--clr-common-black);
+}
+
+.infoOpen {
+    transform: translateX(0);
+}
+
+/* Header */
+.sideInfoContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.col9 {
+    width: 75%;
+}
+
+.col3 {
+    width: 25%;
+    text-align: right;
+}
+
+.offsetWidget {
+    /* margin-bottom: 20px; */
+}
+
+.offsetHeader {
+    padding-bottom: 20px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.offsetLogo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.sideInfoClose {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.sideInfoClose:hover {
+    color: #ccc;
+}
+
+/* Menu Styling */
+.mainMenu2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mainMenu2 ul li {
+    padding: 15px 0;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menuItem:hover {
+    color: var(--primary-color);
+    padding-left: 10px;
+}
+
+/* White line decoration - half length */
+
+
+/* Mobile Dropdown */
+.mobileDropdown {
+    position: relative;
+}
+
+.mobileDropdownTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 15px 0; */
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mobileDropdownTitle:hover {
+    color: var(--primary-color);
+}
+
+.mobileDropdownTitle i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.mobileDropdown.open .mobileDropdownTitle i {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Submenu */
+.mobileSubmenu {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 25px;
+    /* Increased padding for better indentation */
+    transition: max-height 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), padding 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    margin: 8px 0;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileDropdown.open .mobileSubmenu {
+    max-height: 300px;
+    /* padding: 15px 0 15px 25px; */
+    /* Top, right, bottom, left */
+    margin: 10px 0;
+}
+
+.dropdownItem {
+    padding: 12px 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.08); */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.dropdownItem:last-child {
+    border-bottom: none;
+}
+
+.dropdownItem:hover {
+    color: var(--primary-color);
+    padding-left: 10px;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Dropdown item indicator */
+.dropdownItem::before {
+    content: '›';
+    position: absolute;
+    left: -15px;
+    color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dropdownItem:hover::before {
+    opacity: 1;
+}
+
+/* Search Bar */
+.offsetSearchbar {
+    margin-top: 20px;
+}
+
+.filterSearchInput {
+    position: relative;
+}
+
+.filterSearchInput input {
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+}
+
+.filterSearchInput input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.filterSearchInput button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.filterSearchInput button:hover {
+    color: white;
+}
+
+/* Support Section */
+.offsetSupport {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.metaItemIcon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metaItemIcon i {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.metaItemContent {
+    flex: 1;
+}
+
+.metaTitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.metaTitle span {
+    color: white;
+    font-weight: 600;
+}
+
+.metaItemContent p {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px 0 0 0;
+}
+
+/* Social Icons */
+.footerWidgetSocial {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerWidgetSocial a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footerWidgetSocial a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+
+/* Animation for dropdown */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobileDropdown.open .mobileSubmenu li {
+    animation: slideDown 0.3s ease forwards;
+    animation-delay: calc(var(--item-index) * 0.1s);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .sideInfo {
+        padding: 20px;
+    }
+
+    .mobileSubmenu {
+        padding-left: 20px;
+    }
+
+    .mobileDropdown.open .mobileSubmenu {
+        padding-left: 20px;
+    }
+}

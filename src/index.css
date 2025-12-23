@@ -26,6 +26,7 @@ code {
   --primary-color: #556b2f;
   --secondary-color: #b9972f;
   --dark-bg: #1a1a1a;
+  --dark-color: #1a3c40;
   --light-bg: #f7f3e9;
   --thm-gradient1: linear-gradient(135deg, #3d5220, #6e8b3d, #d4af37);
   --thm-gradient2: linear-gradient(135deg, #a3b76b, #6e8b3d, #b9972f);
@@ -53,4 +54,14 @@ code {
   --clr-bg-2: #c8a04e;
   --clr-bg-3: #fffcf6;
   --clr-bg-4: #f2f2f2;
+
+
+  --light-bg: #f7f3e9;
+  --card-bg: #ffffff;
+  --border-color: #e8e4d8;
+  --shadow-sm: 0 3px 15px rgba(26, 60, 64, 0.1);
+  --shadow-md: 0 5px 25px rgba(26, 60, 64, 0.15);
+  --shadow-lg: 0 10px 35px rgba(26, 60, 64, 0.2);
+  --radius-md: 12px;
+  --radius-sm: 8px;
 }

@@ -128,7 +128,7 @@ const HowItWorks = () => {
 
 
     return (
-        <section className={styles.howItWorksSection}>
+        <section className={styles.opportunitySection}>
             <div className={styles.howItWorksContainer}>
 
                 {/* Section Header */}
