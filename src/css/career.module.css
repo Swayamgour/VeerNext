@@ -261,8 +261,9 @@
     }
 
     .statsSidebar {
-        max-width: 500px;
-        margin: 0 auto;
+        /* max-width: 500px; */
+        margin: 0 20px;
+        /* width: 2100%; */
     }
 }
 
@@ -273,6 +274,8 @@
 
     .heroSubtitle {
         font-size: 1.1rem;
+        margin: 0 40px;
+        text-align: center;
     }
 
     .trustBadges {
@@ -3403,9 +3406,9 @@
         padding: 20px;
     }
 
-    .featureIcon {
+    /* .featureIcon {
         width: 40px;
         height: 40px;
         font-size: 1rem;
-    }
+    } */
 }

@@ -165,7 +165,7 @@ const OperationRakshak = () => {
               <h3 className="cs-miss-feature-sec-title">Program Features</h3>
               <div className="row col-12 mx-auto">
                 {featureData.map((item, index) => (
-                  <div key={index} className="col-lg-3 col-sm-4 col-6">
+                  <div key={index} className="col-lg-3 col-sm-4 col-12">
                     <div className="cs-miss-feature-card">
                       <i className={`${item.icon} cs-miss-feature-icon`}></i>
 
@@ -180,6 +180,7 @@ const OperationRakshak = () => {
                   </div>
                 ))}
               </div>
+
 
 
             </div>

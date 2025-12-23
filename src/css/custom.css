@@ -2236,6 +2236,10 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .gapOfFinancial {
+        margin-top: 30px;
+    }
 }
 
 
@@ -2370,5 +2374,3 @@
     visibility: visible;
     transform: translateY(0);
 }
-
-

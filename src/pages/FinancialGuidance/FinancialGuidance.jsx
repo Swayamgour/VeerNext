@@ -99,7 +99,8 @@ function FinancialGuidance() {
 
             <section className="fn-hero">
                 <div className="container">
-                    <div className="row align-items-center">
+                    {/* <div className="row align-items-center   "> */}
+                        <div className="row align-items-center g-5 g-md-0">
 
                         <div className="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
                             <h1 style={{ color: 'var(--' }} className="fn-hero-title">
@@ -124,8 +125,8 @@ function FinancialGuidance() {
                         </div>
 
 
-                        <div className="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.2s">
-                            <div className="fn-hero-img">
+                        <div className="col-lg-4 text-center wow fadeInUp  " data-wow-delay="0.2s">
+                            <div className="fn-hero-img ">
                                 <img src='/assets/img/about/financial.jpg'
                                     alt="Financial Planning for Agniveers"
                                     className="img-fluid" />
