@@ -108,9 +108,9 @@ const ViewExamsPage = () => {
                 <section className="exams-hero">
                     <div className="container">
                         <div className="hero-content">
-                            <h1 className="hero-title">
+                            {/* <h1 className="hero-title">
                                 Mission <span className="highlight">Opportunities</span>
-                            </h1>
+                            </h1> */}
                             <p className="hero-subtitle">
                                 500+ Exclusive Opportunities for Veterans. Age relaxation and priority for ex-servicemen.
                             </p>

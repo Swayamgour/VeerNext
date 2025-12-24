@@ -45,15 +45,15 @@ const StartMissionPage = () => {
             successRate: '78%',
             steps: ['Idea Validation', 'Funding Assistance', 'Mentorship', 'Launch']
         },
-        {
-            id: 4,
-            title: 'Defense PSUs',
-            description: 'Public Sector Undertakings in defense',
-            icon: 'fas fa-shield-alt',
-            duration: '2-4 months',
-            successRate: '88%',
-            steps: ['Application', 'Technical Round', 'Medical', 'Joining']
-        }
+        // {
+        //     id: 4,
+        //     title: 'Defense PSUs',
+        //     description: 'Public Sector Undertakings in defense',
+        //     icon: 'fas fa-shield-alt',
+        //     duration: '2-4 months',
+        //     successRate: '88%',
+        //     steps: ['Application', 'Technical Round', 'Medical', 'Joining']
+        // }
     ];
 
     const serviceBranches = [
@@ -245,7 +245,7 @@ const StartMissionPage = () => {
                                                 <div className="path-icon">
                                                     <i className={path.icon}></i>
                                                 </div>
-                                                <h4>{path.title}</h4>
+                                                <h4 >{path.title}</h4>
                                                 <p>{path.description}</p>
                                                 <div className="path-meta">
                                                     <span><i className="fas fa-clock"></i> {path.duration}</span>
