@@ -1,6 +1,3 @@
-import React, { useEffect, useRef } from 'react';
-import useCountUp from '../components/useCountUp';
-// import RiotPoliceIcon from "../../img/";
 
 
 
@@ -93,7 +90,7 @@ const AboutArea = () => {
                                                 <div className="about-info">
                                                     <div className="about-info-icon">
 
-                                                        <img src={stat.iconClass} />
+                                                        <img src={stat.iconClass} alt="about-info" />
                                                     </div>
                                                     <div className="about-info-text ">
                                                         <span className="odometer" >

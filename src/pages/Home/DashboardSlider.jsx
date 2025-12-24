@@ -86,7 +86,7 @@ const DashboardSlider = () => {
                     <div className="bd-section-title-wrapper">
                         <div className="bd-section-subtitle">
                             Next-Step Control
-                            <img src="/assets/img/icons/icon-2/bullet.png" />
+                            <img src="/assets/img/icons/icon-2/bullet.png" alt="next-step control" />
                         </div>
                         <h3 className="bd-section-title mb-60 text-white">
                             Your Command Center for Civilian Success

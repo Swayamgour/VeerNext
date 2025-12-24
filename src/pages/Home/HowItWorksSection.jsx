@@ -101,7 +101,7 @@ const HowItWorksSection = () => {
                                     <div className="bd-section-subtitle">
                                         Mission Workflow
                                         {/* <i className="fas fa-star"></i> Replaced flaticon-001-bullet */}
-                                        <img src={'/assets/img/icons/icon-2/bullet.png'} />
+                                        <img src={'/assets/img/icons/icon-2/bullet.png'} alt='/icons/icon-2' />
                                     </div>
                                     <h3 className="bd-section-title mb-40">How VeerNXT Works</h3>
                                 </div>

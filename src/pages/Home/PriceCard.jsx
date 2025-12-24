@@ -72,7 +72,7 @@ const OfferSection = () => {
                             <div className="bd-section-subtitle">
                                 Empowering Your Next Mission Beyond the Uniform
                                 {/* <i className="fas fa-star"></i> Replaced flaticon-001-bullet with a star */}
-                                <img src={'/assets/img/icons/icon-2/bullet.png'} />
+                                <img src={'/assets/img/icons/icon-2/bullet.png'} alt='icons of this ' />
                             </div>
                             <h3 className="bd-section-title mb-60">
                                 What we offer?

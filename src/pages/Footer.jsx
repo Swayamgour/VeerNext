@@ -10,7 +10,9 @@ const Footer = () => {
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate()
 
+    const handleNavigate = () => {
 
+    }
 
     const [progress, setProgress] = useState(0);
 
@@ -98,10 +100,10 @@ const Footer = () => {
                                     </div>
                                     <div className="footer-links">
                                         <ul className="p-0">
-                                            <li className='cursor' onClick={() => navigate("/")}>Home</li>
-                                            <li className='cursor' onClick={() => navigate("/services")}>Service</li>
-                                            <li className='cursor' onClick={() => navigate("/About")}>About Us</li>
-                                            <li className='cursor' onClick={() => navigate("/ContactUS")}>Contacts Us</li>
+                                            <li className='cursor' onClick={() => handleNavigate("/")}>Home</li>
+                                            <li className='cursor' onClick={() => handleNavigate("/services")}>Service</li>
+                                            <li className='cursor' onClick={() => handleNavigate("/About")}>About Us</li>
+                                            <li className='cursor' onClick={() => handleNavigate("/ContactUS")}>Contacts Us</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -114,15 +116,15 @@ const Footer = () => {
                                     </div>
                                     <div className="footer-links">
                                         <ul className="p-0">
-                                            <li onClick={() => navigate("/echs")}>ECHS Application</li>
-                                            <li onClick={() => navigate("/resume-service")}>Resume Service</li>
-                                            <li onClick={() => navigate("/important-contacts")}>
+                                            <li onClick={() => handleNavigate("/echs")}>ECHS Application</li>
+                                            <li onClick={() => handleNavigate("/resume-service")}>Resume Service</li>
+                                            <li onClick={() => handleNavigate("/important-contacts")}>
                                                 Important Contacts
                                             </li>
-                                            <li onClick={() => navigate("/community-safety")}>
+                                            <li onClick={() => handleNavigate("/community-safety")}>
                                                 Community Safety
                                             </li>
-                                            <li onClick={() => navigate("/welfare-schemes")}>
+                                            <li onClick={() => handleNavigate("/welfare-schemes")}>
                                                 Welfare Schemes
                                             </li>
                                         </ul>

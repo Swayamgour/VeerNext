@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Line, Pie, Bar } from 'react-chartjs-2';
+import { Line, Pie } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -31,14 +31,16 @@ const FinancialCommandPage = () => {
     const [selectedMonth, setSelectedMonth] = useState('January 2024');
 
     // Sample financial data
-    const [financialData, setFinancialData] = useState({
+ 
+
+    const financialData = {
         totalSavings: 1250000,
         monthlyIncome: 75000,
         monthlyExpenses: 45000,
         investments: 850000,
         debt: 150000,
         netWorth: 1950000
-    });
+    }
 
     // Investment portfolio
     const investments = [
