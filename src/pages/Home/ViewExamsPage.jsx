@@ -193,7 +193,7 @@ const ViewExamsPage = () => {
                 {/* Main Content with Filters */}
                 <section className="exams-main">
                     <div className="container">
-                        <div className="row">
+                        <div className="row gy-4">
                             {/* Filters Sidebar */}
                             <div className="col-lg-3">
                                 <div className="filters-sidebar">
@@ -360,9 +360,9 @@ const ViewExamsPage = () => {
                                                         <button className="apply-now-btn">
                                                             <i className="fas fa-paper-plane"></i> Apply Now
                                                         </button>
-                                                        <button className="reminder-btn">
+                                                        {/* <button className="reminder-btn">
                                                             <i className="fas fa-bell"></i>
-                                                        </button>
+                                                        </button> */}
                                                     </div>
                                                 </div>
                                             </div>

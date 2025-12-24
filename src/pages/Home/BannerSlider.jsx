@@ -154,7 +154,7 @@ const BannerSlider = () => {
                                     </div>
                                 </div>
 
-                                 <div className="mission-cta-buttons">
+                                 <div style={{marginTop:'40px'}}  className="mission-cta-buttons">
                                     <button onClick={() => navigate('/Courses')} className="mission-btn fill-btn">
                                         <span>Start Your Journey</span>
                                         <i class="fas fa-rocket btn-icon"></i>
