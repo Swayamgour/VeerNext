@@ -12,7 +12,7 @@ import { FaShieldAlt, FaMedal } from "react-icons/fa";
 const slidesData = [
     {
         id: 1,
-        bgImage: "/assets/img/about/army-to-co.webp",
+        bgImage: "/assets/img/about/Tr5c5nS6.jpg",
         title: {
             part1: "Your Second",
             marked: "Mission",
