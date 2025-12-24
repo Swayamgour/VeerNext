@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import Preloader from './components/Preloader';
+import { useNavigate } from 'react-router-dom';
 
 
 const Footer = () => {
 
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate()
 
-    const handleNavigate = () => {
 
-    }
 
     const [progress, setProgress] = useState(0);
 
@@ -98,10 +98,10 @@ const Footer = () => {
                                     </div>
                                     <div className="footer-links">
                                         <ul className="p-0">
-                                            <li className='cursor'  onClick={() => handleNavigate("/")}>Home</li>
-                                            <li className='cursor' onClick={() => handleNavigate("/services")}>Service</li>
-                                            <li className='cursor' onClick={() => handleNavigate("/about")}>About Us</li>
-                                            <li className='cursor' onClick={() => handleNavigate("/contact")}>Contacts</li>
+                                            <li className='cursor' onClick={() => navigate("/")}>Home</li>
+                                            <li className='cursor' onClick={() => navigate("/services")}>Service</li>
+                                            <li className='cursor' onClick={() => navigate("/About")}>About Us</li>
+                                            <li className='cursor' onClick={() => navigate("/ContactUS")}>Contacts Us</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -114,15 +114,15 @@ const Footer = () => {
                                     </div>
                                     <div className="footer-links">
                                         <ul className="p-0">
-                                            <li onClick={() => handleNavigate("/echs")}>ECHS Application</li>
-                                            <li onClick={() => handleNavigate("/resume-service")}>Resume Service</li>
-                                            <li onClick={() => handleNavigate("/important-contacts")}>
+                                            <li onClick={() => navigate("/echs")}>ECHS Application</li>
+                                            <li onClick={() => navigate("/resume-service")}>Resume Service</li>
+                                            <li onClick={() => navigate("/important-contacts")}>
                                                 Important Contacts
                                             </li>
-                                            <li onClick={() => handleNavigate("/community-safety")}>
+                                            <li onClick={() => navigate("/community-safety")}>
                                                 Community Safety
                                             </li>
-                                            <li onClick={() => handleNavigate("/welfare-schemes")}>
+                                            <li onClick={() => navigate("/welfare-schemes")}>
                                                 Welfare Schemes
                                             </li>
                                         </ul>
@@ -218,7 +218,7 @@ const Footer = () => {
                 </div>
             </footer>
 
-           
+
             {/* } */}
             {/* <Preloader /> */}
 

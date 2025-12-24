@@ -51,7 +51,7 @@ const OfferSection = () => {
             text: 'Smart investment guidance, insurance, loans, mutual funds, entrepreneurship support—maximize your ₹8-10 lakh package.',
             tagText: 'Plan Your Finances',
             buttonText: 'Plan Your Finances',
-            link: '#', // Replace with actual link
+            link: '/FinancialGuidance', // Replace with actual link
         },
         {
             iconClass: 'fas fa-users',
@@ -59,7 +59,7 @@ const OfferSection = () => {
             text: 'Join 10,000+ veterans, access global mentors, peer support, exclusive job boards, and industry networking events.',
             tagText: 'Join Community',
             buttonText: 'Join Community',
-            link: '#', // Replace with actual link
+            link: '/CommunityPage', // Replace with actual link
         },
     ];
 

@@ -72,14 +72,16 @@ const AboutArea = () => {
 
                                 <div className="about-content">
                                     <p>
-                                        Four years of service make you disciplined, brave, and responsible. VeerNXT gives you the tools to build the future you deserve.
+                                        Four years of service makes you disciplined, brave, and responsible. VeerNXT gives you the tools to build the future you deserve.
+
+
+                                        Whether you aim for a government job, a corporate career, or your own business, we guide you with military-grade clarity and purpose.
+
                                     </p>
                                     <p className="fw-bold">
                                         India's most trusted, veteran-led transition platform - the country's first Defence Reintegration EdTech for Agniveers and ex-servicemen - offering jobs, training, career guidance, and mentorship under one roof.
                                     </p>
-                                    <p>
-                                        Whether you aim for a government job, a corporate career, or your own business, we guide you with military-grade clarity and purpose.
-                                    </p>
+
                                 </div>
 
                                 {/* Stat Box */}

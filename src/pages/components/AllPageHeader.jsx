@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function AllPageHeader(props) {
 
     // console.log()
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
 
     return (
@@ -28,7 +32,7 @@ function AllPageHeader(props) {
                             </div>
                             <div className="breadcrumb-menu">
                                 <nav aria-label="Breadcrumbs" className="breadcrumb-trail breadcrumbs">
-                                    <ul className="trail-items">
+                                    <ul style={{ padding: '0' }} className="trail-items">
                                         <li className="trail-item trail-begin">
                                             {/* <Link to="/"> */}
                                             <span>home</span>

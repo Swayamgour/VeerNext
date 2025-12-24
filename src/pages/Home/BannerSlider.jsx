@@ -5,6 +5,9 @@ import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import { useNavigate } from "react-router-dom";
+import { FaShieldAlt, FaMedal } from "react-icons/fa";
+
 
 const slidesData = [
     {
@@ -37,7 +40,11 @@ const slidesData = [
     },
 ];
 
+
+
 const BannerSlider = () => {
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         const badges = document.querySelectorAll(".trust-badge-compact");
@@ -128,24 +135,33 @@ const BannerSlider = () => {
 
 
 
-                                <div className="mission-cta-buttons">
-                                    <button className="mission-btn fill-btn">
+                               
+                                <div className="trust-badge-compact mx-auto">
+                                    <FaShieldAlt className="badge-icon-compact" />
+                                    <div>
+                                        <div className="badge-text-compact text-white">
+                                            Government of India Approved
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="trust-badge-compact mx-auto">
+                                    <FaMedal className="badge-icon-compact" />
+                                    <div>
+                                        <div className="badge-text-compact text-white">
+                                            Veteran Led, Veteran Driven
+                                        </div>
+                                    </div>
+                                </div>
+
+                                 <div className="mission-cta-buttons">
+                                    <button onClick={() => navigate('/Courses')} className="mission-btn fill-btn">
                                         <span>Start Your Journey</span>
                                         <i class="fas fa-rocket btn-icon"></i>
                                     </button>
                                 </div>
-                                <div class="trust-badge-compact mx-auto">
-                                    <i class="fas fa-award badge-icon-compact"></i>
-                                    <div>
-                                        <div class="badge-text-compact text-white">Government of India Approved </div>
-                                    </div>
-                                </div>
-                                <div class="trust-badge-compact mx-auto">
-                                    <i class="fas fa-award badge-icon-compact"></i>
-                                    <div>
-                                        <div class="badge-text-compact text-white">Veteran Led, Veteran Driven</div>
-                                    </div>
-                                </div>
+
+
                             </div>
                         </div>
                     </SwiperSlide>

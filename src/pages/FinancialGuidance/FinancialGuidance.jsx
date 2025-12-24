@@ -100,7 +100,7 @@ function FinancialGuidance() {
             <section className="fn-hero">
                 <div className="container">
                     {/* <div className="row align-items-center   "> */}
-                        <div className="row align-items-center g-5 g-md-0">
+                    <div className="row align-items-center  g-md-0">
 
                         <div className="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
                             <h1 style={{ color: 'var(--' }} className="fn-hero-title">
@@ -126,7 +126,7 @@ function FinancialGuidance() {
 
 
                         <div className="col-lg-4 text-center wow fadeInUp  " data-wow-delay="0.2s">
-                            <div className="fn-hero-img ">
+                            <div className="fn-hero-img  responsive-mt">
                                 <img src='/assets/img/about/financial.jpg'
                                     alt="Financial Planning for Agniveers"
                                     className="img-fluid" />
@@ -442,22 +442,10 @@ function FinancialGuidance() {
                             Simple. Transparent. Designed For Soldiers.
                         </h2>
 
-                        {/* <p className={styles.benefitsSectionSubtitle}>
-                            Comprehensive tools and resources designed specifically for your transition journey
-                        </p> */}
+
                     </div>
 
-                    {/* <section className="features-area pt-70 pb-40 p-relative bg-white z-index-2">
-                        <div className="container">
 
-                            <div className="bd-section-title-wrapper">
-                                <div className="bd-section-subtitle">
-                                    Simple. Transparent. Designed For Soldiers.
-                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
-                                </div>
-                                <h3 className="bd-section-title mb-60 ">HOW IT WORKS
-                                </h3>
-                            </div> */}
                     {/* <!-- Workflow --> */}
                     <div className="fn-how-it-work mt-80">
                         {/* <!-- Step 1 --> */}
@@ -793,22 +781,10 @@ function FinancialGuidance() {
                             civilian success.
                         </h2>
 
-                        {/* <p className={styles.benefitsSectionSubtitle}>
-                            Comprehensive tools and resources designed specifically for your transition journey
-                        </p> */}
+
                     </div>
 
-                    {/* <section className="features-area pt-70 pb-40 p-relative bg-white z-index-2">
-                        <div className="container">
-                            <div className="bd-section-title-wrapper">
-                                <div className="bd-section-subtitle">
-                                    Mission-ready financial systems built for disciplined
-                                    civilian success.
-                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
-                                </div>
-                                <h3 className="bd-section-title mb-60 ">Featured Tools & Modules
-                                </h3>
-                            </div> */}
+
                     <div className="row g-4">
                         <div className="col-lg-3 col-md-6  wow fadeInUp" data-wow-delay="0.2s">
                             <div className="fn-feature-tool-card">
@@ -883,23 +859,13 @@ function FinancialGuidance() {
                             Built with military integrity, designed for soldier success
                         </h2>
 
-                        {/* <p className={styles.benefitsSectionSubtitle}>
-                            Comprehensive tools and resources designed specifically for your transition journey
-                        </p> */}
+                      
                     </div>
 
-                    {/* <section className="features-area pt-70 pb-40 p-relative bg-white z-index-2">
-                        <div className="container">
-                            <div className="bd-section-title-wrapper">
-                                <div className="bd-section-subtitle">
-                                    Built with military integrity, designed for soldier success
-                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
-                                </div>
-                                <h3 className="bd-section-title mb-60 ">WHY AGNIVEERS TRUST US
-                                </h3>
-                            </div> */}
+                    
 
-                    <div className="row gy-4 col-12 mx-auto">
+                    <div className="row gy-4 col-12 mx-auto" style={{ marginBottom: "80px" }}>
+
                         <div className="col-lg-6">
                             {/* <!-- /Point 1 --> */}
                             <div className="fn-credibility-card">
@@ -1103,17 +1069,17 @@ function FinancialGuidance() {
                         ))}
 
                         {/* last button section */}
-                        <div className="col-lg-4 col-md-6 col-sm-6 d-flex align-items-center">
-                            <div className="float-animation">
-                                <div className="col-12 mt-40 text-center wow fadeInUp" data-wow-delay="0.3s">
-                                    <button className="fill-btn">
-                                        Start All 7 Missions <i className="fas fa-play-circle ms-2"></i>
-                                    </button>
+                    </div>
+                    <div className="col-lg-4 col-md-6 col-sm-6 d-flex align-items-center justify-content-center mx-auto">
+                        <div className="float-animation">
+                            <div className="col-12 mt-40 text-center wow fadeInUp" data-wow-delay="0.3s">
+                                <button className="fill-btn">
+                                    Start All 7 Missions <i className="fas fa-play-circle ms-2"></i>
+                                </button>
 
-                                    <p className="mt-3 text-muted text-center">
-                                        7 Missions • 3 Minutes Each • 21 Minutes Total
-                                    </p>
-                                </div>
+                                <p className="mt-3 text-muted text-center">
+                                    7 Missions • 3 Minutes Each • 21 Minutes Total
+                                </p>
                             </div>
                         </div>
                     </div>

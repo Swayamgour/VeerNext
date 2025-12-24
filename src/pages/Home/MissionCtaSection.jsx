@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * MissionCtaSection Component
@@ -11,24 +12,26 @@ const MissionCtaSection = ({ onStartMissionClick, onViewExamsClick, onFinancialC
             text: 'Start My Mission',
             className: 'fill-btn',
             icon: 'fas fa-rocket',
-            link: '#start-mission', // Replace with actual URL
-            onClick: onStartMissionClick,
+            link: '/StartMissionPage', // Replace with actual URL
+            // onClick: onStartMissionClick,
         },
         {
             text: 'View Exams',
             className: 'border-btn',
             icon: 'fas fa-search',
-            link: '#view-exams', // Replace with actual URL
-            onClick: onViewExamsClick,
+            link: '/ViewExamsPage', // Replace with actual URL
+            // onClick: onViewExamsClick,
         },
         {
             text: 'Financial Command',
             className: 'border-btn',
             icon: 'fas fa-chart-line',
-            link: '#financial-command', // Replace with actual URL
-            onClick: onFinancialCommandClick,
+            link: '/FinancialCommandPage', // Replace with actual URL
+            // onClick: onFinancialCommandClick,
         },
     ];
+
+    const navigate = useNavigate()
 
     return (
         <section className="mission-cta-section mb-85">
@@ -48,20 +51,12 @@ const MissionCtaSection = ({ onStartMissionClick, onViewExamsClick, onFinancialC
 
                             <div className="mission-cta-buttons wow fadeInUp" data-wow-delay=".3s">
                                 {ctaButtons.map((button, index) => (
-
-
                                     <div className="mission-cta-buttons">
-                                        <button onClick={(e) => {
-                                            if (button.onClick) {
-                                                e.preventDefault();
-                                                button.onClick(e);
-                                            }
-                                        }} className={`mission-btn ${button.className}`}>
+                                        <button onClick={() => navigate(`${button?.link}`)} className={`mission-btn ${button.className}`}>
                                             <span>{button.text}</span>
                                             <i className={`${button.icon} btn-icon`}></i>
                                         </button>
                                     </div>
-
 
                                 ))}
                             </div>

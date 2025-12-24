@@ -41,6 +41,9 @@ import Login from './pages/Login';
 import ContactUs from './pages/Contact';
 import FinancialPlanningPlatform from './pages/FinancialGuidance/FinancialPlanningPlatform';
 import MoneyPlanView from './pages/FinancialGuidance/MoneyPlanView';
+import StartMissionPage from './pages/Home/StartMissionPage';
+import FinancialCommandPage from './pages/Home/FinancialCommandPage';
+import ViewExamsPage from './pages/Home/ViewExamsPage';
 
 
 
@@ -77,6 +80,12 @@ function App() {
         <Route path="/ContactUS" element={<ContactUs />} />
         <Route path="/FinancialPlanningPlatform" element={<FinancialPlanningPlatform />} />
         <Route path="/MoneyPlanView" element={<MoneyPlanView />} />
+
+
+        <Route path="/StartMissionPage" element={<StartMissionPage />} />
+        <Route path="/FinancialCommandPage" element={<FinancialCommandPage />} />
+        <Route path="/ViewExamsPage" element={<ViewExamsPage />} />
+
       </Routes>
     </Layout>
 

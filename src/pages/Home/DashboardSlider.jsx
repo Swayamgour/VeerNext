@@ -16,7 +16,7 @@ const DashboardSlider = () => {
             id: 1,
             title: "Personalized Dashboard",
             description:
-                '"Welcome, Agniveer [Name]" - Your customized mission control center with real-time progress tracking, personalized recommendations, and smart notifications tailored to your career goals.',
+                ' Your customized mission control center with real-time progress tracking, personalized recommendations, and smart notifications tailored to your career goals.',
             ctaText: "Start Your Journey",
             bgClass: "slide-1-bg",
         },

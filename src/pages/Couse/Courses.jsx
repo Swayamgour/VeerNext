@@ -521,6 +521,7 @@ const Courses = () => {
                 .btn-primary {
                     background: var(--primary-color);
                     color: white;
+                    font-size: 14px;
                 }
 
                 .btn-primary:hover {
