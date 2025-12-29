@@ -450,3 +450,920 @@
         font-size: 1.8rem;
     }
 }
+
+
+/* Growth Warrior Plan Specific Styles */
+
+.GWP-plan-overview {
+    /* background: linear-gradient(135deg, #fff8f0 0%, #ffe8d6 100%); */
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px 0;
+    border: 1px solid var(--clr-theme-3);
+    position: relative;
+    overflow: hidden;
+}
+
+.GWP-plan-overview::before {
+    /* content: ''; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    /* background:  var(--primary-color) */
+}
+
+.GWP-plan-overview-title {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+}
+
+.GWP-plan-overview-title i {
+    color: var(--clr-theme-3);
+    font-size: 1.8rem;
+}
+
+.GWP-plan-overview-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.GWP-plan-overview-item {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.1);
+    border-left: 4px solid var(--primary-color);
+}
+
+.GWP-plan-overview-item h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.GWP-plan-overview-item h4 i {
+    color: var(--clr-theme-3);
+
+}
+
+.GWP-plan-overview-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Allocation Chart for Growth Warrior */
+.GWP-alloca-sec {
+    background: rgba(255, 107, 53, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px 0;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.GWP-sec-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.GWP-sec-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--clr-theme-3), var(--primary-color));
+    border-radius: 2px;
+}
+
+.GWP-alloca-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.GWP-alloca-chart-visual {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.GWP-alloca-chart-circle {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: conic-gradient(#4CAF50 0% 50%,
+            /* SIP Investments - 50% */
+            #FFD700 50% 70%,
+            /* Gold Allocation - 20% */
+            var(--primary-color) 70% 90%,
+            /* Safe Savings - 20% */
+            #FF9800 90% 100%
+            /* Emergency Fund - 10% */
+        );
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.GWP-alloca-chart-center {
+    width: 180px;
+    height: 180px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.GWP-alloca-chart-total {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.GWP-alloca-chart-label {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.GWP-alloca-chart-legand {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.GWP-alloca-legend-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.GWP-alloca-legend-color {
+    width: 50px;
+    height: 30px;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.GWP-alloca-legend-color:nth-child(1) {
+    background: #4CAF50;
+    /* SIP Investments */
+}
+
+.GWP-alloca-legend-color:nth-child(2) {
+    background: #FFD700;
+    /* Gold Allocation */
+}
+
+.GWP-alloca-legend-color:nth-child(3) {
+    background: var(--primary-color);
+    /* Safe Savings */
+}
+
+.GWP-alloca-legend-color:nth-child(4) {
+    background: #FF9800;
+    /* Emergency Fund */
+}
+
+.GWP-alloca-legend-content h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.GWP-alloca-legend-content p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Investment Cards for Growth Warrior */
+.GWP-invst-detail {
+    margin: 60px 0;
+}
+
+.GWP-invst-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* border: 2px solid transparent; */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.GWP-invst-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--clr-theme-3);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+}
+
+.GWP-invst-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    /* background: linear-gradient(90deg, var(--clr-theme-3), #ffcc00); */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.GWP-invst-card:hover::before {
+    opacity: 1;
+}
+
+.GWP-invst-icon {
+    font-size: 2.5rem;
+    color: var(--clr-theme-3);
+    margin-bottom: 20px;
+}
+
+.GWP-invst-card h4 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.GWP-invst-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.GWP-invst-features li {
+    padding: 8px 0;
+    color: #666;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.GWP-invst-features li i {
+    color: var(--secondary-color);
+    margin-top: 3px;
+}
+
+.GWP-invst-return {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    /* border-radius: 10px; */
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Timeline for Growth Warrior */
+.GWP-timline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.GWP-timline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--clr-theme-3), var(--primary-color));
+}
+
+.GWP-timline-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.GWP-timline-marker {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--clr-theme-3), var(--primary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.GWP-timline-content {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.1);
+    border-left: 4px solid var(--clr-theme-3);
+    flex: 1;
+}
+
+.GWP-timline-content h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.GWP-timline-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.GWP-cta {
+    text-align: center;
+    padding: 50px;
+    background: var(--primary-color);
+    border-radius: 20px;
+    margin: 60px 0;
+    color: white;
+}
+
+.GWP-cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.GWP-cta p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.GWP-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.GWP-cta-buttons .fill-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    /* border-radius: 50px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.GWP-cta-buttons .fill-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+    background-color: var(--secondary-color);
+}
+
+.GWP-cta-buttons .border-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    /* border-radius: 50px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    background-color: var(--secondary-color);
+
+}
+
+.GWP-cta-buttons .border-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .GWP-alloca-chart {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .GWP-alloca-chart-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .GWP-alloca-chart-center {
+        width: 160px;
+        height: 160px;
+    }
+
+    .GWP-timline::before {
+        left: 20px;
+    }
+
+    .GWP-timline-marker {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .GWP-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .GWP-cta-buttons button {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+
+
+/* Balanced Patriot Plan Specific Styles */
+
+.BPP-plan-overview {
+    /* background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%); */
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px 0;
+    border: 2px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.BPP-plan-overview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.BPP-plan-overview-title {
+    color: var( --primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.BPP-plan-overview-title i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.BPP-plan-overview-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.BPP-plan-overview-item {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.1);
+    border-left: 4px solid var(--primary-color);
+}
+
+.BPP-plan-overview-item h4 {
+    color: var( --primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.BPP-plan-overview-item h4 i {
+    color: var(--primary-color);
+}
+
+.BPP-plan-overview-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Allocation Chart for Balanced Patriot */
+.BPP-alloca-sec {
+    /* background: rgba(33, 150, 243, 0.05); */
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px 0;
+    border: 1px solid rgba(33, 150, 243, 0.2);
+}
+
+.BPP-sec-title {
+    color: var( --primary-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.BPP-sec-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), #4CAF50);
+    border-radius: 2px;
+}
+
+.BPP-alloca-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.BPP-alloca-chart-visual {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BPP-alloca-chart-circle {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: conic-gradient(var(--primary-color) 0% 40%,
+            /* Secure Investments - 40% */
+            #4CAF50 40% 75%,
+            /* Growth Instruments - 35% */
+            #FF9800 75% 90%,
+            /* Protection Shield - 15% */
+            #FFD700 90% 100%
+            /* Gold Reserve - 10% */
+        );
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BPP-alloca-chart-center {
+    width: 180px;
+    height: 180px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.BPP-alloca-chart-total {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var( --primary-color);
+}
+
+.BPP-alloca-chart-label {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.BPP-alloca-chart-legand {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.BPP-alloca-legend-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.BPP-alloca-legend-color {
+    width: 50px;
+    height: 30px;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.BPP-alloca-legend-content h4 {
+    color: var( --primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.BPP-alloca-legend-content p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Investment Cards for Balanced Patriot */
+.BPP-invst-detail {
+    margin: 60px 0;
+}
+
+.BPP-invst-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.BPP-invst-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 40px rgba(33, 150, 243, 0.2);
+}
+
+.BPP-invst-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), #4CAF50);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.BPP-invst-card:hover::before {
+    opacity: 1;
+}
+
+.BPP-invst-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.BPP-invst-card h4 {
+    color: var( --primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.BPP-invst-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.BPP-invst-features li {
+    padding: 8px 0;
+    color: #666;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.BPP-invst-features li i {
+    color: #4CAF50;
+    margin-top: 3px;
+}
+
+.BPP-invst-return {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Timeline for Balanced Patriot */
+.BPP-timline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.BPP-timline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary-color), #4CAF50);
+}
+
+.BPP-timline-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.BPP-timline-marker {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.BPP-timline-content {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.1);
+    border-left: 4px solid var(--primary-color);
+    flex: 1;
+}
+
+.BPP-timline-content h4 {
+    color: var( --primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.BPP-timline-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.BPP-cta {
+    text-align: center;
+    padding: 50px;
+    background: var(--primary-color);
+    border-radius: 20px;
+    margin: 60px 0;
+    color: white;
+}
+
+.BPP-cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.BPP-cta p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.BPP-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.BPP-cta-buttons .fill-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    /* border-radius: 50px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.BPP-cta-buttons .fill-btn:hover {
+    transform: translateY(-3px);
+    /* box-shadow: 0 10px 25px rgba(33, 150, 243, 0.3);2 */
+    background-color: var(--secondary-color);
+
+}
+
+.BPP-cta-buttons .border-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    /* border-radius: 50px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    
+}
+
+.BPP-cta-buttons .border-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .BPP-alloca-chart {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .BPP-alloca-chart-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .BPP-alloca-chart-center {
+        width: 160px;
+        height: 160px;
+    }
+
+    .BPP-timline::before {
+        left: 20px;
+    }
+
+    .BPP-timline-marker {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .BPP-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .BPP-cta-buttons button {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}

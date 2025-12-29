@@ -1,0 +1,408 @@
+/* Get Started Benefits Page */
+.getStartedBenefitsPage {
+    min-height: 100vh;
+    /* background: linear-gradient(135deg, #000428 0%, #004e92 100%); */
+    color: var(--primary-color);
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+/* Animated Background */
+.getStartedBenefitsPage::before {
+    /* content: ''; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 107, 53, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 168, 255, 0.15) 0%, transparent 40%),
+        repeating-linear-gradient(45deg,
+            transparent,
+            transparent 10px,
+            rgba(255, 255, 255, 0.02) 10px,
+            rgba(255, 255, 255, 0.02) 20px);
+    z-index: 0;
+}
+
+.getStartedContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header Section */
+.getStartedHeader {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.getStartedTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    /* background: linear-gradient(135deg, #ffffff, #00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; */
+    /* text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
+}
+
+.getStartedSubtitle {
+    font-size: 1.4rem;
+    color: var(--clr-theme-3);
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.getStartedHighlight {
+    color: #ffcc00;
+    font-weight: 600;
+}
+
+/* Benefits Grid */
+.benefitsGridSection {
+    margin: 60px 0;
+}
+
+.benefitsGridTitle {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700;
+
+}
+
+.benefitsGridTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.benefitCard {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--clr-common-border);
+    transition: all 0.4s ease;
+}
+
+.benefitCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+
+
+}
+
+.benefitCard:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.benefitCard:hover::before {
+    opacity: 1;
+}
+
+.benefitIcon {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #ff6b35, #00d2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.benefitTitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.benefitDescription {
+    color: var(--clr-theme-3);
+    line-height: 1.6;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+/* Success Stories */
+.successStories {
+    /* background: rgba(0, 78, 146, 0.3; */
+    border-radius: 20px;
+    padding: 50px;
+    margin: 60px 0;
+    /* border: 1px solid var(--primary-color); */
+    border: 2px solid var(--clr-common-border)
+}
+
+.successStoriesTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.storiesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.storyCard {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+/* .storyCard:hover{
+  border: 1px solid var(--secondary-color);  
+} */
+
+.storyContent {
+    font-style: italic;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.storyAuthor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* width: 100px; */
+}
+
+.authorAvatar {
+    width: 50px;
+    height: 50px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--clr-common-white);
+}
+
+.authorInfo h4 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+
+}
+
+.authorInfo p {
+    margin: 5px 0 0;
+    color: var(--clr-theme-3);
+    font-size: 0.9rem;
+}
+
+/* CTA Section */
+.ctaSection {
+    text-align: center;
+    margin: 60px 0 40px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--clr-common-border);
+}
+
+.ctaContent h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: 700;
+
+    background-clip: text;
+}
+
+.ctaContent p {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* Mission Button Styles */
+.missionCtaButtons {
+    display: inline-block;
+}
+
+.missionBtn {
+    background: var(--primary-color);
+
+    color: var(--clr-common-white);
+    border: 1px solid var(--primary-color);
+    padding: 20px 45px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    /* border-radius: 50px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    min-width: 250px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.missionBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.missionBtn:hover {
+    transform: translateY(-5px);
+    /* box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4); */
+    background: var(--secondary-color);
+}
+
+.missionBtn:hover::before {
+    left: 100%;
+}
+
+.missionBtn:hover svg {
+    animation: bounceRight 0.6s ease infinite alternate;
+}
+
+@keyframes bounceRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+/* Statistics Section */
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 0;
+    padding: 40px;
+    /* background: rgba(0, 78, 146, 0.2); */
+    border-radius: 20px;
+    border: 1px solid var(--clr-theme-3);
+}
+
+.statItem {
+    text-align: center;
+}
+
+.statNumber {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    /* background: linear-gradient(135deg, #ff6b35, #00d2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; */
+    margin-bottom: 10px;
+}
+
+.statLabel {
+    color: var(--clr-theme-3);
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .getStartedTitle {
+        font-size: 2.5rem;
+    }
+
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .missionBtn {
+        min-width: 100%;
+        padding: 18px 30px;
+    }
+
+    .ctaContent h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Rocket Animation */
+.rocketIcon {
+    margin-left: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}

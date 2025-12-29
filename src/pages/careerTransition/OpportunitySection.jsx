@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
+import { useNavigate } from "react-router-dom";
 
 const OpportunitySection = () => {
     const benefits = [
@@ -45,6 +46,8 @@ const OpportunitySection = () => {
     ];
 
     const swiperRef = useRef();
+
+    const navigate = useNavigate()
 
     const handlePrevClick = () => {
         swiperRef.current.slidePrev();
@@ -139,6 +142,7 @@ const OpportunitySection = () => {
                         <button
                             style={{ border: "1px solid var(--primary-color)" }}
                             className="mission-btn fill-btn "
+                            onClick={() => navigate('/ExamOpportunitiesPage')}
                         >
                             <span>Explore Exam Opportunities</span>
                             <FaArrowRight />

@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from '../../css/career.module.css';
 import { FaChevronDown, FaShieldAlt, FaMedal, FaBullseye, FaStar, FaCheck } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
+
+    const navigate = useNavigate()
     return (
         <section className={styles.heroSection}>
             {/* Clean Background with subtle pattern */}
@@ -56,7 +59,7 @@ const HeroSection = () => {
                             </button> */}
 
 
-                            <button className="mission-btn fill-btn ">
+                            <button onClick={()=>navigate('/FreeCareerReportPage')} className="mission-btn fill-btn ">
                                 <span> Get Your Free Career Report </span>
                                 <FaChevronDown />
                                 {/* <i class="fas fa-rocket btn-icon"></i> */}

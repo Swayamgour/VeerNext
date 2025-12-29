@@ -26,21 +26,10 @@ function MoneyPlanView() {
                             SECURE SOLDIER PLAN
                         </h2>
 
-                        {/* <p className={styles.benefitsSectionSubtitle}>
-                            VeerNXT provides the clarity, direction and tools you need to step confidently into civilian life.
-                        </p> */}
+
                     </div>
 
-                    {/* <section className="features-area pt-70 pb-70 .secure-soldier p-relative bg-white z-index-2">
-                        <div className="container">
 
-                            <div className="bd-section-title-wrapper wow fadeInUp" data-wow-delay="0.1s">
-                                <div className="bd-section-subtitle">
-                                    Money Plan View
-                                    <i className="flaticon-001-bullet"></i>
-                                </div>
-                                <h3 className="bd-section-title mb-60 ">SECURE SOLDIER PLAN</h3>
-                            </div> */}
 
                     <div className="MPV-plan-overview">
                         <h2 className="MPV-plan-overview-title">
@@ -323,10 +312,7 @@ function MoneyPlanView() {
                                 Contact Us
                                 <i className="fas fa-phone ms-2"></i>
                             </button>
-                            <button className="border-btn" href="javascript:void(0)">
-                                Back
-                                <i className="fas fa-arrow-left ms-2"></i>
-                            </button>
+                           
                         </div>
                     </div>
                 </div>

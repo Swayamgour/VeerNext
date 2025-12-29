@@ -1,0 +1,212 @@
+/* Download Report Page - Unique Classes */
+.downloadReportPage {
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%); */
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.downloadReportPage::before {
+  /* content: ''; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var( --primary-color), var( --primary-color));
+}
+
+.downloadReportContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.downloadReportHeader {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(26, 42, 108, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.downloadReportTitle {
+  color: var( --primary-color);
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.downloadReportTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var( --primary-color);
+  border-radius: 2px;
+}
+
+.downloadReportSubtitle {
+  color: #555;
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.downloadReportPreview {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eaeaea;
+}
+
+.previewTitle {
+  color: var( --primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.previewContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.previewCard {
+  background: #f8faff;
+  padding: 30px;
+  border-radius: 15px;
+  border-top: 5px solid var( --primary-color);
+  transition: transform 0.3s ease;
+}
+
+.previewCard:hover {
+  transform: translateY(-5px);
+}
+
+.previewCardTitle {
+  color: var( --primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.previewCardContent {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Report CTA Buttons */
+.reportCtaButtons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.missionCtaButtons {
+  display: flex;
+  gap: 15px;
+}
+
+.missionBtn {
+  background: white;
+  color: var( --primary-color);
+  /* border: 2px solid var( --primary-color); */
+  padding: 18px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  /* border-radius: 50px; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  min-width: 280px;
+}
+
+.missionBtn:hover {
+  background: var( --secondary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(26, 42, 108, 0.2);
+}
+
+.fillBtn {
+  background: var( --primary-color);
+  color: white;
+}
+
+.fillBtn:hover {
+  background: var(--primary-color);
+  /* border-color: #2d388a; */
+}
+
+.ctaIcon {
+  font-size: 1.3rem;
+}
+
+.ctaArrow {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.missionBtn:hover .ctaArrow {
+  transform: translateX(5px);
+}
+
+/* Features Section */
+.downloadFeatures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.featureCard {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  color: var( --primary-color);
+  margin-bottom: 20px;
+}
+
+.featureTitle {
+  color: var( --primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.featureDesc {
+  color: #666;
+  line-height: 1.6;
+}

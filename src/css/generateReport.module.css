@@ -1,0 +1,187 @@
+/* Generate Report Page - Unique Classes */
+.generateReportPage {
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #fff9f0 0%, #ffe6e6 100%); */
+  padding: 60px 20px;
+  position: relative;
+}
+
+.generateReportContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 25px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(255, 107, 53, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.generateReportContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var( --primary-color), var( --primary-color));
+}
+
+.generateReportHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.generateReportTitle {
+  color: var( --primary-color);
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.generateReportSubtitle {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Form Styles */
+.reportForm {
+  margin-top: 40px;
+}
+
+.formGroup {
+  margin-bottom: 30px;
+}
+
+.formLabel {
+  display: block;
+  color: var( --primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.formInput {
+  width: 100%;
+  padding: 18px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var( --primary-color);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.formSelect {
+  width: 100%;
+  padding: 18px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  appearance: none;
+  cursor: pointer;
+}
+
+.formSelect:focus {
+  outline: none;
+  border-color: var( --primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+/* Radio Button Group */
+.radioGroup {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 12px 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.radioLabel:hover {
+  background: #e8f4ff;
+}
+
+.radioInput {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+/* Submit Button */
+.generateReportCta {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.generateMissionBtn {
+  /* background: linear-gradient(135deg, var( --primary-color), var( --primary-color)); */
+  color: white;
+  border: none;
+  padding: 16px 45px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  /* border-radius: 50px; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  min-width: 300px;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.generateMissionBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 107, 53, 0.3);
+  /* background: linear-gradient(135deg, var( --primary-color), var( --primary-color)); */
+}
+
+.generateCtaArrow {
+  transition: transform 0.3s ease;
+}
+
+.generateMissionBtn:hover .generateCtaArrow {
+  transform: translateX(8px);
+}
+
+/* Loading Animation */
+.loadingAnimation {
+  text-align: center;
+  padding: 40px;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var( --primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

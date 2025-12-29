@@ -12,6 +12,7 @@ import {
     FaDownload,
     FaShieldAlt
 } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const ReportSnapshot = () => {
     const reportFeatures = [
@@ -71,6 +72,8 @@ const ReportSnapshot = () => {
         }
     ];
 
+
+    const navigate = useNavigate();
     const categories = ['All', 'Strategy', 'Assessment', 'Validation', 'Analysis', 'Resources', 'Planning', 'Career'];
 
     return (
@@ -178,7 +181,7 @@ const ReportSnapshot = () => {
 
 
                             <div className="mission-cta-buttons">
-                                <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
+                                <button onClick={() => navigate('/DownloadReportPage')} style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
                                     <FaDownload className={styles.ctaIcon} />
                                     <span>Download Sample Report</span>
                                     <FaArrowRight className={styles.ctaArrow} />
@@ -186,7 +189,7 @@ const ReportSnapshot = () => {
                             </div>
 
                             <div className="mission-cta-buttons">
-                                <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
+                                <button onClick={() => navigate('/GenerateReportPage')} style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
                                     <span>Generate My Report</span>
                                     <FaArrowRight className={styles.ctaArrow} />
                                 </button>

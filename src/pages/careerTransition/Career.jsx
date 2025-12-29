@@ -25,7 +25,7 @@ function Career() {
                 <BenefitsSection />
                 <HowItWorks />
                 <ReportSnapshot />
-                <Testimonials />
+                {/* <Testimonials /> */}
                 <CTA />
             </div>
         </>

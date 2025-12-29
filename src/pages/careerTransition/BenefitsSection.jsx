@@ -10,6 +10,7 @@ import {
     FaCheckCircle,
     FaArrowRight
 } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const BenefitsSection = () => {
     const benefits = [
@@ -51,13 +52,15 @@ const BenefitsSection = () => {
         }
     ];
 
+    const navigate = useNavigate()
+
     return (
         <section className={styles.opportunitySection}>
             <div className={styles.benefitsContainer}>
 
                 {/* Section Header */}
                 <div className={styles.benefitsHeader}>
-                   
+
 
                     <div className={styles.headerDecorator}>
                         <div className={styles.decLine}></div>
@@ -117,17 +120,7 @@ const BenefitsSection = () => {
                     ))}
                 </div>
 
-                {/* Bottom CTA */}
-                {/* <div className={styles.benefitsCtaSection}>
-                    <div className={styles.benefitsCtaContent}>
-                        <h3>Ready to Access All These Benefits?</h3>
-                        <p>Join thousands of Agniveers who have successfully transitioned</p>
-                    </div>
-                    <button className={styles.benefitsCtaButton}>
-                        <span>Get Started Now</span>
-                        <span className={styles.benefitsCtaArrow}>→</span>
-                    </button>
-                </div> */}
+
 
                 <div className={styles.ctaSection}>
                     <div className={styles.ctaContent}>
@@ -137,7 +130,7 @@ const BenefitsSection = () => {
 
 
                     <div className="mission-cta-buttons">
-                        <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
+                        <button onClick={() => navigate('/GetStartedBenefitsPage')} style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
                             <span>Get Started Now</span>
                             {/* <span className={styles.benefitsCtaArrow}>→</span> */}
                             <FaArrowRight />

@@ -21,11 +21,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-cards';
 import 'swiper/css/effect-coverflow';
+import { useNavigate } from 'react-router-dom';
 
 const HowItWorks = () => {
     const swiperRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
     const [isWOWLoaded, setIsWOWLoaded] = useState(false);
+
+    const navigate = useNavigate()
 
     const steps = [
         {
@@ -133,7 +136,7 @@ const HowItWorks = () => {
 
                 {/* Section Header */}
                 <div className={styles.howItWorksHeader}>
-                   
+
 
                     <div className={styles.headerDecorator}>
                         <div className={styles.decLine}></div>
@@ -239,7 +242,7 @@ const HowItWorks = () => {
                     </div>
 
                     <div className="mission-cta-buttons">
-                        <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn">
+                        <button onClick={() => navigate('/GenerateCareerReportPage')} style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn">
                             <span>Generate My Career Transition Report</span>
                             <FaArrowRight />
                         </button>

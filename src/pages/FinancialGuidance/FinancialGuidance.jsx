@@ -688,7 +688,7 @@ function FinancialGuidance() {
                                     </div>
                                 </div>
 
-                                <div onClick={() => navigate('/MoneyPlanView')} className="fn-money-plan-cta">
+                                <div onClick={() => navigate('/GrowthWarriorPlanPage')} className="fn-money-plan-cta">
                                     <button className="fill-btn">
                                         View Example <i className="fas fa-arrow-right"></i>
                                     </button>
@@ -748,7 +748,7 @@ function FinancialGuidance() {
                                     </div>
                                 </div>
 
-                                <div onClick={() => navigate('/MoneyPlanView')} className="fn-money-plan-cta">
+                                <div onClick={() => navigate('/BalancedPatriotPlanPage')} className="fn-money-plan-cta">
                                     <button className="fill-btn">
                                         View Example <i className="fas fa-arrow-right"></i>
                                     </button>

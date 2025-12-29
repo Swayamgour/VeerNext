@@ -1464,6 +1464,7 @@
     color: var(--primary-color);
     margin-bottom: 12px;
     transition: color 0.3s ease;
+    height: 3rem;
 }
 
 .cs-veergear-prd-card:hover .cs-veergear-prd-name {
@@ -1473,6 +1474,7 @@
 .cs-veergear-prd-type {
     font-size: 0.9rem;
     margin-bottom: 20px;
+    height: 2rem;
 }
 
 /* Button with slide-in effect */

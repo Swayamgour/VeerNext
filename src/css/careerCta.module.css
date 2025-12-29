@@ -1,0 +1,136 @@
+/* Original CTA Section */
+.ctaSection {
+    padding: 80px 20px;
+    /* background: linear-gradient(135deg, var( --primary-color), #2d388a); */
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.ctaTitle {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+
+.mainCTA {
+    background-color: var( --primary-color);
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.mainCTA:hover {
+    background-color: #ff8535;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Naye page ke liye unique classes */
+.careerReportPage {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 40px 20px;
+}
+
+.reportContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.reportHeader {
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 20px;
+}
+
+.reportTitle {
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.reportSubtitle {
+    color: #666;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.reportContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.reportCard {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.cardTitle {
+    color: var( --primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.cardContent {
+    color: #555;
+    line-height: 1.6;
+}
+
+.reportList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reportListItem {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.listIcon {
+    color: var( --primary-color);
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.downloadBtn {
+    background: var( --primary-color);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    /* border-radius: 50px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 50px auto 0;
+    transition: all 0.3s ease;
+}
+
+.downloadBtn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}

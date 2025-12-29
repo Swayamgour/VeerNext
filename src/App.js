@@ -44,6 +44,16 @@ import MoneyPlanView from './pages/FinancialGuidance/MoneyPlanView';
 import StartMissionPage from './pages/Home/StartMissionPage';
 import FinancialCommandPage from './pages/Home/FinancialCommandPage';
 import ViewExamsPage from './pages/Home/ViewExamsPage';
+import CareerReport from './pages/careerTransition/CareerReport';
+import DownloadReportPage from './pages/careerTransition/DownloadReportPage';
+import GenerateReportPage from './pages/careerTransition/GenerateReportPage';
+import GenerateCareerReportPage from './pages/careerTransition/GenerateCareerReportPage';
+import GetStartedBenefitsPage from './pages/careerTransition/GetStartedBenefitsPage';
+import ExamOpportunitiesPage from './pages/careerTransition/ExamOpportunitiesPage';
+import FreeCareerReportPage from './pages/careerTransition/FreeCareerReportPage';
+import GrowthWarriorPlanPage from './pages/FinancialGuidance/GrowthWarriorPlanPage';
+import BalancedPatriotPlanPage from './pages/FinancialGuidance/BalancedPatriotPlanPage';
+import VeerNxtCommunityPage from './pages/CommunityPage/VeerNxtCommunityPage';
 
 
 
@@ -85,6 +95,16 @@ function App() {
         <Route path="/StartMissionPage" element={<StartMissionPage />} />
         <Route path="/FinancialCommandPage" element={<FinancialCommandPage />} />
         <Route path="/ViewExamsPage" element={<ViewExamsPage />} />
+        <Route path="/CareerReport" element={<CareerReport />} />
+        <Route path="/DownloadReportPage" element={<DownloadReportPage />} />
+        <Route path="/GenerateReportPage" element={<GenerateReportPage />} />
+        <Route path="/GenerateCareerReportPage" element={<GenerateCareerReportPage />} />
+        <Route path="/GetStartedBenefitsPage" element={<GetStartedBenefitsPage />} />
+        <Route path="/ExamOpportunitiesPage" element={<ExamOpportunitiesPage />} />
+        <Route path="/FreeCareerReportPage" element={<FreeCareerReportPage />} />
+        <Route path="/GrowthWarriorPlanPage" element={<GrowthWarriorPlanPage />} />
+        <Route path="/BalancedPatriotPlanPage" element={<BalancedPatriotPlanPage />} />
+        <Route path="/VeerNxtCommunityPage" element={<VeerNxtCommunityPage />} />
 
       </Routes>
     </Layout>
