@@ -56,6 +56,8 @@ import BalancedPatriotPlanPage from './pages/FinancialGuidance/BalancedPatriotPl
 import VeerNxtCommunityPage from './pages/CommunityPage/VeerNxtCommunityPage';
 import FinancialLearningBootcampPage from './pages/FinancialGuidance/FinancialLearningBootcampPage';
 import JoinCommunityPage from './pages/CommunityPage/JoinCommunityPage';
+import IndianArmySSCTechDetails from './pages/Home/IndianArmySSCTechDetails';
+import ComingSoonPage from './pages/ComingSoonPage';
 
 
 
@@ -109,6 +111,8 @@ function App() {
         <Route path="/VeerNxtCommunityPage" element={<VeerNxtCommunityPage />} />
         <Route path="/FinancialLearningBootcampPage" element={<FinancialLearningBootcampPage />} />
         <Route path="/JoinCommunityPage" element={<JoinCommunityPage />} />
+        <Route path="/IndianArmySSCTechDetails" element={<IndianArmySSCTechDetails />} />
+        <Route path="/ComingSoonPage" element={<ComingSoonPage />} />
 
       </Routes>
     </Layout>

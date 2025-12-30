@@ -120,7 +120,7 @@ const DashboardSlider = () => {
                         effect="fade"
                         speed={800}
                         autoplay={{
-                            delay: 5000,
+                            delay: 2000,
                             disableOnInteraction: false,
                         }}
                         onSlideChange={handleSlideChange}

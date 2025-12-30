@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AllPageHeader from '../components/AllPageHeader';
+import { useNavigate } from 'react-router-dom';
 // import './ViewExamsPage.css';
 
 const ViewExamsPage = () => {
@@ -99,6 +100,8 @@ const ViewExamsPage = () => {
             [filterType]: value
         }));
     };
+
+    const navigate = useNavigate()
 
     return (
         <>
@@ -354,15 +357,13 @@ const ViewExamsPage = () => {
                                                         <span><i className="fas fa-rupee-sign"></i> Fee: {exam.applicationFee}</span>
                                                     </div>
                                                     <div className="exam-actions">
-                                                        <button className="view-details-btn">
+                                                        <button onClick={() => navigate('/IndianArmySSCTechDetails')} className="view-details-btn">
                                                             <i className="fas fa-eye"></i> View Details
                                                         </button>
-                                                        <button className="apply-now-btn">
+                                                        <button onClick={() => navigate('/ComingSoonPage')} className="apply-now-btn">
                                                             <i className="fas fa-paper-plane"></i> Apply Now
                                                         </button>
-                                                        {/* <button className="reminder-btn">
-                                                            <i className="fas fa-bell"></i>
-                                                        </button> */}
+
                                                     </div>
                                                 </div>
                                             </div>
