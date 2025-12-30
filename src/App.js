@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 // import HeaderHome from './pages/Header';
 
@@ -24,14 +24,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home/Home';
 import Layout from './pages/components/Layout';
 import CourseDetails from './pages/Couse/CourseDetails';
 import Courses from './pages/Couse/Courses';
 import Preloader from './pages/components/Preloader';
 import { useEffect, useState } from 'react';
-import SidebarMenu from './pages/components/SidebarMenu';
+// import SidebarMenu from './pages/components/SidebarMenu';
 import UserDashboard from './pages/Profile/UserDashboard';
 import Career from './pages/careerTransition/Career';
 import FinancialGuidance from './pages/FinancialGuidance/FinancialGuidance';
@@ -54,6 +54,8 @@ import FreeCareerReportPage from './pages/careerTransition/FreeCareerReportPage'
 import GrowthWarriorPlanPage from './pages/FinancialGuidance/GrowthWarriorPlanPage';
 import BalancedPatriotPlanPage from './pages/FinancialGuidance/BalancedPatriotPlanPage';
 import VeerNxtCommunityPage from './pages/CommunityPage/VeerNxtCommunityPage';
+import FinancialLearningBootcampPage from './pages/FinancialGuidance/FinancialLearningBootcampPage';
+import JoinCommunityPage from './pages/CommunityPage/JoinCommunityPage';
 
 
 
@@ -105,6 +107,8 @@ function App() {
         <Route path="/GrowthWarriorPlanPage" element={<GrowthWarriorPlanPage />} />
         <Route path="/BalancedPatriotPlanPage" element={<BalancedPatriotPlanPage />} />
         <Route path="/VeerNxtCommunityPage" element={<VeerNxtCommunityPage />} />
+        <Route path="/FinancialLearningBootcampPage" element={<FinancialLearningBootcampPage />} />
+        <Route path="/JoinCommunityPage" element={<JoinCommunityPage />} />
 
       </Routes>
     </Layout>

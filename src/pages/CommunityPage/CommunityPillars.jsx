@@ -40,7 +40,7 @@ const CommunityPillars = () => {
                             <div className={styles.decLine}></div>
                         </div>
 
-                        <h2 className={styles.sectionTitle}>
+                        <h2 className={styles.sectionTitle} style={{letterSpacing:'2px'}}>
                             Community Pillars
                         </h2>
 

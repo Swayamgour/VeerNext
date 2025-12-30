@@ -1,73 +1,24 @@
 import React from 'react';
 // import styles from './SkillForgeAcademy.module.css';
 import styles from '../../css/career.module.css';
+
+import { tracks } from '../components/data';
 import { FaCheckCircle } from 'react-icons/fa';
-import { FaUserTie, FaShieldAlt, FaLaptopCode, FaLanguage } from "react-icons/fa";
 
 // import { FaUserTie, FaShieldAlt, FaLaptopCode, FaLanguage } from "react-icons/fa";
 
 
 const SkillForgeAcademy = () => {
 
-    const tracks = [
-        {
-            number: '1️⃣',
-            title: 'Corporate Readiness Track',
-            subtitle: 'From Uniform to Office Leadership.',
-            skills: [
-                'Workplace behaviour & communication',
-                'Email writing',
-                'Excel, MIS, CRM basics'
-            ],
-            icon: <FaUserTie />,
-            color: 'var(--growth-color)'
-        },
-        {
-            number: '2️⃣',
-            title: 'Security & Ops Track',
-            subtitle: 'Command. Control. Coordinate.',
-            skills: [
-                'Security officer training',
-                'CCTV ops & surveillance',
-                'Facility management',
-                'Crisis response basics'
-            ],
-            icon: <FaShieldAlt />,
-            color: 'var(--protection-color)'
-        },
-        {
-            number: '3️⃣',
-            title: 'Tech & Digital Track',
-            subtitle: 'Future-ready digital skills.',
-            skills: [
-                'Basic IT & computer fundamentals',
-                'Digital tools (Docs, Sheets, CRM)',
-                'Intro to cybersecurity',
-                'Data entry + administrative systems'
-            ],
-            icon: <FaLaptopCode />,
-            color: 'var(--skills-color)'
-        },
-        {
-            number: '4️⃣',
-            title: 'Communication & English Mastery',
-            subtitle: 'Speak with confidence.',
-            skills: [
-                'Spoken English',
-                'Interview communication'
-            ],
-            icon: <FaLanguage />,
-            color: 'var(--gold-color)'
-        }
-    ];
+
 
 
     return (
         <>
 
 
-            <section  className={styles.benefitsSection}>
-               
+            <section className={styles.benefitsSection}>
+
 
 
                 <div className={styles.benefitsContainer}>
@@ -94,7 +45,7 @@ const SkillForgeAcademy = () => {
 
 
 
-                    
+
 
                     <div className={styles.benefitsSectionGrid}>
                         {tracks?.map((benefit, index) => (

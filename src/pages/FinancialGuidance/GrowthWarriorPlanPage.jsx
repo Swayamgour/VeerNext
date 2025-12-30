@@ -93,61 +93,61 @@ function GrowthWarriorPlanPage() {
                     </div>
 
                     {/* Allocation Breakdown */}
-                    <div className="GWP-alloca-sec">
-                        <h2 className="GWP-sec-title">Portfolio Allocation</h2>
+                    <div className="MPV-alloca-sec">
+                        <h2 className="MPV-sec-title">Portfolio Allocation</h2>
 
-                        <div className="GWP-alloca-chart">
-                            <div className="GWP-alloca-chart-visual">
-                                <div className="GWP-alloca-chart-circle">
-                                    <div className="GWP-alloca-chart-center">
-                                        <div className="GWP-alloca-chart-total">100%</div>
-                                        <div className="GWP-alloca-chart-label">Total Allocation</div>
+                        <div className="MPV-alloca-chart">
+                            <div className="MPV-alloca-chart-visual">
+                                <div className="MPV-alloca-chart-circle">
+                                    <div className="MPV-alloca-chart-center">
+                                        <div className="MPV-alloca-chart-total">100%</div>
+                                        <div className="MPV-alloca-chart-label">Total Allocation</div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="GWP-alloca-chart-legand">
-                                <div className="GWP-alloca-legend-item">
-                                    <div className="GWP-alloca-legend-color" style={{ background: '#4CAF50' }}></div>
-                                    <div className="GWP-alloca-legend-content">
-                                        <h4>50% - SIP Investments</h4>
+                            <div className="MPV-alloca-chart-legand">
+                                <div className="MPV-alloca-legend-item">
+                                    <div className="MPV-alloca-legend-color"></div>
+                                    <div className="MPV-alloca-legend-content">
+                                        <h4>40% - Safe Savings</h4>
                                         <p>
-                                            Index Funds, Flexi-Cap Funds, Sectoral Funds,
-                                            Technology Funds, Mid & Small Cap Funds with
-                                            Systematic Investment Plans
+                                            Public Provident Fund (PPF), Post Office
+                                            Monthly Income Scheme, Senior Citizen
+                                            Savings Scheme, Fixed Deposits
                                         </p>
                                     </div>
                                 </div>
-                                <div className="GWP-alloca-legend-item">
-                                    <div className="GWP-alloca-legend-color" style={{ background: '#FFD700' }}></div>
-                                    <div className="GWP-alloca-legend-content">
-                                        <h4>20% - Gold Allocation</h4>
+                                <div className="MPV-alloca-legend-item">
+                                    <div className="MPV-alloca-legend-color"></div>
+                                    <div className="MPV-alloca-legend-content">
+                                        <h4>30% - Growth Investments</h4>
                                         <p>
-                                            Sovereign Gold Bonds, Gold ETFs, Gold Mutual Funds,
-                                            Digital Gold Platforms for inflation hedging and
-                                            portfolio diversification
+                                            Conservative Equity Funds, Balanced
+                                            Advantage Funds, Debt Mutual Funds,
+                                            Government Bonds
                                         </p>
                                     </div>
                                 </div>
-                                <div className="GWP-alloca-legend-item">
-                                    <div className="GWP-alloca-legend-color" style={{ background: '#2196F3' }}></div>
-                                    <div className="GWP-alloca-legend-content">
-                                        <h4>20% - Safe Savings</h4>
+                                <div className="MPV-alloca-legend-item">
+                                    <div className="MPV-alloca-legend-color"></div>
+                                    <div className="MPV-alloca-legend-content">
+                                        <h4>20% - Protection</h4>
                                         <p>
-                                            Public Provident Fund (PPF), Corporate Fixed Deposits,
-                                            Debt Mutual Funds, Government Securities for capital
-                                            preservation
+                                            Term Insurance, Health Insurance, Critical
+                                            Illness Cover, Emergency Fund (12 months
+                                            expenses)
                                         </p>
                                     </div>
                                 </div>
-                                <div className="GWP-alloca-legend-item">
-                                    <div className="GWP-alloca-legend-color" style={{ background: '#FF9800' }}></div>
-                                    <div className="GWP-alloca-legend-content">
-                                        <h4>10% - Emergency Fund</h4>
+                                <div className="MPV-alloca-legend-item">
+                                    <div className="MPV-alloca-legend-color"></div>
+                                    <div className="MPV-alloca-legend-content">
+                                        <h4>10% - Skills Development</h4>
                                         <p>
-                                            Liquid Funds, Ultra Short-Term Funds, Savings Account,
-                                            Recurring Deposits for immediate liquidity needs and
-                                            unexpected expenses
+                                            Online Certifications, Technical Training,
+                                            Language Courses, Professional Development
+                                            Programs
                                         </p>
                                     </div>
                                 </div>

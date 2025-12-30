@@ -64,7 +64,7 @@ const MissionCertify = () => {
                                 {certificates.map((cert, index) => (
                                     <div key={index} className={styles.certificateCard}>
                                         <div className={styles.certIcon}>{cert.icon}</div>
-                                        <h4 className={styles.certTitle}>{cert.title}</h4>
+                                        <h4 className={styles.certTitle }>{cert.title}</h4>
                                         <div className={styles.certLine}></div>
                                     </div>
                                 ))}

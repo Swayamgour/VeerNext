@@ -240,81 +240,73 @@ function MoneyPlanView() {
                     </div>
 
                     {/* <!-- Action Plan --> */}
-                    <div className="MPV-action-plan">
-                        <h2 className="MPV-sec-title">
+
+                    {/* Action Plan Timeline */}
+                    <div  className="GWP-action-plan mt-5">
+                        <h2 className="GWP-sec-title">
                             Implementation MPV-timline
                         </h2>
 
-                        <div className="MPV-timline">
-                            <div className="MPV-timline-item">
-                                <div className="MPV-timline-marker">1</div>
-                                <div className="MPV-timline-content">
+                        <div className="GWP-timline">
+                            <div className="GWP-timline-item">
+                                <div className="GWP-timline-marker">1</div>
+                                <div className="GWP-timline-content">
                                     <h4>Month 1-3: Foundation Setup</h4>
                                     <p>
-                                        Open PPF account, set up Post Office schemes,
-                                        create emergency fund (12 months expenses),
-                                        purchase term insurance (20× annual income).
+                                        Open PPF account, set up Post Office schemes, create emergency fund (12 months expenses), purchase term insurance (20× annual income).
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="MPV-timline-item">
-                                <div className="MPV-timline-marker">2</div>
-                                <div className="MPV-timline-content">
+                            <div className="GWP-timline-item">
+                                <div className="GWP-timline-marker">2</div>
+                                <div className="GWP-timline-content">
                                     <h4>Month 4-6: Investment Phase</h4>
                                     <p>
-                                        Start SIP in conservative mutual funds, allocate
-                                        funds to government bonds, set up health
-                                        insurance with critical illness rider.
+                                        Start SIP in conservative mutual funds, allocate funds to government bonds, set up health insurance with critical illness rider.
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="MPV-timline-item">
-                                <div className="MPV-timline-marker">3</div>
-                                <div className="MPV-timline-content">
-                                    <h4>Month 7-12: Skill Development</h4>
-                                    <p>
-                                        Enroll in certification courses, allocate 10% to
-                                        skill development fund, attend financial
-                                        literacy workshops.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="MPV-timline-item">
-                                <div className="MPV-timline-marker">4</div>
-                                <div className="MPV-timline-content">
+                            <div className="GWP-timline-item">
+                                <div className="GWP-timline-marker">3</div>
+                                <div className="GWP-timline-content">
                                     <h4>Quarterly Reviews</h4>
                                     <p>
-                                        Review portfolio performance, rebalance if
-                                        needed, update insurance coverage, assess skill
-                                        development progress.
+                                        Review portfolio performance, rebalance if needed, update insurance coverage, assess skill development progress.
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    {/* <!-- CTA --> */}
-                    <div className="MPV-cta">
-                        <h3 className="MPV-cta-title">
-                            Ready to Implement This Plan?
-                        </h3>
-                        <p>
-                            Get your personalized Secure Soldier Plan with exact
-                            allocations, specific investment recommendations, and
-                            implementation checklist.
-                        </p>
-
-                        <div className="MPV-cta-buttons">
-                            <button className="fill-btn" href="javascript:void(0)">
-                                Contact Us
-                                <i className="fas fa-phone ms-2"></i>
-                            </button>
                            
                         </div>
                     </div>
+
+                    {/* CTA Section */}
+                    <div className="GWP-cta">
+                        <h3 className="GWP-cta-title">
+                            Ready to Implement This Plan?
+                        </h3>
+                        <p>
+                            Get your personalized Secure Soldier Plan with exact allocations, specific investment recommendations, and implementation checklist.
+                        </p>
+
+                        <div className="GWP-cta-buttons">
+                            <button className="border-btn">
+                                Contact Us
+                                <i className="fas fa-phone ms-2"></i>
+                            </button>
+                            <button className="border-btn">
+                                Back to Plans
+                                <i className="fas fa-arrow-left ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+             
+
+                   
                 </div>
             </section>
 

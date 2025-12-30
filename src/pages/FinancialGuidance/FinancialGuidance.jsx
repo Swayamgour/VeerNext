@@ -859,10 +859,10 @@ function FinancialGuidance() {
                             Built with military integrity, designed for soldier success
                         </h2>
 
-                      
+
                     </div>
 
-                    
+
 
                     <div className="row gy-4 col-12 mx-auto" style={{ marginBottom: "80px" }}>
 
@@ -1029,23 +1029,10 @@ function FinancialGuidance() {
                             Financial Learning Bootcamp
                         </h2>
 
-                        {/* <p className={styles.benefitsSectionSubtitle}>
-                            Comprehensive tools and resources designed specifically for your transition journey
-                        </p> */}
+
                     </div>
 
 
-                    {/* <section className="features-area pt-70 pb-70 p-relative bg-white z-index-2">
-                <div className="container">
-
-                    <div className="bd-section-title-wrapper">
-                        <div className="bd-section-subtitle">
-                            Learn in 7 Short Missions
-                            <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
-                        </div>
-                        <h3 className="bd-section-title mb-60 ">Financial Learning Bootcamp
-                        </h3>
-                    </div> */}
 
                     <div className="row col-12 gy-4 mx-auto">
                         {missions.map((item, i) => (
@@ -1073,7 +1060,7 @@ function FinancialGuidance() {
                     <div className="col-lg-4 col-md-6 col-sm-6 d-flex align-items-center justify-content-center mx-auto">
                         <div className="float-animation">
                             <div className="col-12 mt-40 text-center wow fadeInUp" data-wow-delay="0.3s">
-                                <button className="fill-btn">
+                                <button onClick={() => navigate('/FinancialLearningBootcampPage')} className="fill-btn">
                                     Start All 7 Missions <i className="fas fa-play-circle ms-2"></i>
                                 </button>
 
@@ -1133,20 +1120,20 @@ function FinancialGuidance() {
 
             <style>{`
                         .swiper-pagination-bullet {
-                          width: 10px;
-                          height: 10px;
+                          width: 12px;
+                          height: 12px;
                           background: rgba(0, 0, 0, 0.3);
                           opacity: 1;
                           transition: all 0.3s ease;
                         }
 
                         .swiper-pagination-bullet-active {
-                          background: var(--primary-color);
+                          background: var(--clr-common-white);
                           transform: scale(1.4);
                         }
 
                         .swiper-vertical > .swiper-pagination-bullets {
-                          right: 10px;
+                          right: 40px;
                         }
                     `}
             </style>

@@ -421,7 +421,10 @@ section {
   font-size: 3.5rem;
   color: var(--primary-color);
   margin-bottom: 25px;
-  line-height: 1.2;
+  /* line-height: 1.2; */
+  font-weight: 700;
+  letter-spacing: 1px;
+
   /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
@@ -653,6 +656,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* text-align: center; */
+  letter-spacing: 2px;
+
 }
 
 .pillarLine {
@@ -704,6 +710,7 @@ section {
   line-height: 1.6;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .quoteAuthor {
@@ -820,6 +827,7 @@ section {
   color: var(--primary-color);
   margin-bottom: 10px;
   font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .trackSubtitle {
@@ -938,7 +946,8 @@ section {
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 10px;
-  line-height: 1.4;
+  /* line-height: 1.4; */
+  letter-spacing: 2px;
 }
 
 .certLine {
@@ -1010,6 +1019,8 @@ section {
   color: var(--primary-color);
   font-size: 2.5rem;
   margin-bottom: 5px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .certHeader h4 {
@@ -1153,6 +1164,7 @@ section {
   font-weight: 600;
   position: relative;
   padding-bottom: 15px;
+  letter-spacing: 2px;
 }
 
 .moduleTitle::after {
@@ -1290,6 +1302,7 @@ section {
   font-weight: 600;
   margin-bottom: 10px;
   line-height: 1.4;
+  letter-spacing: 1px;
 }
 
 .featureLine {

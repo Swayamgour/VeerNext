@@ -387,6 +387,7 @@
     /* color: #1a1a1a; */
     margin-bottom: 20px;
     color: var(--primary-color);
+    letter-spacing: 2px;
 }
 
 .titleHighlight {
@@ -501,7 +502,8 @@
     font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 5px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+
 }
 
 .cardSubtitle {

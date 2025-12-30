@@ -1165,15 +1165,20 @@
 .fn-quote-left-icon,
 .fn-quote-right-icon {
     position: absolute;
-    width: 56px;
-    height: 56px;
+
+
     background: var(--secondary-color);
     color: #000;
-    font-size: 24px;
-    line-height: 56px;
-    text-align: center;
+    font-size: 30px;
+    padding: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     z-index: 2;
 }
+
 
 .fn-quote-left-icon {
     bottom: 0;
@@ -2281,12 +2286,12 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(12px) scale(0.98);
-    transition: 
-      opacity 0.25s ease,
-      transform 0.3s cubic-bezier(.4,0,.2,1);
+    transition:
+        opacity 0.25s ease,
+        transform 0.3s cubic-bezier(.4, 0, .2, 1);
 
     z-index: 99999;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .cs-nav-submenu li {
@@ -2296,10 +2301,10 @@
     cursor: pointer;
     white-space: nowrap;
     position: relative;
-    transition: 
-      background-color 0.25s ease,
-      color 0.25s ease,
-      padding-left 0.25s ease;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        padding-left 0.25s ease;
 }
 
 .cs-nav-submenu li::before {
@@ -4442,4 +4447,10 @@
     100% {
         background-position: -200% 0;
     }
+}
+
+
+.heading-line {
+    font-weight: 700;
+    letter-spacing: 2px;
 }
