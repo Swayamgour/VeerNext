@@ -90,21 +90,26 @@ const OpportunitySection = () => {
                 </div>
 
                 {/* SWIPER */}
+              
+
                 <div className={styles.benefitsSectionGrid_Two}>
                     <Swiper
                         modules={[Autoplay]}
                         onSwiper={(swiper) => (swiperRef.current = swiper)}
                         spaceBetween={30}
-                        slidesPerView={3}
+                        slidesPerView={1} // ✅ MOBILE FIRST (MOST IMPORTANT)
                         loop={true}
                         autoplay={{
                             delay: 4000,
                             disableOnInteraction: false,
                         }}
                         breakpoints={{
-                            1024: { slidesPerView: 3 },
-                            768: { slidesPerView: 2 },
-                            480: { slidesPerView: 1 },
+                            768: {
+                                slidesPerView: 2,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                            },
                         }}
                         className={styles.benefitsSwiper}
                     >
@@ -114,10 +119,14 @@ const OpportunitySection = () => {
                                     <div className={styles.cardTop}>
                                         <div className={styles.benefitsIconContainer}>
                                             <div className={styles.benefitsIconBg}></div>
-                                            <div className={styles.benefitsIcon}>{benefit.icon}</div>
+                                            <div className={styles.benefitsIcon}>
+                                                {benefit.icon}
+                                            </div>
                                         </div>
 
-                                        <div className={styles.cardCount}>0{index + 1}</div>
+                                        <div className={styles.cardCount}>
+                                            {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                                        </div>
                                     </div>
 
                                     <h4 className={styles.cardTitle}>{benefit.title}</h4>
@@ -130,6 +139,7 @@ const OpportunitySection = () => {
                         ))}
                     </Swiper>
                 </div>
+
 
                 {/* CTA */}
                 <div className={styles.ctaSection}>

@@ -1,100 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { lectures, resources } from '../components/data';
+import AllPageHeader from '../components/AllPageHeader';
 
 const CourseDetails = () => {
     const [activeLecture, setActiveLecture] = useState(0);
-    const [lectures, setLectures] = useState([
-        {
-            id: 1,
-            number: '1',
-            title: 'Introduction to Corporate Security',
-            type: 'video',
-            duration: '45 min',
-            status: 'Completed',
-            description: 'Learn the fundamentals of corporate security management and its importance in modern business environments.'
-        },
-        {
-            id: 2,
-            number: '2',
-            title: 'Risk Assessment Framework',
-            type: 'video',
-            duration: '60 min',
-            status: 'Completed',
-            description: 'Understand how to identify, analyze, and evaluate security risks using structured frameworks.'
-        },
-        {
-            id: 3,
-            number: '3',
-            title: 'Security Operations Planning',
-            type: 'video',
-            duration: '55 min',
-            status: 'In Progress',
-            description: 'Learn how to plan and execute security operations in corporate environments using military-grade strategies adapted for civilian use.'
-        },
-        {
-            id: 4,
-            number: '4',
-            title: 'Crisis Management Protocols',
-            type: 'pdf',
-            duration: '30 min',
-            status: 'Not Started',
-            description: 'Study crisis management protocols and emergency response procedures for corporate settings.'
-        },
-        {
-            id: 5,
-            number: '5',
-            title: 'Physical Security Systems',
-            type: 'video',
-            duration: '70 min',
-            status: 'Not Started',
-            description: 'Explore various physical security systems and technologies used in corporate security.'
-        }
-    ]);
 
-    const [resources, setResources] = useState([
-        {
-            id: 1,
-            icon: 'fas fa-file-pdf',
-            title: 'Security Management Handbook',
-            type: 'PDF',
-            size: '4.2 MB',
-            downloadUrl: '#'
-        },
-        {
-            id: 2,
-            icon: 'fas fa-file-pdf',
-            title: 'Risk Assessment Templates',
-            type: 'PDF',
-            size: '2.8 MB',
-            downloadUrl: '#'
-        },
-        {
-            id: 3,
-            icon: 'fas fa-file-excel',
-            title: 'Security Audit Checklist',
-            type: 'Excel',
-            size: '1.5 MB',
-            downloadUrl: '#'
-        },
-        {
-            id: 4,
-            icon: 'fas fa-file-word',
-            title: 'Report Writing Guidelines',
-            type: 'Word',
-            size: '3.1 MB',
-            downloadUrl: '#'
-        },
-        {
-            id: 5,
-            icon: 'fas fa-video',
-            title: 'Case Study Videos',
-            type: 'Videos',
-            size: '120 min',
-            downloadUrl: '#'
-        }
-    ]);
 
-    const [assignments, setAssignments] = useState([
+
+
+    const assignments = [
         {
             id: 1,
             title: 'Security Risk Assessment Report',
@@ -102,7 +17,7 @@ const CourseDetails = () => {
             description: 'Submit a comprehensive risk assessment report for a hypothetical corporate office.',
             status: 'pending'
         }
-    ]);
+    ]
 
     const handleLectureClick = (index) => {
         setActiveLecture(index);
@@ -126,44 +41,9 @@ const CourseDetails = () => {
 
     return (
         <>
-            {/* Page Title Area */}
-            <section
-                className="page-title-area"
-                style={{
-                    backgroundImage: "url('/assets/img/bg/page-title-bg.jpg')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    position: 'relative',
-                    // padding: '100px 0'
-                }}
-            >
-                <div className="page-title-shape">
-                    <img className="shape-cube" src="/assets/img/shape/cube-shape.png" alt="cube shape" />
-                </div>
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-8">
-                            <div className="page-title-wrapper">
-                                <h1 className="page-title mb-10">Course Details</h1>
-                            </div>
-                            <div className="breadcrumb-menu">
-                                <nav aria-label="Breadcrumbs" className="breadcrumb-trail breadcrumbs">
-                                    <ul className="trail-items">
-                                        <li className="trail-item trail-begin">
-                                            {/* <Link to="/"> */}
-                                                <span>home</span>
-                                            {/* </Link> */}
-                                        </li>
-                                        <li className="trail-item trail-end">
-                                            <span>Course Details</span>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+
+            <AllPageHeader props="COURSE DETAILS " />
 
             {/* Course Content Section */}
             <section className="course-content-section">
@@ -195,9 +75,9 @@ const CourseDetails = () => {
                                         <div className="lecture-number">{lecture.number}</div>
                                         <div className="lecture-content">
                                             <h3 className="lecture-title">{lecture.title}</h3>
-                                            <div className="lecture-meta">
+                                            <div style={{ color: 'var( --clr-theme-3)' }} className="lecture-meta">
                                                 <span className="lecture-type">
-                                                    <i className={`fas ${lecture.type === 'video' ? 'fa-video' : 'fa-file-pdf'}`}></i>
+                                                    <i style={{ color: 'var( --clr-theme-3)' }} className={`fas ${lecture.type === 'video' ? 'fa-video' : 'fa-file-pdf'}`}></i>
                                                     {lecture.type === 'video' ? 'Video' : 'PDF Reading'} • {lecture.duration}
                                                 </span>
                                                 <span>{lecture.status}</span>
@@ -216,10 +96,10 @@ const CourseDetails = () => {
                                 </div>
                             </div>
                             <div style={{ padding: '20px', background: 'white' }}>
-                                <h3 style={{ color: 'var(--text-dark)', marginBottom: '10px', letterSpacing: '1px' }}>
+                                <h3 style={{ color: 'var(--primary-color)', marginBottom: '10px', letterSpacing: '2px', fontWeight: '700' }}>
                                     {lectures[activeLecture].title}
                                 </h3>
-                                <p style={{ color: 'var(--text-light)', fontSize: '0.95rem' }}>
+                                <p style={{ color: 'var( --clr-theme-3)', fontSize: '0.95rem' }}>
                                     {lectures[activeLecture].description}
                                 </p>
                             </div>
@@ -235,7 +115,7 @@ const CourseDetails = () => {
                                     <div className="assignment-deadline">
                                         <i className="far fa-clock"></i> Due: {assignment.deadline}
                                     </div>
-                                    <p style={{ color: 'var(--text-light)', fontSize: '0.95rem', marginBottom: '15px' }}>
+                                    <p style={{ color: 'var( --clr-theme-3)', fontSize: '0.90rem', marginBottom: '15px' }}>
                                         {assignment.description}
                                     </p>
                                     <button className="submit-btn" onClick={handleSubmitAssignment}>
@@ -512,15 +392,16 @@ const CourseDetails = () => {
 
                 .resource-title {
                     font-size: 1rem;
-                    color: var(--text-dark);
+                    color: var(--primary-color);
                     margin-bottom: 5px;
                     font-weight: 600;
-                    letter-spacing: 1px;
+                    letter-spacing: 2px;
                 }
 
                 .resource-size {
                     font-size: 0.85rem;
-                    color: var(--text-light);
+                    color: var(--clr-theme-3);
+                    font-weight:500
                 }
 
                 .dwn-btn {
@@ -557,21 +438,21 @@ const CourseDetails = () => {
 
                 .assignment-title {
                     font-size: 1.1rem;
-                    color: var(--text-dark);
+                    color: var(--primary-color);
                     margin-bottom: 10px;
-                    font-weight: 600;
-                    letter-spacing: 1px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
                 }
 
                 .assignment-deadline {
-                    color: var(--accent-color);
-                    font-weight: 600;
+                    color: var( --clr-theme-3);
+                    font-weight: 500;
                     font-size: 0.9rem;
                     margin-bottom: 15px;
                 }
 
                 .submit-btn {
-                    background: var(--accent-color);
+                    background: var(--primary-color);
                     color: white;
                     border: none;
                     padding: 8px 20px;
@@ -582,7 +463,7 @@ const CourseDetails = () => {
                 }
 
                 .submit-btn:hover {
-                    background: #a30000;
+                    background: var(--secondary-color);
                 }
 
                 /* Responsive */

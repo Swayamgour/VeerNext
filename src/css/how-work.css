@@ -397,7 +397,7 @@
 /* Navigation Buttons */
 .vtx-slider-nav {
     position: absolute;
-    top: 50%;
+    top: 43%;
     left: -70px;
     right: -70px;
     transform: translateY(-50%);

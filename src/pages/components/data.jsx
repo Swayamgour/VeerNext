@@ -15,7 +15,7 @@ import {
 } from 'react-icons/fa';
 
 
-import { FaUserTie,  FaLaptopCode, FaLanguage } from "react-icons/fa";
+import { FaUserTie, FaLaptopCode, FaLanguage } from "react-icons/fa";
 
 
 
@@ -507,4 +507,102 @@ const tracks = [
         color: 'var(--gold-color)'
     }
 ];
-export { benefits, interestsList, stats, tracks };
+
+
+
+const lectures = [
+    {
+        id: 1,
+        number: '1',
+        title: 'Introduction to Corporate Security',
+        type: 'video',
+        duration: '45 min',
+        status: 'Completed',
+        description: 'Learn the fundamentals of corporate security management and its importance in modern business environments.'
+    },
+    {
+        id: 2,
+        number: '2',
+        title: 'Risk Assessment Framework',
+        type: 'video',
+        duration: '60 min',
+        status: 'Completed',
+        description: 'Understand how to identify, analyze, and evaluate security risks using structured frameworks.'
+    },
+    {
+        id: 3,
+        number: '3',
+        title: 'Security Operations Planning',
+        type: 'video',
+        duration: '55 min',
+        status: 'In Progress',
+        description: 'Learn how to plan and execute security operations in corporate environments using military-grade strategies adapted for civilian use.'
+    },
+    {
+        id: 4,
+        number: '4',
+        title: 'Crisis Management Protocols',
+        type: 'pdf',
+        duration: '30 min',
+        status: 'Not Started',
+        description: 'Study crisis management protocols and emergency response procedures for corporate settings.'
+    },
+    {
+        id: 5,
+        number: '5',
+        title: 'Physical Security Systems',
+        type: 'video',
+        duration: '70 min',
+        status: 'Not Started',
+        description: 'Explore various physical security systems and technologies used in corporate security.'
+    }
+]
+
+const resources = [
+    {
+        id: 1,
+        icon: 'fas fa-file-pdf',
+        title: 'Security Management Handbook',
+        type: 'PDF',
+        size: '4.2 MB',
+        downloadUrl: '#'
+    },
+    {
+        id: 2,
+        icon: 'fas fa-file-pdf',
+        title: 'Risk Assessment Templates',
+        type: 'PDF',
+        size: '2.8 MB',
+        downloadUrl: '#'
+    },
+    {
+        id: 3,
+        icon: 'fas fa-file-excel',
+        title: 'Security Audit Checklist',
+        type: 'Excel',
+        size: '1.5 MB',
+        downloadUrl: '#'
+    },
+    {
+        id: 4,
+        icon: 'fas fa-file-word',
+        title: 'Report Writing Guidelines',
+        type: 'Word',
+        size: '3.1 MB',
+        downloadUrl: '#'
+    },
+    {
+        id: 5,
+        icon: 'fas fa-video',
+        title: 'Case Study Videos',
+        type: 'Videos',
+        size: '120 min',
+        downloadUrl: '#'
+    }
+]
+
+
+
+
+
+export { benefits, interestsList, stats, tracks, lectures, resources };

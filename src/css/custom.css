@@ -4453,4 +4453,13 @@
 .heading-line {
     font-weight: 700;
     letter-spacing: 2px;
+    /* color: var(--primary-color); */
+}
+
+
+
+.lecture-content .lecture-title {
+    /* font-size: 1.5rem; */
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }

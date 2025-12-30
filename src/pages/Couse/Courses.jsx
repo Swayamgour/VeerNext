@@ -115,22 +115,22 @@ const Courses = () => {
     };
 
     const handleStartCourse = (course) => {
-        alert(`Starting course: ${course.title}`);
+        // alert(`Starting course: ${course.title}`);
         // Navigation logic can be added here
     };
 
     const handleViewDetails = (course) => {
-        alert(`Viewing details for: ${course.title}`);
+        // alert(`Viewing details for: ${course.title}`);
         // Navigation to course details page
     };
 
     const handleEnroll = (course) => {
-        alert(`Enrolling in: ${course.title}`);
+        // alert(`Enrolling in: ${course.title}`);
         // Payment/Enrollment logic
     };
 
     const handlePreview = (course) => {
-        alert(`Previewing: ${course.title}`);
+        // alert(`Previewing: ${course.title}`);
         // Preview logic
     };
 
