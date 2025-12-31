@@ -46,32 +46,32 @@ const OperationRakshak = () => {
 
   const veerGearProducts = [
     {
-      img: "/assets/img/about/shirt.webp",
+      img: "/VEER/assets/img/about/shirt.webp",
       name: "Agniveer Alumni T-Shirts",
       type: "Premium cotton with custom insignia"
     },
     {
-      img: "/assets/img/about/hoodie.webp",
+      img: "/VEER/assets/img/about/hoodie.webp",
       name: "Battalion Hoodies",
       type: "Heavyweight with battalion designs"
     },
     {
-      img: "/assets/img/about/duffle.webp",
+      img: "/VEER/assets/img/about/duffle.webp",
       name: "Military Duffle Bags",
       type: "Rugged and water-resistant"
     },
     {
-      img: "/assets/img/about/caps.webp",
+      img: "/VEER/assets/img/about/caps.webp",
       name: "Caps & Badges",
       type: "Official military accessories"
     },
     {
-      img: "/assets/img/about/poster.webp",
+      img: "/VEER/assets/img/about/poster.webp",
       name: "Desk Flags & Posters",
       type: "Display your pride"
     },
     {
-      img: "/assets/img/about/notebook.webp",
+      img: "/VEER/assets/img/about/notebook.webp",
       name: "Tactical Notebooks",
       type: "Field-tested stationery"
     }

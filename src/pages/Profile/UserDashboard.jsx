@@ -343,14 +343,14 @@ const UserDashboard = () => {
             <section
                 className="page-title-area"
                 style={{
-                    backgroundImage: "url('/assets/img/bg/page-title-bg.jpg')",
+                    backgroundImage: "url('/VEER/assets/img/bg/page-title-bg.jpg')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     position: 'relative',
                 }}
             >
                 <div className="page-title-shape">
-                    <img className="shape-cube" src="/assets/img/shape/cube-shape.png" alt="cube shape" />
+                    <img className="shape-cube" src="/VEER/assets/img/shape/cube-shape.png" alt="cube shape" />
                 </div>
                 <div className="container">
                     <div className="row justify-content-center">

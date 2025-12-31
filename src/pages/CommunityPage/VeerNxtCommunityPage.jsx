@@ -300,7 +300,7 @@ function VeerNxtCommunityPage() {
                                 <div className={styles.heroImage}>
                                     <div className={styles.imageContainer}>
                                         <img
-                                            src="/assets/img/about/img-1.jpg"
+                                            src="/VEER/assets/img/about/img-1.jpg"
                                             alt="VEER-NXT Community"
                                             className="img-fluid"
                                         />

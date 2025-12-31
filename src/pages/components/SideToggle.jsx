@@ -37,7 +37,7 @@ const SideToggle = ({ isSideOpen, toggleSideToggle }) => {
                         <div className={styles.row}>
                             <div className={styles.col9}>
                                 <div className={styles.offsetLogo}>
-                                    <img src="/assets/img/logo/logo.png" alt="Logo" />
+                                    <img src="/VEER/assets/img/logo/logo.png" alt="Logo" />
                                 </div>
                             </div>
                             <div className={styles.col3}>

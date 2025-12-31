@@ -14,7 +14,7 @@ const Preloader = () => {
                     {/* Logo inside spinner */}
                     <div className="img_insidespinner">
                         <img
-                            src="/assets/img/logo/logo.png"
+                            src="/VEER/assets/img/logo/logo.png"
                             style={{ height: "5rem" }}
                             alt="logo"
                         />

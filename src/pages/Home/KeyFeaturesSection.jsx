@@ -27,32 +27,32 @@ const FeatureCard = ({ imageSrc, title, subtitle }) => {
 const KeyFeaturesSection = () => {
     const featuresData = [
         {
-            imageSrc: '/assets/img/icons/exam-brief.png',
+            imageSrc: '/VEER/assets/img/icons/exam-brief.png',
             title: 'Clean Exam Briefs',
             subtitle: 'Only what matters. Nothing more.',
         },
         {
-            imageSrc: '/assets/img/icons/learning.png',
+            imageSrc: '/VEER/assets/img/icons/learning.png',
             title: 'Complete Learning System',
             subtitle: 'Videos, quizzes, mock tests.',
         },
         {
-            imageSrc: '/assets/img/icons/resume.png',
+            imageSrc: '/VEER/assets/img/icons/resume.png',
             title: 'CV Builder',
             subtitle: 'Convert military experience to civilian roles.',
         },
         {
-            imageSrc: '/assets/img/icons/interview.png',
+            imageSrc: '/VEER/assets/img/icons/interview.png',
             title: 'Interview Simulator',
             subtitle: 'AI-powered + human mentoring.',
         },
         {
-            imageSrc: '/assets/img/icons/business-plan.png',
+            imageSrc: '/VEER/assets/img/icons/business-plan.png',
             title: 'Financial Planner',
             subtitle: 'Secure your Sewa Nidhi.',
         },
         {
-            imageSrc: '/assets/img/icons/ved.png',
+            imageSrc: '/VEER/assets/img/icons/ved.png',
             title: 'Veteran-Led, Discipline-Driven',
             subtitle: 'By veterans, for veterans.',
         },
@@ -66,7 +66,7 @@ const KeyFeaturesSection = () => {
                     <div className="bd-section-subtitle">
                         Built for Soldiers. Designed for Success.
                         {/* <i className="fas fa-star"></i> Replaced flaticon-001-bullet with a star */}
-                           <img src={'/assets/img/icons/icon-2/bullet.png'} />
+                           <img src={'/VEER/assets/img/icons/icon-2/bullet.png'} />
                     </div>
                     <h3 className="bd-section-title mb-60 ">
                         Key Features

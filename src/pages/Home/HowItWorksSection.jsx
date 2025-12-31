@@ -1,7 +1,7 @@
 import React from 'react';
 
 // --- Placeholder Asset Import ---
-// import '/assets/img/about/banner-1.webp' from '/assets/img/about/banner-1.webp'; // Replace with actual path
+// import '/VEER/assets/img/about/banner-1.webp' from '/VEER/assets/img/about/banner-1.webp'; // Replace with actual path
 
 /**
  * Reusable TimelineStep Component
@@ -78,7 +78,7 @@ const HowItWorksSection = () => {
     // Note on Parallax: The background image needs to be set up either via CSS or a JavaScript library
     // that reads the data-background attribute or a style object.
     const backgroundStyle = {
-        backgroundImage: `url(${'/assets/img/about/banner-1.webp'})`,
+        backgroundImage: `url(${'/VEER/assets/img/about/banner-1.webp'})`,
     };
 
     return (
@@ -87,7 +87,7 @@ const HowItWorksSection = () => {
             {/* Background Overlay Image (Parallax) */}
             <div
                 className="donation-overlay-img area-absolute parallax-bg"
-                // data-background={'/assets/img/about/banner-1.webp'} // Retained data attribute for external scripts
+                // data-background={'/VEER/assets/img/about/banner-1.webp'} // Retained data attribute for external scripts
                 style={backgroundStyle} // Using inline style for immediate visibility
             ></div>
 
@@ -101,7 +101,7 @@ const HowItWorksSection = () => {
                                     <div className="bd-section-subtitle">
                                         Mission Workflow
                                         {/* <i className="fas fa-star"></i> Replaced flaticon-001-bullet */}
-                                        <img src={'/assets/img/icons/icon-2/bullet.png'} alt='/icons/icon-2' />
+                                        <img src={'/VEER/assets/img/icons/icon-2/bullet.png'} alt='/icons/icon-2' />
                                     </div>
                                     <h3 className="bd-section-title mb-40">How VeerNXT Works</h3>
                                 </div>

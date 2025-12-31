@@ -109,7 +109,7 @@ const StartMissionPage = () => {
                             </div>
                             <div className="col-lg-6">
                                 <div className="hero-image">
-                                    <img src="/assets/img/about/banner-1.webp" alt="Veteran Success" style={{ width: '100%' }} />
+                                    <img src="/VEER/assets/img/about/banner-1.webp" alt="Veteran Success" style={{ width: '100%' }} />
                                 </div>
                             </div>
                         </div>
@@ -308,7 +308,7 @@ const StartMissionPage = () => {
                         <div className="stories-grid">
                             <div className="story-card">
                                 <div className="story-image">
-                                    <img src="/assets/img/about/banner-5.webp" alt="Col. Rajesh Kumar" />
+                                    <img src="/VEER/assets/img/about/banner-5.webp" alt="Col. Rajesh Kumar" />
                                 </div>
                                 <div className="story-content">
                                     <h4>Col. Rajesh Kumar</h4>

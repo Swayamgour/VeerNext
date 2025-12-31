@@ -21,7 +21,7 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
                                 <div className="header-main-left header-main-left-header2">
                                     <div onClick={() => navigate('/')} className="header-logo header2-logo">
                                         <div className="logo-white">
-                                            <img src="/assets/img/logo/logo.png" alt="logo-img" />
+                                            <img src="/VEER/assets/img/logo/logo.png" alt="logo-img" />
                                         </div>
                                     </div>
                                 </div>
@@ -133,11 +133,11 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
 
                                     <div className="menu-bar">
                                         <button className="offset-btn d-none d-xl-inline-block" onClick={toggleOffsetContent}>
-                                            <img src="/assets/img/icons/side-toggle.png" alt="toggle" />
+                                            <img src="/VEER/assets/img/icons/side-toggle.png" alt="toggle" />
                                         </button>
 
                                         <button className="side-toggle d-xl-none" onClick={toggleSideToggle}>
-                                            <img src="/assets/img/icons/side-toggle.png" alt="toggle" />
+                                            <img src="/VEER/assets/img/icons/side-toggle.png" alt="toggle" />
                                         </button>
                                     </div>
                                 </div>

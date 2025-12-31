@@ -127,7 +127,7 @@ function FinancialGuidance() {
 
                         <div className="col-lg-4 text-center wow fadeInUp  " data-wow-delay="0.2s">
                             <div className="fn-hero-img  responsive-mt">
-                                <img src='/assets/img/about/financial.jpg'
+                                <img src='/VEER/assets/img/about/financial.jpg'
                                     alt="Financial Planning for Agniveers"
                                     className="img-fluid" />
                             </div>
@@ -171,7 +171,7 @@ function FinancialGuidance() {
                             <div className="bd-section-title-wrapper wow fadeInUp" data-wow-delay="0.1s">
                                 <div className="bd-section-subtitle">
                                     Your Sewa Nidhi Is Not Just Money. It’s Your Launchpad.
-                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
+                                    <img alt="kjhgf" src="/VEER/assets/img/icons/icon-2/bullet.png" />
                                 </div>
                                 <h3 className="bd-section-title mb-60 ">WHY FINANCIAL GUIDANCE MATTERS</h3>
                             </div> */}
@@ -222,9 +222,9 @@ function FinancialGuidance() {
 
             <!-- WHAT VEERNXT GIVES YOU start --> */}
             <section className="contact-form-area pt-70 pb-70 contact-form-style parallax-bg fix"
-                // data-background="{{asset('/assets/img/about/financial.jpg')}}"
+                // data-background="{{asset('/VEER/assets/img/about/financial.jpg')}}"
                 style={{
-                    backgroundImage: "url('/assets/img/about/financial.jpg')",
+                    backgroundImage: "url('/VEER/assets/img/about/financial.jpg')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     position: 'relative',
@@ -239,7 +239,7 @@ function FinancialGuidance() {
                             <div className="bd-section-title-wrapper">
                                 <div className="bd-section-subtitle">
                                     Our Offering
-                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
+                                    <img alt="kjhgf" src="/VEER/assets/img/icons/icon-2/bullet.png" />
                                 </div>
                                 <h3 className="bd-section-title mb-40">WHAT VEERNXT GIVES YOU</h3>
                             </div>
@@ -567,7 +567,7 @@ function FinancialGuidance() {
                             <div className="bd-section-title-wrapper">
                                 <div className="bd-section-subtitle">
                                     Explore our strategic financial plans designed specifically for armed forces personnel.
-                                    <img alt="kjhgf" src="/assets/img/icons/icon-2/bullet.png" />
+                                    <img alt="kjhgf" src="/VEER/assets/img/icons/icon-2/bullet.png" />
                                 </div>
                                 <h3 className="bd-section-title mb-60 ">Money Plan
                                 </h3>

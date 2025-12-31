@@ -24,7 +24,7 @@ const AboutDialog = ({ isOffsetOpen, toggleOffsetContent }) => {
                 <div className="offset-info">
                     <div className="offset-logo mb-25">
                         <img
-                            src="/assets/img/logo/logo.png"
+                            src="/VEER/assets/img/logo/logo.png"
                             alt="logo"
                             style={{ height: "150px", width: "auto" }}
                         />
@@ -103,7 +103,7 @@ const AboutDialog = ({ isOffsetOpen, toggleOffsetContent }) => {
                 {/* RIGHT IMAGE */}
                 <div className="offset-thumb">
                     <img
-                        src="/assets/img/about/bg-9.webp"
+                        src="/VEER/assets/img/about/bg-9.webp"
                         alt="about"
                     />
                 </div>

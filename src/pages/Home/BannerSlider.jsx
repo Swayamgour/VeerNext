@@ -12,7 +12,7 @@ import { FaShieldAlt, FaMedal } from "react-icons/fa";
 const slidesData = [
     {
         id: 1,
-        bgImage: "/assets/img/about/Tr5c5nS6.jpg",
+        bgImage: "/VEER/assets/img/about/Tr5c5nS6.jpg",
         title: {
             part1: "Your Second",
             marked: "Mission",
@@ -21,14 +21,14 @@ const slidesData = [
         subText:
             "Empowering Agniveers with career pathways, financial freedom, and lifelong growth.",
         shapes: [
-            { className: "arm-shape-a-1", src: "/assets/img/shape/shape-1.png" },
-            { className: "arm-shape-a-2", src: "/assets/img/shape/shape-2.png" },
-            { className: "arm-shape-a-4", src: "/assets/img/shape/shape-4.png" },
+            { className: "arm-shape-a-1", src: "/VEER/assets/img/shape/shape-1.png" },
+            { className: "arm-shape-a-2", src: "/VEER/assets/img/shape/shape-2.png" },
+            { className: "arm-shape-a-4", src: "/VEER/assets/img/shape/shape-4.png" },
         ],
     },
     {
         id: 2,
-        bgImage: "/assets/img/about/bg-3.webp",
+        bgImage: "/VEER/assets/img/about/bg-3.webp",
         title: {
             part1: "Your Second",
             marked: "Mission",
@@ -36,7 +36,7 @@ const slidesData = [
         },
         subText:
             "Veteran-led platform guiding Agniveers towards meaningful careers.",
-        shapes: [{ className: "arm-shape-a-1", src: "/assets/img/shape/shape-1.png" }],
+        shapes: [{ className: "arm-shape-a-1", src: "/VEER/assets/img/shape/shape-1.png" }],
     },
 ];
 
