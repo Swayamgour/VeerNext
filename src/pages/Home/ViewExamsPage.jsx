@@ -360,7 +360,7 @@ const ViewExamsPage = () => {
                                                         <button onClick={() => navigate('/IndianArmySSCTechDetails')} className="view-details-btn">
                                                             <i className="fas fa-eye"></i> View Details
                                                         </button>
-                                                        <button onClick={() => navigate('/ComingSoonPage')} className="apply-now-btn">
+                                                        <button onClick={() => navigate('/ComingSoon')} className="apply-now-btn">
                                                             <i className="fas fa-paper-plane"></i> Apply Now
                                                         </button>
 

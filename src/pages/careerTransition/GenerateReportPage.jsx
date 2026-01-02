@@ -205,7 +205,7 @@ const GenerateReportPage = () => {
 
                             {/* CTA Button */}
                             <div className={styles.generateReportCta}>
-                                <button type="submit" className={styles.generateMissionBtn}>
+                                <button onClick={() => navigate('/GenerateReportPage')} type="submit" className={styles.generateMissionBtn}>
                                     <span>Generate My Report</span>
                                     <FaArrowRight className={styles.generateCtaArrow} />
                                 </button>

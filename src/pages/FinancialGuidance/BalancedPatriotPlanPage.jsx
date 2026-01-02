@@ -185,7 +185,7 @@ function BalancedPatriotPlanPage() {
                                             SIP and SWP options available
                                         </li>
                                     </ul>
-                                    <div className="BPP-invst-return">
+                                    <div className="MPV-invst-return">
                                         10-12% p.a. Expected Returns
                                     </div>
                                 </div>
@@ -214,7 +214,7 @@ function BalancedPatriotPlanPage() {
                                             Tax-efficient compared to multiple funds
                                         </li>
                                     </ul>
-                                    <div className="BPP-invst-return">
+                                    <div className="MPV-invst-return">
                                         9-11% p.a. Expected
                                     </div>
                                 </div>
@@ -243,7 +243,7 @@ function BalancedPatriotPlanPage() {
                                             ₹1.5 lakh annual investment limit
                                         </li>
                                     </ul>
-                                    <div className="BPP-invst-return">
+                                    <div className="MPV-invst-return">
                                         7.1% p.a. Current Rate
                                     </div>
                                 </div>

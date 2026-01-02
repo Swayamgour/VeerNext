@@ -522,7 +522,8 @@ function FinancialGuidance() {
 
                     </div>
 
-                    <div className="col-12 mt-40 text-center wow  fadeInUp" data-wow-delay="0.3s">
+                    <div onClick={() => navigate('/ComingSoon',
+                        { state: { title: ' Start My Financial Scan' } })} className="col-12 mt-40 text-center wow cursor fadeInUp" data-wow-delay="0.3s">
                         {/* <a href="#" className="fill-btn"> */}
                         <span className='fill-btn'>
                             Start My Financial Scan<i className="fas fa-rocket btn-icon "></i>
@@ -1103,7 +1104,7 @@ function FinancialGuidance() {
                                     {/* </a> */}
 
                                     {/* <a href="#" > */}
-                                    <span className="mission-btn border-btn">Explore Financial Tools
+                                    <span onClick={() => navigate('/ComingSoon', { state: { title: 'Explore Financial Tools' } })} className="mission-btn border-btn">Explore Financial Tools
 
                                         <i className="fas fa-arrow-right btn-icon"></i>
                                     </span>

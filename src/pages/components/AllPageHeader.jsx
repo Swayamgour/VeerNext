@@ -14,7 +14,7 @@ function AllPageHeader(props) {
             <section
                 className="page-title-area"
                 style={{
-                    backgroundImage: "url('/VEER/assets/img/bg/page-title-bg.jpg')",
+                    backgroundImage: "url('/VEER/assets/img/bg/bgimg.png')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     position: 'relative',

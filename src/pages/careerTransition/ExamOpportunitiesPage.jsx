@@ -8,10 +8,7 @@ import {
     FaRupeeSign,
     FaBook,
     FaUsers,
-    FaChartLine,
-    FaShieldAlt,
-    FaBriefcase,
-    FaUniversity,
+
     FaFileAlt,
     FaRegClock,
     FaCheckCircle,
@@ -19,6 +16,7 @@ import {
 } from 'react-icons/fa';
 import styles from '../../css/examOpportunities.module.css';
 import AllPageHeader from '../components/AllPageHeader';
+import { examsData, examCategories } from '../../pages/components/data'
 
 const ExamOpportunitiesPage = () => {
     const navigate = useNavigate();
@@ -51,135 +49,11 @@ const ExamOpportunitiesPage = () => {
         }, 1500);
     };
 
-    const handleBack = () => {
-        navigate(-1);
-    };
 
-    const examCategories = [
-        { id: 'all', label: 'All Exams' },
-        { id: 'government', label: 'Government Jobs' },
-        { id: 'defense', label: 'Defense' },
-        { id: 'psu', label: 'PSU Jobs' },
-        { id: 'banking', label: 'Banking' },
-        { id: 'ssc', label: 'SSC' },
-        { id: 'upsc', label: 'UPSC' },
-        { id: 'state-level', label: 'State Level' }
-    ];
 
-    const examsData = [
-        {
-            id: 1,
-            title: "UPSC CDS Examination",
-            category: "defense",
-            description: "Combined Defense Services Examination for entry into Indian Military Academy, Officers Training Academy, Indian Naval Academy, and Air Force Academy.",
-            icon: <FaShieldAlt />,
-            eligibility: "Graduate (Any Discipline)",
-            ageLimit: "19-24 years",
-            lastDate: "15 Dec 2024",
-            attempts: "Unlimited till age limit",
-            notification: "UPSC",
-            salary: "₹56,100 - ₹1,77,500",
-            badge: "Popular"
-        },
-        {
-            id: 2,
-            title: "SSC CGL",
-            category: "government",
-            description: "Staff Selection Commission Combined Graduate Level examination for various government posts.",
-            icon: <FaUniversity />,
-            eligibility: "Graduation",
-            ageLimit: "18-32 years",
-            lastDate: "30 Nov 2024",
-            attempts: "Varies by category",
-            notification: "SSC",
-            salary: "₹35,400 - ₹1,12,400",
-            badge: "High Demand"
-        },
-        {
-            id: 3,
-            title: "IBPS PO",
-            category: "banking",
-            description: "Institute of Banking Personnel Selection Probationary Officer examination for public sector banks.",
-            icon: <FaBriefcase />,
-            eligibility: "Graduation (Any)",
-            ageLimit: "20-30 years",
-            lastDate: "25 Oct 2024",
-            attempts: "6 attempts",
-            notification: "IBPS",
-            salary: "₹38,000 - ₹63,000",
-            badge: "Banking"
-        },
-        {
-            id: 4,
-            title: "Indian Army Technical Entry",
-            category: "defense",
-            description: "10+2 Technical Entry Scheme for Indian Army. Direct entry as Officer after training.",
-            icon: <FaShieldAlt />,
-            eligibility: "10+2 with PCM",
-            ageLimit: "16.5-19.5 years",
-            lastDate: "Ongoing",
-            attempts: "No limit",
-            notification: "Indian Army",
-            salary: "₹56,100 - ₹1,77,500",
-            badge: "Technical"
-        },
-        {
-            id: 5,
-            title: "RRB NTPC",
-            category: "psu",
-            description: "Railway Recruitment Board Non-Technical Popular Categories examination for various posts in Indian Railways.",
-            icon: <FaUniversity />,
-            eligibility: "Graduation",
-            ageLimit: "18-33 years",
-            lastDate: "20 Nov 2024",
-            attempts: "No limit",
-            notification: "RRB",
-            salary: "₹19,900 - ₹63,200",
-            badge: "Railways"
-        },
-        {
-            id: 6,
-            title: "CAPF (Assistant Commandant)",
-            category: "defense",
-            description: "Central Armed Police Forces Examination for Assistant Commandant posts in BSF, CRPF, CISF, SSB, ITBP.",
-            icon: <FaShieldAlt />,
-            eligibility: "Bachelor's Degree",
-            ageLimit: "20-25 years",
-            lastDate: "10 Dec 2024",
-            attempts: "6 attempts",
-            notification: "UPSC",
-            salary: "₹56,100 - ₹1,77,500",
-            badge: "Paramilitary"
-        },
-        {
-            id: 7,
-            title: "SBI PO",
-            category: "banking",
-            description: "State Bank of India Probationary Officer examination for one of India's largest banks.",
-            icon: <FaBriefcase />,
-            eligibility: "Graduation",
-            ageLimit: "21-30 years",
-            lastDate: "15 Nov 2024",
-            attempts: "No limit",
-            notification: "SBI",
-            salary: "₹41,960 - ₹63,840",
-            badge: "Premium"
-        },
-        {
-            id: 8,
-            title: "DRDO Scientist Entry",
-            category: "psu",
-            description: "Defence Research and Development Organization Scientist entry for engineering graduates.",
-            icon: <FaChartLine />,
-            eligibility: "BE/B.Tech/M.Sc",
-            ageLimit: "28 years",
-            lastDate: "25 Oct 2024",
-            attempts: "No limit",
-            notification: "DRDO",
-            salary: "₹56,100 - ₹1,77,500",
-            badge: "Research"
-        }
-    ];
+
+
+
 
     const filteredExams = activeCategory === 'all'
         ? examsData

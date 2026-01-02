@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
     FaRocket,
     FaArrowLeft,
@@ -77,43 +77,25 @@ function ComingSoonPage() {
         }, 1500);
     };
 
-    const handleBack = () => {
-        navigate(-1);
-    };
 
-    const features = [
-        {
-            icon: <FaRocket />,
-            title: "AI Career Matching",
-            description: "Smart algorithms match your skills with perfect opportunities"
-        },
-        {
-            icon: <FaUsers />,
-            title: "Veteran Network",
-            description: "Connect with defense personnel across India"
-        },
-        {
-            icon: <FaChartLine />,
-            title: "Job Tracking",
-            description: "Track applications and get real-time updates"
-        },
-        {
-            icon: <FaLightbulb />,
-            title: "Learning Paths",
-            description: "Personalized courses based on career goals"
-        }
-    ];
+    const location = useLocation();
+    const title = location.state?.title;
+
+
+    console.log(title)
+
+
 
     return (
         <>
-            <AllPageHeader props='Coming Soon' />
+            <AllPageHeader props={title} />
             <div className={styles.comingSoonPage}>
 
                 {/* Subtle Floating Elements */}
-                <div className={styles.floatingElement}>●</div>
+                {/* <div className={styles.floatingElement}>●</div>
                 <div className={styles.floatingElement}>■</div>
                 <div className={styles.floatingElement}>▲</div>
-                <div className={styles.floatingElement}>◆</div>
+                <div className={styles.floatingElement}>◆</div> */}
 
                 <div className={styles.comingSoonContainer}>
 
@@ -174,24 +156,6 @@ function ComingSoonPage() {
                         </div>
                     </div>
 
-                    {/* Features Preview */}
-                    <div className={styles.featureList}>
-                        <h3>Key Features</h3>
-                        <div className={styles.featuresGrid}>
-                            {features.map((feature, index) => (
-                                <div key={index} className={styles.featureItem}>
-                                    <div className={styles.featureIcon}>{feature.icon}</div>
-                                    <h4>{feature.title}</h4>
-                                    <p>{feature.description}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                   
-                  
-
-                   
                 </div>
             </div>
         </>

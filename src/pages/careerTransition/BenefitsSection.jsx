@@ -8,7 +8,9 @@ import {
     FaGraduationCap,
     FaSyncAlt,
     FaCheckCircle,
-    FaArrowRight
+    FaArrowRight,
+    FaDownload,
+    FaShieldAlt
 } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
@@ -122,22 +124,53 @@ const BenefitsSection = () => {
 
 
 
-                <div className={styles.ctaSection}>
-                    <div className={styles.ctaContent}>
-                        <h3>Ready to Access All These Benefits?</h3>
-                        <p>Join thousands of Agniveers who have successfully transitioned</p>
+                <div className={styles.reportSecurityCta}>
+                    <div className={styles.reportSecurity}>
+                        <div className={styles.securityIcon}>
+                            <FaShieldAlt />
+                        </div>
+                        <div className={styles.securityContent}>
+                            <h4>100% Secure & Confidential</h4>
+                            <p>Your personal information and career data are protected with military-grade encryption</p>
+                        </div>
                     </div>
+                    <div className={styles.reportCtaSection}>
+                        <div className={styles.reportCtaContent}>
+                            <h3>Want to See a Sample Report?</h3>
+                            <p className="text-center">Download a sample report to understand what you'll receive</p>
+                        </div>
+
+                        <div className={styles.reportCtaButtons}>
 
 
-                    <div className="mission-cta-buttons">
-                        <button onClick={() => navigate('/GetStartedBenefitsPage')} style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
-                            <span>Get Started Now</span>
-                            {/* <span className={styles.benefitsCtaArrow}>→</span> */}
-                            <FaArrowRight />
-                            {/* <i class="fas fa-rocket btn-icon"></i> */}
-                        </button>
+                            <div className="mission-cta-buttons">
+                                <button onClick={() => navigate('/VeerNXTReport')} style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
+                                    <FaDownload className={styles.ctaIcon} />
+                                    <span>Download Sample Report</span>
+                                    <FaArrowRight className={styles.ctaArrow} />
+                                </button>
+                            </div>
+
+                            <div className="mission-cta-buttons">
+                                <button onClick={() => navigate('/GenerateReportPage')} style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn ">
+                                    <span>Generate My Report</span>
+                                    <FaArrowRight className={styles.ctaArrow} />
+                                </button>
+                            </div>
+
+
+                        </div>
+
+                        <div className={styles.reportCtaNote}>
+                            <FaCheckCircle className={styles.noteIcon} />
+                            <span>No registration required for sample report</span>
+                        </div>
                     </div>
                 </div>
+
+
+
+
 
             </div>
         </section>

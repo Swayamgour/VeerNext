@@ -39,7 +39,7 @@ const HowItWorks = () => {
             color: 'step1',
             time: '2 Minutes',
             features: ['Personal Details', 'Service History', 'Career Goals'],
-            image: '/VEER/assets/img/how-it-works/form-fill.jpg',
+            image: '/VEER/assets/img/banner/fillfrom.webp',
             imageAlt: 'Soldier filling form',
             videoDemo: '#',
             stats: '98% Completion Rate',
@@ -53,7 +53,7 @@ const HowItWorks = () => {
             color: 'step2',
             time: 'Instant Analysis',
             features: ['Skills Assessment', 'Interest Mapping', 'Military Credit'],
-            image: '/VEER/assets/img/how-it-works/ai-scan.jpg',
+            image: '/VEER/assets/img/banner/aicareer.jpg',
             imageAlt: 'AI Analysis Dashboard',
             videoDemo: '#',
             stats: '500+ Data Points Analyzed',
@@ -66,7 +66,7 @@ const HowItWorks = () => {
             color: 'step3',
             time: '24 Hours',
             features: ['Exam Recommendations', 'Skill Gap Analysis', 'Timeline Planning'],
-            image: '/VEER/assets/img/how-it-works/report.jpg',
+            image: '/VEER/assets/img/banner/report.webp',
             imageAlt: 'Personalized Report',
             videoDemo: '#',
             stats: '15+ Career Paths Suggested',
@@ -79,7 +79,7 @@ const HowItWorks = () => {
             color: 'step4',
             time: 'Daily Progress',
             features: ['Mock Tests', 'Study Material', 'Daily Tasks'],
-            image: '/VEER/assets/img/how-it-works/training.jpg',
+            image: '/VEER/assets/img/banner/training.jpg',
             imageAlt: 'Structured Training',
             videoDemo: '#',
             stats: '1000+ Practice Questions',
@@ -92,7 +92,7 @@ const HowItWorks = () => {
             color: 'step5',
             time: 'Career Success',
             features: ['Job Placement', 'Interview Prep', 'Career Support'],
-            image: '/VEER/assets/img/how-it-works/success.jpg',
+            image: '/VEER/assets/img/banner/victory.avif',
             imageAlt: 'Career Success Celebration',
             videoDemo: '#',
             stats: '85% Success Rate',
@@ -179,7 +179,7 @@ const HowItWorks = () => {
                                 <SwiperSlide key={index}>
                                     <div
                                         className={styles.gallerySlide}
-                                        style={{ backgroundImage: `url(${'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80' || sampleImages[index]})` }}
+                                        style={{ backgroundImage: `url(${step.image})` }}
                                     >
                                         <div className={styles.galleryOverlay}>
                                             <div className={styles.galleryContent}>

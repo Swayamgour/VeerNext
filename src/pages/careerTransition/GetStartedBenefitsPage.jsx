@@ -8,15 +8,16 @@ import {
     FaBriefcase,
     FaHandshake,
     FaChartLine,
-    FaMoneyBillWave,
+   
     FaUsers,
-    FaAward,
     FaShieldAlt,
     FaLightbulb,
     FaRegCheckCircle
 } from 'react-icons/fa';
 import styles from '../../css/getStartedBenefits.module.css';
 import AllPageHeader from '../components/AllPageHeader';
+import toast from 'react-hot-toast';
+import { successStories, benefitsOf } from '../components/data'
 
 const GetStartedBenefitsPage = () => {
     const navigate = useNavigate();
@@ -29,77 +30,15 @@ const GetStartedBenefitsPage = () => {
         setTimeout(() => {
             setLoading(false);
             // Redirect to registration/signup page
-            navigate('/register');
+            // navigate('/register');
+            toast.success('start successfully')
+
         }, 1500);
     };
 
-    const handleBack = () => {
-        navigate(-1);
-    };
 
-    const benefits = [
-        {
-            icon: <FaUserTie />,
-            title: "Personalized Career Roadmap",
-            description: "Get a customized plan based on your skills, experience, and career aspirations"
-        },
-        {
-            icon: <FaGraduationCap />,
-            title: "Skill Development Programs",
-            description: "Access to industry-relevant training and certification courses"
-        },
-        {
-            icon: <FaBriefcase />,
-            title: "Job Placement Assistance",
-            description: "Direct connections with 500+ hiring partners across India"
-        },
-        {
-            icon: <FaHandshake />,
-            title: "Mentorship Network",
-            description: "Guidance from successful veterans and industry experts"
-        },
-        {
-            icon: <FaChartLine />,
-            title: "Career Growth Tracking",
-            description: "Monitor your progress with our advanced analytics dashboard"
-        },
-        {
-            icon: <FaMoneyBillWave />,
-            title: "Salary Negotiation Support",
-            description: "Expert advice on compensation packages and benefits"
-        },
-        {
-            icon: <FaUsers />,
-            title: "Community Support",
-            description: "Join a network of 10,000+ Agniveers and veterans"
-        },
-        {
-            icon: <FaAward />,
-            title: "Certification & Recognition",
-            description: "Industry-recognized certificates for your military skills"
-        }
-    ];
 
-    const successStories = [
-        {
-            quote: "After 15 years in the Army, I was uncertain about my civilian career. This platform gave me a clear roadmap and within 3 months, I landed a project management role!",
-            name: "Major Rajesh Kumar",
-            role: "Now: Project Manager at Tata Group",
-            initial: "RK"
-        },
-        {
-            quote: "The skill mapping and training programs helped me transition from Navy logistics to supply chain management. The mentorship was invaluable!",
-            name: "Commander Priya Sharma",
-            role: "Now: Supply Chain Lead at Amazon",
-            initial: "PS"
-        },
-        {
-            quote: "As an Agniveer, I needed guidance for post-service career. The personalized plan and job connections helped me secure a cybersecurity position.",
-            name: "Vikram Singh",
-            role: "Now: Cybersecurity Analyst at Wipro",
-            initial: "VS"
-        }
-    ];
+
 
     return (
         <>
@@ -142,7 +81,7 @@ const GetStartedBenefitsPage = () => {
                     <div className={styles.benefitsGridSection}>
                         <h2 className={styles.benefitsGridTitle}>Exclusive Benefits You'll Get</h2>
                         <div className={styles.benefitsGrid}>
-                            {benefits.map((benefit, index) => (
+                            {benefitsOf.map((benefit, index) => (
                                 <div key={index} className={styles.benefitCard}>
                                     <div className={styles.benefitIcon}>{benefit.icon}</div>
                                     <h3 className={styles.benefitTitle}>{benefit.title}</h3>

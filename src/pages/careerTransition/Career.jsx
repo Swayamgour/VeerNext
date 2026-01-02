@@ -14,19 +14,19 @@ function Career() {
     return (
         <>
 
-         
+
 
             <AllPageHeader props="CAREER TRANSITION " />
 
 
             <div className={styles.app}>
                 <HeroSection />
-                <OpportunitySection />
-                <BenefitsSection />
                 <HowItWorks />
+                {/* <OpportunitySection /> */}
+                <BenefitsSection />
                 <ReportSnapshot />
                 {/* <Testimonials /> */}
-                <CTA />
+                {/* <CTA /> */}
             </div>
         </>
 

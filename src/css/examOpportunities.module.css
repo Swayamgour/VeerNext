@@ -44,6 +44,7 @@
     color: var(--primary-color);
     position: relative;
     display: inline-block;
+    letter-spacing: 2px;
 }
 
 .examMainTitle::after {
@@ -143,6 +144,7 @@
     color: var(--primary-color);
     position: relative;
     font-weight: 700;
+    letter-spacing: 2px;
 
 }
 
@@ -225,6 +227,8 @@
     font-weight: 700;
     margin-bottom: 15px;
     color: var(--primary-color);
+
+    /* letter-spacing: 1px; */
 }
 
 .examDescription {

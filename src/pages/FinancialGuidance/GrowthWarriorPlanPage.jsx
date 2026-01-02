@@ -186,7 +186,7 @@ function GrowthWarriorPlanPage() {
                                             Direct plan for lower expense ratio
                                         </li>
                                     </ul>
-                                    <div className="GWP-invst-return">
+                                    <div className="MPV-invst-return">
                                         12-14% p.a. Historical Returns
                                     </div>
                                 </div>
@@ -215,7 +215,7 @@ function GrowthWarriorPlanPage() {
                                             8-year tenure with exit options
                                         </li>
                                     </ul>
-                                    <div className="GWP-invst-return">
+                                    <div className="MPV-invst-return">
                                         2.5% + Gold Appreciation
                                     </div>
                                 </div>
@@ -244,7 +244,7 @@ function GrowthWarriorPlanPage() {
                                             Better risk-adjusted returns
                                         </li>
                                     </ul>
-                                    <div className="GWP-invst-return">
+                                    <div className="MPV-invst-return">
                                         10-12% p.a. Expected
                                     </div>
                                 </div>
