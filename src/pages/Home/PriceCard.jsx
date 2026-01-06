@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 const PriceCard = ({ iconClass, title, text, tagText, buttonText, buttonLink = "#" }) => {
     const navigate = useNavigate()
     return (
-        <div className="col-lg-4 col-md-6">
+        <div  className="col-lg-4 col-md-6">
             <div className="price-card price-card-default">
                 <div className="price-card-icon">
                     <i className={iconClass}></i>

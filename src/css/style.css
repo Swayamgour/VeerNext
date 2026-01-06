@@ -2559,7 +2559,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         max-width: 100%;
         min-width: 100%;
         width: 100%;
-        padding:  5px;
+        padding: 5px;
         height: 100vh;
     }
 }
@@ -10895,12 +10895,12 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 .g-2,
 .gy-2 {
-    --bs-gutter-y: 0.5rem;
+    --bs-gutter-y: 0px;
 }
 
 .g-2,
 .gx-2 {
-    --bs-gutter-x: 0.5rem;
+    --bs-gutter-x: 0px;
 }
 
 /*----------------------------------------
@@ -11757,5 +11757,26 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
     100% {
         transform: translate(-100px, 100px);
+    }
+}
+
+@media (max-width:786px) {
+    .fill-btn {
+        font-size: 16px;
+        color: var(--clr-common-white);
+        font-weight: 600;
+        background: var(--clr-theme-1);
+        border: 1px solid var(--clr-theme-1);
+        height: 60px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border-radius: 0px;
+        padding: 0 20px;
+        position: relative;
+        overflow: hidden;
+        line-height: 1;
+        white-space: nowrap;
     }
 }

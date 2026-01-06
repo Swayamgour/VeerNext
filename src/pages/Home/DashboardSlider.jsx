@@ -119,10 +119,10 @@ const DashboardSlider = () => {
                         loop
                         effect="fade"
                         speed={800}
-                        autoplay={{
-                            delay: 2000,
-                            disableOnInteraction: false,
-                        }}
+                        // autoplay={{
+                        //     delay: 2000,
+                        //     disableOnInteraction: false,
+                        // }}
                         onSlideChange={handleSlideChange}
                         className="swiper "
                     >
@@ -134,13 +134,13 @@ const DashboardSlider = () => {
                                         <h2 className="vtx-slide-title">{slide.title}</h2>
                                         <p className="vtx-slide-desc">{slide.description}</p>
 
-                                        <div
+                                        <div style={{ minWidth: 'fit-content' }}
                                             className={`mission-cta-buttons d-inline-block ${isWOWLoaded ? "wow fadeInUp" : ""
                                                 }`}
                                             data-wow-delay=".3s"
                                         >
-                                            <div className="mission-cta-buttons">
-                                                <button className="mission-btn fill-btn">
+                                            <div style={{ minWidth: 'fit-content' }} className="mission-cta-buttons">
+                                                <button style={{ minWidth: 'fit-content' }} className="mission-btn fill-btn">
                                                     <span>{slide.ctaText}</span>
                                                     <i className="fas fa-play-circle btn-icon"></i>
                                                 </button>

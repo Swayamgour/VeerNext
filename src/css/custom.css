@@ -273,6 +273,7 @@
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    min-width: 280px;
 
     /* margin-top: 40px; */
 }
@@ -283,6 +284,7 @@
     color: var(--primary-color);
     transition: all ease 0.2s;
     letter-spacing: 0px;
+    min-width: 200px;
 }
 
 .mission-cta-buttons .fill-btn:hover {
@@ -2126,6 +2128,7 @@
     .mission-cta-buttons {
         flex-direction: column;
         align-items: center;
+        min-width: 300px;
     }
 
     .fn-matter-card-desc {

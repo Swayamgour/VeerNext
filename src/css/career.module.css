@@ -35,7 +35,7 @@
     background: var(--clr-bg-1);
     color: var(--clr-bg-2);
     padding: 6px 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 25px;
@@ -277,7 +277,7 @@
     padding: 10px;
 }
 
-.submitButtonCon{
+.submitButtonCon {
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -294,7 +294,7 @@
     background: var(--primary-color);
     color: var(--light-bg);
     border: none;
-    padding: 15px ;
+    padding: 15px;
     font-size: 15px;
     font-weight: 600;
     /* border-radius: 6px; */
@@ -3195,41 +3195,132 @@
     color: var(--clr-common-white);
 }
 
+/* ================================
+   STEP SELECTOR WRAPPER
+================================ */
 .stepSelector {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
+    /* overflow: hidden; */
+    /* ⭐ prevents button from going outside */
 }
 
+/* ================================
+   STEP SELECTOR BUTTON
+================================ */
 .stepSelectorBtn {
     display: flex;
     align-items: center;
     gap: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 20px;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-align: left;
+
     width: 100%;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+
+    border : 1px solid var(--clr-common-border);
+
+    cursor: pointer;
+    text-align: left;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+
+    transform: translateX(0);
+    /* ⭐ base reset */
 }
 
+/* ================================
+   ICON SECTION
+================================ */
+.selectorIcon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ================================
+   TEXT SECTION
+================================ */
+.selectorText h5 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+.selectorText p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    opacity: 0.7;
+    color: white;
+}
+
+/* ================================
+   HOVER STATE
+================================ */
 .stepSelectorBtn:hover {
     background: rgba(255, 255, 255, 0.1);
-    transform: translateX(5px);
-}
-
-.stepSelectorBtn {
     border-color: var(--primary-color);
-    transform: translateX(10px);
+    transform: translateX(6px);
+    /* small & safe */
 }
 
+/* ================================
+   ACTIVE STATE
+================================ */
 .stepSelectorBtn.active {
     background: var(--primary-color);
-    /* back: var(--primary-color); */
-    transform: translateX(10px);
+    border-color: var(--primary-color);
+    transform: translateX(6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
+
+/* Active Icon */
+.stepSelectorBtn.active .selectorIcon {
+    background: white;
+    color: var(--primary-color);
+}
+
+/* Active Text */
+.stepSelectorBtn.active .selectorText h5,
+.stepSelectorBtn.active .selectorText p {
+    color: white;
+    opacity: 1;
+}
+
+/* ================================
+   MOBILE SAFE FIX
+================================ */
+@media (max-width: 768px) {
+    .stepSelectorBtn {
+        padding: 16px;
+        transform: none;
+    }
+
+    .stepSelectorBtn:hover,
+    .stepSelectorBtn.active {
+        transform: none;
+        /* ❌ no sideways move on small screens */
+    }
+}
+
 
 .selectorIcon {
     width: 50px;
@@ -3565,8 +3656,8 @@
 .badgeIcon {
     width: 35px;
     height: 35px;
-    background: var(--primary-color);
-    border-radius: 10px;
+    /* background: var(--primary-color); */
+    /* border-radius: px; */
     display: flex;
     align-items: center;
     justify-content: center;
