@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 
@@ -7,6 +7,8 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import { useNavigate } from "react-router-dom";
 import { FaShieldAlt, FaMedal } from "react-icons/fa";
+import HomeRegFrom from "../components/HomeRegFrom";
+import DialogboxReg from "../components/DialogboxReg";
 
 
 const slidesData = [
@@ -42,9 +44,16 @@ const slidesData = [
 
 
 
+
+
+
 const BannerSlider = () => {
 
     const navigate = useNavigate()
+
+    const [isOffsetOpen, setIsOffsetOpen] = useState(false);
+    const [isSideOpen, setIsSideOpen] = useState(false);
+
 
     useEffect(() => {
         const badges = document.querySelectorAll(".trust-badge-compact");
@@ -63,6 +72,11 @@ const BannerSlider = () => {
         badges.forEach(badge => observer.observe(badge));
     }, []);
 
+
+    const toggleOffsetContent = () => {
+        setIsOffsetOpen(!isOffsetOpen);
+        setIsSideOpen(false);
+    };
 
     return (
 
@@ -135,7 +149,7 @@ const BannerSlider = () => {
 
 
 
-                               
+
                                 <div className="trust-badge-compact mx-auto">
                                     <FaShieldAlt className="badge-icon-compact" />
                                     <div>
@@ -154,12 +168,20 @@ const BannerSlider = () => {
                                     </div>
                                 </div>
 
-                                 <div style={{marginTop:'40px'}}  className="mission-cta-buttons">
-                                    <button onClick={() => navigate('/Courses')} className="mission-btn fill-btn">
+
+
+                                {/* <div style={{ marginTop: '40px' }} className="mission-cta-buttons">
+                                    <button onClick={toggleOffsetContent} className="mission-btn fill-btn">
                                         <span>Start Your Journey</span>
                                         <i class="fas fa-rocket btn-icon"></i>
                                     </button>
-                                </div>
+                                </div> */}
+
+                                <DialogboxReg />
+
+                                {/* <HomeRegFrom
+                                    isOffsetOpen={isOffsetOpen}
+                                    toggleOffsetContent={toggleOffsetContent} /> */}
 
 
                             </div>

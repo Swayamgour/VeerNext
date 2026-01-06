@@ -7,6 +7,8 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
     const navigate = useNavigate();
     const [openDropdown, setOpenDropdown] = useState(null);
 
+    // console.log(showSticky)
+
 
     return (
         <header>
@@ -49,7 +51,7 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
                                                     </ul>
                                                 </li> */}
 
-                                                {console.log(openDropdown)}
+                                                {/* {console.log(openDropdown)} */}
 
                                                 <li
                                                     className={`cs-nav-item-dropdown ${openDropdown === 'services' ? 'open' : ''}`}

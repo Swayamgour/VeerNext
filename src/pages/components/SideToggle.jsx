@@ -11,7 +11,7 @@ const SideToggle = ({ isSideOpen, toggleSideToggle }) => {
     const sideInfoClass = `${styles.sideInfo} ${styles.sideInfoArmy} ${isSideOpen ? styles.infoOpen : ""
         }`;
 
-    console.log(sideInfoClass)
+    // console.log(sideInfoClass)
 
     // 🔥 Navigate + close sidebar
     const handleNavigate = (path) => {

@@ -112,7 +112,7 @@ h6 {
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
-    
+
 }
 
 a:focus,
@@ -169,7 +169,7 @@ h6 {
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
-    
+
     /* font-weight: 700; */
 }
 
@@ -2553,6 +2553,18 @@ only screen and (min-width: 576px) and (max-width: 767px),
         font-size: 22px;
     }
 }
+
+@media (max-width: 768px) {
+    .offset-info {
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+        padding:  5px;
+        height: 100vh;
+    }
+}
+
+
 
 @media only screen and (min-width: 992px) and (max-width: 1199px),
 only screen and (min-width: 768px) and (max-width: 991px),

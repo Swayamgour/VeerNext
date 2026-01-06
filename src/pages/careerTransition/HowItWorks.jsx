@@ -66,7 +66,7 @@ const HowItWorks = () => {
             color: 'step3',
             time: '24 Hours',
             features: ['Exam Recommendations', 'Skill Gap Analysis', 'Timeline Planning'],
-            image: '/VEER/assets/img/banner/report.webp',
+            image: '/VEER/assets/img/banner/report.png',
             imageAlt: 'Personalized Report',
             videoDemo: '#',
             stats: '15+ Career Paths Suggested',

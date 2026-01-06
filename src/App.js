@@ -60,6 +60,7 @@ import IndianArmySSCTechDetails from './pages/Home/IndianArmySSCTechDetails';
 import ComingSoonPage from './pages/ComingSoonPage';
 import { Toaster } from "react-hot-toast";
 import VeerNXTReport from './pages/careerTransition/VeerNXTReport';
+import HomeRegFrom from './pages/components/HomeRegFrom';
 
 
 
@@ -123,6 +124,7 @@ function App() {
           <Route path="/IndianArmySSCTechDetails" element={<IndianArmySSCTechDetails />} />
           <Route path="/ComingSoon" element={<ComingSoonPage />} />
           <Route path="/VeerNXTReport" element={<VeerNXTReport />} />
+          <Route path="/HomeRegFrom" element={<HomeRegFrom />} />
 
         </Routes>
       </Layout>

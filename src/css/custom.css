@@ -4413,6 +4413,11 @@
     .step-circle {
         margin-bottom: 0;
     }
+
+    .logo-white img {
+        height: 100px;
+        width: auto;
+    }
 }
 
 /* Animations */

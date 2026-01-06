@@ -65,3 +65,12 @@ code {
   --radius-md: 12px;
   --radius-sm: 8px;
 }
+
+.css-t3ipsp-control{
+  border-color: var(--primary-color);
+  
+}
+
+.css-t3ipsp-control:hover{
+  border-color: var(--primary-color);
+}

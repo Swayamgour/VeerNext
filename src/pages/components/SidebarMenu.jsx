@@ -8,7 +8,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa"
 
 
 const AboutDialog = ({ isOffsetOpen, toggleOffsetContent }) => {
-    console.log(isOffsetOpen)
+    // console.log(isOffsetOpen)
     return (
         <aside
             className={`offset-content-wrapper offset-content-wrapper-army ${isOffsetOpen ? "offset-show" : ""

@@ -8,6 +8,7 @@ import Testimonials from './Testimonials'
 import CTA from './CTA'
 import styles from '../../css/career.module.css';
 import AllPageHeader from '../components/AllPageHeader'
+import RegisterDrawer from '../components/RegisterDrawer'
 
 
 function Career() {
@@ -21,6 +22,7 @@ function Career() {
 
             <div className={styles.app}>
                 <HeroSection />
+                {/* <RegisterDrawer /> */}
                 <HowItWorks />
                 {/* <OpportunitySection /> */}
                 <BenefitsSection />
