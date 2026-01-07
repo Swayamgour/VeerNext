@@ -1,10 +1,18 @@
+
+
+
+
 import React, { useState } from 'react';
 import styles from '../../css/UserDashboard.module.css';
-import { Link } from 'react-router-dom';
+import styleOfHeader from '../../css/SideToggle.module.css';
 import { FaArrowRightLong } from 'react-icons/fa6';
+import { MdMenu, MdClose } from 'react-icons/md';
+
+import AllPageHeader from '../components/AllPageHeader';
 
 const UserDashboard = () => {
     const [activeTab, setActiveTab] = useState('dashboard');
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const tabData = [
         { id: 'dashboard', label: 'Dashboard' },
@@ -15,6 +23,11 @@ const UserDashboard = () => {
         { id: 'weak-zones', label: 'Weak Zones' },
         { id: 'skill-courses', label: 'Skill Courses' },
     ];
+
+    const handleTabClick = (tabId) => {
+        setActiveTab(tabId);
+        setIsDrawerOpen(false); // Close drawer on mobile after selection
+    };
 
     const renderTabContent = () => {
         switch (activeTab) {
@@ -83,7 +96,7 @@ const UserDashboard = () => {
                             ].map((order, index) => (
                                 <div key={index} className={styles.orderCard}>
                                     <div className={styles.orderInfo}>
-                                        <h4>{order.title}</h4>
+                                        <h4 className={styles.oderInfHeading}>{order.title}</h4>
                                         <p>{order.details || `${order.time}`}</p>
                                     </div>
                                     <button className={styles.orderCTA}>Start</button>
@@ -124,7 +137,7 @@ const UserDashboard = () => {
                                 <div key={index} className={styles.examCard}>
                                     <div>
                                         <div className={styles.examHeader}>
-                                            <h4 className={styles.examTitle}>{exam.name}</h4>
+                                            <h4 className={styles.oderInfHeading}>{exam.name}</h4>
                                             <span className={styles.examStatus}>{exam.status}</span>
                                         </div>
                                         <div className={styles.examDetails}>
@@ -167,7 +180,7 @@ const UserDashboard = () => {
                             ].map((phase, index) => (
                                 <div key={index} className={styles.phaseCard}>
                                     <div className={styles.phaseHeader}>
-                                        <h4 className={styles.phaseTitle}>{phase.title}</h4>
+                                        <h4 className={styles.oderInfHeading}>{phase.title}</h4>
                                         <span className={styles.phaseStatus}>{phase.status}</span>
                                     </div>
                                     <ul className={styles.phaseList}>
@@ -214,7 +227,7 @@ const UserDashboard = () => {
                             ].map((test, index) => (
                                 <div key={index} className={styles.testCard}>
                                     <div className={styles.testHeader}>
-                                        <h4 className={styles.testTitle}>{test.title}</h4>
+                                        <h4 className={styles.oderInfHeading}>{test.title}</h4>
                                         <span className={styles.testScore}>{test.score}</span>
                                     </div>
                                     <div className={styles.testDetails}>
@@ -312,7 +325,7 @@ const UserDashboard = () => {
                                         <div className={styles.courseLevel}>
                                             <span className={styles.levelBadge}>{course.level}</span>
                                         </div>
-                                        <h4 className={styles.courseTitle}>{course.title}</h4>
+                                        <h4 className={styles.oderInfHeading}>{course.title}</h4>
                                         <p className={styles.courseDescription}>{course.description}</p>
                                     </div>
                                     <button className={styles.examButton}>
@@ -340,55 +353,85 @@ const UserDashboard = () => {
 
     return (
         <>
-            <section
-                className="page-title-area"
-                style={{
-                    backgroundImage: "url('/VEER/assets/img/bg/page-title-bg.jpg')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    position: 'relative',
-                }}
-            >
-                <div className="page-title-shape">
-                    <img className="shape-cube" src="/VEER/assets/img/shape/cube-shape.png" alt="cube shape" />
-                </div>
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-8">
-                            <div className="page-title-wrapper">
-                                <h1 className="page-title mb-10">Profile</h1>
-                            </div>
-                            <div className="breadcrumb-menu">
-                                <nav aria-label="Breadcrumbs" className="breadcrumb-trail breadcrumbs">
-                                    <ul className="trail-items">
-                                        <li className="trail-item trail-begin">
-                                            <span>home</span>
-                                        </li>
-                                        <li className="trail-item trail-end">
-                                            <span>Profile</span>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <AllPageHeader props='profile' />
 
             <div className={styles.dashboardContainer}>
-                {/* Tabs Navigation */}
+                {/* Mobile Drawer Toggle Button */}
+
+                <aside className={`${styleOfHeader.fix} ${isDrawerOpen ? styleOfHeader.infoOpen : ""}`}>
+                    <div className={`${styleOfHeader.sideInfo} ${styleOfHeader.sideInfoArmy}`}>
+                        <div className={styleOfHeader.sideInfoContent}>
+
+
+                            {/* ===== HEADER ===== */}
+                            <div className={`${styleOfHeader.offsetWidget} ${styleOfHeader.offsetHeader} ${styleOfHeader.mb20}`}>
+                                <div className={styleOfHeader.row}>
+                                    <div className={styleOfHeader.col9}>
+                                        <div className={styleOfHeader.offsetLogo}>
+                                            <img src="/VEER/assets/img/logo/logo.png" alt="Logo" />
+                                        </div>
+                                    </div>
+                                    <div className={styleOfHeader.col3}>
+                                        <button onClick={() => setIsDrawerOpen(false)} className={styleOfHeader.sideInfoClose} >
+                                            <i className="fal fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* ===== MENU ===== */}
+                            {/* <div className={`${styleOfHeader.mainMenu2f}`}> */}
+                            <nav>
+                                <ul style={{padding:'0'}}>
+
+                                    {tabData.map((tab) => (
+                                        <li key={tab.id}
+                                            onClick={() => handleTabClick(tab.id)}
+                                            className={` ${activeTab === tab.id ? styles.activeTab : styles.inActiveTab}`}>
+                                            {tab.label}
+                                        </li>
+                                    ))}
+
+
+                                </ul>
+                            </nav>
+                            {/* </div> */}
+
+
+                        </div>
+                    </div>
+                </aside>
+
+
+
+                {/* Desktop Tabs Navigation */}
                 <div className={styles.tabsContainer}>
                     <div className={styles.tabs}>
                         {tabData.map((tab) => (
                             <button
                                 key={tab.id}
-                                className={`${styles.tabButton} ${activeTab === tab.id ? styles.activeTab : ''}`}
+                                className={`${styles.tabButton} ${activeTab === tab.id ? styles.activeTabForWeb : ''}`}
                                 onClick={() => setActiveTab(tab.id)}
                             >
                                 {tab.label}
                             </button>
                         ))}
                     </div>
+                </div>
+
+
+                <div className={styles.mobileDrawerBox}>
+
+                    <h4 className={styles.oderInfHeading}> {activeTab}</h4>
+
+
+                    <button
+                        className={styles.mobileDrawerToggle}
+                        onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+                    >
+                        {isDrawerOpen ? <MdClose style={{ fontSize: '25px' }} /> : <MdMenu style={{ fontSize: '25px' }} />}
+                        {/* <span>Menu</span> */}
+                    </button>
                 </div>
 
                 {/* Tab Content */}

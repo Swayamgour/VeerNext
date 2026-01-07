@@ -6657,6 +6657,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     position: relative;
     z-index: 2;
     padding: 235px 0 125px;
+
 }
 
 .page-title-area::before {
@@ -6669,6 +6670,12 @@ only screen and (min-width: 576px) and (max-width: 767px),
     top: 0;
     inset-inline-start: 0;
     z-index: -1;
+}
+
+@media (max-width:786px) {
+    .page-title-area {
+        padding: 191px 0 63px;
+    }
 }
 
 .page-title-wrapper p {
