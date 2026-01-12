@@ -11,12 +11,23 @@ import {
     FaNetworkWired,
     FaShieldAlt,
     FaGraduationCap,
-   
+
     FaUniversity,
     FaAward,
     FaMoneyBillWave,
 
 } from 'react-icons/fa';
+
+
+import {
+    FaTachometerAlt,
+    FaUser,
+    FaBookOpen,
+    FaClipboardList,
+    FaTasks,
+    FaCog,
+    FaSignOutAlt
+} from "react-icons/fa";
 
 
 import { FaUserTie, FaLaptopCode, FaLanguage } from "react-icons/fa";
@@ -798,7 +809,481 @@ const successStories = [
 ];
 
 
+const tabData = [
+    { id: 'dashboard', label: 'Dashboard' },
+    { id: 'Profile', label: 'My Profile' },
+    { id: 'Enrolled Courses', label: 'Enrolled Courses' },
+    { id: 'Wishlist', label: 'Wishlist' },
+    { id: 'My Quiz Attempts', label: 'My Quiz Attempts' },
+    { id: 'Assignments', label: 'Assignments' },
+    { id: 'todays-orders', label: "Today's Orders" },
+    { id: 'exams', label: 'Exams Targeting' },
+    { id: 'roadmap', label: 'Syllabus Roadmap' },
+    { id: 'mock-tests', label: 'Mock Tests' },
+    { id: 'weak-zones', label: 'Weak Zones' },
+    { id: 'skill-courses', label: 'Skill Courses' },
+];
+
+const Exams = [
+    {
+        name: 'SSC GD Constable',
+        eligibility: '10th Pass',
+        difficulty: 'Easy–Moderate',
+        status: '48% Prepared',
+        buttonText: 'View Syllabus'
+    },
+    {
+        name: 'State Police – Maharashtra & Rajasthan',
+        eligibility: '12th Pass',
+        difficulty: 'Moderate',
+        status: '31% Prepared',
+        buttonText: 'View Pattern'
+    },
+    {
+        name: 'RRB Group D',
+        eligibility: '10th Pass',
+        difficulty: 'Easy',
+        status: '60% Prepared',
+        buttonText: 'Practice Mock'
+    }
+]
+
+
+const roadMap = [
+    {
+        title: 'PHASE 1 – FOUNDATION',
+        status: 'Completed 70%',
+        items: ['Reasoning basics', 'Arithmetic basics', 'Simple grammar', 'Static GK']
+    },
+    {
+        title: 'PHASE 2 – APPLICATION',
+        status: 'Completed 40%',
+        items: ['Mixed problem sets', 'Topic-wise mock tests', 'Speed improvement drills']
+    },
+    {
+        title: 'PHASE 3 – MASTER',
+        status: 'Pending',
+        items: ['Full-length mocks', 'Exam simulation', 'Weak-zone elimination']
+    }
+]
+
+
+const skillCourses = [
+    {
+        title: 'English Speaking',
+        level: 'Beginner → Pro',
+        description: 'Master communication skills for interviews and workplace'
+    },
+    {
+        title: 'Computer Skills',
+        level: 'MS Office + Email Writing',
+        description: 'Essential digital skills for modern workplaces'
+    },
+    {
+        title: 'Corporate Etiquette',
+        level: 'Veteran Mentors',
+        description: 'Learn workplace norms and professional behavior'
+    }
+]
+
+const Courses = [
+    {
+        title: 'SSC GD Complete Batch 2024',
+        progress: 65,
+        lessons: '32/50 Lessons',
+        instructor: 'Capt. Rajesh Sharma',
+        duration: '3 Months',
+        status: 'Active'
+    },
+    {
+        title: 'Reasoning Masterclass',
+        progress: 100,
+        lessons: '40/40 Lessons',
+        instructor: 'Maj. Priya Singh',
+        duration: '2 Months',
+        status: 'Completed'
+    },
+    {
+        title: 'Mathematics Foundation',
+        progress: 45,
+        lessons: '18/40 Lessons',
+        instructor: 'Col. Amit Kumar',
+        duration: '2.5 Months',
+        status: 'Active'
+    },
+    {
+        title: 'English for Competitive Exams',
+        progress: 30,
+        lessons: '12/40 Lessons',
+        instructor: 'Lt. Neha Gupta',
+        duration: '2 Months',
+        status: 'Active'
+    },
+    {
+        title: 'Static GK Crash Course',
+        progress: 0,
+        lessons: '0/30 Lessons',
+        instructor: 'Dr. Anil Verma',
+        duration: '1 Month',
+        status: 'Upcoming'
+    },
+    {
+        title: 'Current Affairs Monthly',
+        progress: 100,
+        lessons: '12/12 Lessons',
+        instructor: 'News Analysis Team',
+        duration: 'Monthly',
+        status: 'Completed'
+    }
+]
+
+
+const wishlist = [
+    {
+        title: 'SSC GD 2024 Ultimate Batch',
+        category: 'Full Course',
+        price: '₹9,999',
+        discount: '₹12,999',
+        rating: 4.8,
+        students: '2.5k',
+        deadline: 'Offer ends in 2 days',
+        priority: true
+    },
+    {
+        title: 'Reasoning Super 30 Sessions',
+        category: 'Crash Course',
+        price: '₹2,499',
+        discount: '₹3,999',
+        rating: 4.9,
+        students: '1.2k',
+        deadline: 'Limited seats',
+        priority: true
+    },
+    {
+        title: 'Current Affairs Yearly Package',
+        category: 'Subscription',
+        price: '₹1,999',
+        discount: '₹2,999',
+        rating: 4.7,
+        students: '3.4k',
+        deadline: 'Monthly updates',
+        priority: false
+    },
+    {
+        title: 'Mathematics 5000+ Questions',
+        category: 'Practice Book',
+        price: '₹1,499',
+        discount: '₹2,499',
+        rating: 4.6,
+        students: '890',
+        deadline: 'Digital access',
+        priority: false
+    },
+    {
+        title: 'Interview Preparation Guide',
+        category: 'Skill Course',
+        price: '₹3,999',
+        discount: '₹4,999',
+        rating: 4.8,
+        students: '560',
+        deadline: 'Personal mentorship',
+        priority: true
+    },
+    {
+        title: 'Mock Test Series - Pro',
+        category: 'Test Series',
+        price: '₹2,999',
+        discount: '₹3,999',
+        rating: 4.5,
+        students: '1.8k',
+        deadline: '20 tests included',
+        priority: false
+    }
+]
+
+
+const Assignments = [
+    {
+        title: 'Percentage & Ratio Problems',
+        course: 'Mathematics Foundation',
+        dueDate: 'Tomorrow, 11:59 PM',
+        status: 'pending',
+        points: 25,
+        difficulty: 'Medium',
+        estimatedTime: '45 mins'
+    },
+    {
+        title: 'Indian Constitution MCQ Set',
+        course: 'General Knowledge',
+        dueDate: 'Today, 6:00 PM',
+        status: 'overdue',
+        points: 20,
+        difficulty: 'Easy',
+        estimatedTime: '30 mins'
+    },
+    {
+        title: 'Sentence Correction Exercises',
+        course: 'English Grammar',
+        dueDate: 'In 3 days',
+        status: 'pending',
+        points: 30,
+        difficulty: 'Hard',
+        estimatedTime: '60 mins'
+    },
+    {
+        title: 'Reasoning Puzzle Solving',
+        course: 'Logical Reasoning',
+        dueDate: 'Submitted',
+        status: 'submitted',
+        points: 35,
+        difficulty: 'Medium',
+        grade: 'A-',
+        submittedOn: 'Yesterday'
+    },
+    {
+        title: 'Current Affairs Essay',
+        course: 'GK & Current Affairs',
+        dueDate: 'Graded',
+        status: 'graded',
+        points: 40,
+        difficulty: 'Hard',
+        grade: 'B+',
+        feedback: 'Good analysis, needs more examples'
+    },
+    {
+        title: 'Data Interpretation Set',
+        course: 'Quantitative Aptitude',
+        dueDate: 'In 5 days',
+        status: 'pending',
+        points: 30,
+        difficulty: 'Medium',
+        estimatedTime: '50 mins'
+    }
+]
+
+
+const Quiz = [
+    {
+        name: 'Reasoning: Analogy & Classification',
+        date: 'Today, 10:30 AM',
+        score: '85%',
+        time: '12:30 mins',
+        rank: 'Top 12%',
+        questions: '20/20'
+    },
+    {
+        name: 'Mathematics: Percentage & Profit',
+        date: 'Yesterday, 3:45 PM',
+        score: '78%',
+        time: '18:45 mins',
+        rank: 'Top 25%',
+        questions: '15/20'
+    },
+    {
+        name: 'General Knowledge: Polity',
+        date: '2 days ago, 9:15 AM',
+        score: '92%',
+        time: '10:20 mins',
+        rank: 'Top 8%',
+        questions: '20/20'
+    },
+    {
+        name: 'English: Spotting Errors',
+        date: '3 days ago, 8:00 PM',
+        score: '65%',
+        time: '25:10 mins',
+        rank: 'Top 40%',
+        questions: '13/20'
+    },
+    {
+        name: 'Current Affairs: March 2024',
+        date: '1 week ago, 11:00 AM',
+        score: '88%',
+        time: '15:30 mins',
+        rank: 'Top 15%',
+        questions: '18/20'
+    },
+    {
+        name: 'Full Mock Test #4',
+        date: '2 weeks ago, 2:00 PM',
+        score: '74%',
+        time: '85:00 mins',
+        rank: 'Top 20%',
+        questions: '74/100'
+    }
+]
+
+const insightData = [
+    {
+        title: "Strongest Subject",
+        value: "General Knowledge",
+        extra: "Average Score: 86%",
+    },
+    {
+        title: "Needs Improvement",
+        value: "English Grammar",
+        extra: "Average Score: 68%",
+    },
+    {
+        title: "Best Time of Day",
+        value: "Morning (8AM-11AM)",
+        extra: "Average Score: 81%",
+    },
+    {
+        title: "Consistency Score",
+        value: "Good",
+        extra: "±8% variation",
+    },
+];
+
+
+const assignmentStats = [
+    {
+        label: "PENDING",
+        value: 8,
+    },
+    {
+        label: "SUBMITTED",
+        value: 24,
+    },
+    {
+        label: "OVERDUE",
+        value: 2,
+    },
+    {
+        label: "AVG. GRADE",
+        value: "B+",
+    },
+];
+
+
+const mockTest = [
+    {
+        title: 'Full Mock Test #5',
+        details: '100Q / 90 min',
+        score: '62%',
+        rank: 'Top 18%'
+    },
+    {
+        title: 'Topic Test – Simplification',
+        details: '20Q / 30 min',
+        score: '75%',
+        rank: 'Top 25%'
+    },
+    {
+        title: 'Topic Test – Indian Constitution',
+        details: '20Q / 30 min',
+        score: '58%',
+        rank: 'Top 30%'
+    }
+]
+
+
+const simplifiedTabs = [
+    {
+        id: 'dashboard',
+        label: 'Dashboard',
+        icon: <FaTachometerAlt />
+    },
+    {
+        id: 'Profile',
+        label: 'My Profile',
+        icon: <FaUser />
+    },
+    {
+        id: 'Enrolled Courses',
+        label: 'Courses',
+        icon: <FaBookOpen />
+    },
+    {
+        id: 'My Quiz Attempts',
+        label: 'My Quiz Attempts',
+        icon: <FaClipboardList />
+    },
+    {
+        id: 'Notes',
+        label: 'Notes',
+        icon: <FaTasks />
+    },
+    {
+        id: 'settings',
+        label: 'Settings',
+        icon: <FaCog />
+    },
+    {
+        id: 'logout',
+        label: 'Logout',
+        icon: <FaSignOutAlt />
+    }
+];
+
+
+const notesData = [
+    {
+        id: 1,
+        category: "course: Fundamentals",
+        title: "Write a the 5",
+        preview:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        pages: "80 pages",
+        date: "2 days ago",
+        actions: ["download"]
+    },
+    {
+        id: 2,
+        category: "course: Advanced",
+        title: "Mathematics Formulas",
+        preview:
+            "Important formulas and theorems for calculus and algebra with solved examples.",
+        pages: "45 pages",
+        date: "1 week ago",
+        actions: ["download"]
+    },
+    {
+        id: 3,
+        category: "course: History",
+        title: "World War Timeline",
+        preview:
+            "Detailed timeline of major events from 1914 to 1945 with important battles.",
+        pages: "32 pages",
+        date: "3 days ago",
+        actions: ["download"]
+    },
+    {
+        id: 4,
+        category: "course: Science",
+        title: "Chemistry Reactions",
+        preview:
+            "Organic and inorganic chemical reactions with mechanisms and examples.",
+        pages: "68 pages",
+        date: "5 days ago",
+        actions: ["download"]
+    },
+    {
+        id: 5,
+        category: "course: Literature",
+        title: "Poetry Analysis",
+        preview:
+            "Analysis of major poems from different eras with critical interpretations.",
+        pages: "28 pages",
+        date: "Yesterday",
+        actions: ["download"]
+    }
+];
+
+const notesStats = [
+    { label: "Total Notes", value: 125 },
+    { label: "This Week", value: 8 },
+    { label: "Subjects", value: 12 }
+];
 
 
 
-export { benefits, interestsList, stats, tracks, lectures, resources, examsData, examCategories, successStories, benefitsOf };
+
+
+
+export {
+    benefits, interestsList, stats, tracks, lectures, resources, examsData, examCategories, successStories, benefitsOf,
+    tabData, Exams, roadMap, skillCourses, Courses, wishlist, Assignments, Quiz, insightData, assignmentStats, mockTest, simplifiedTabs,
+    notesData, notesStats
+};

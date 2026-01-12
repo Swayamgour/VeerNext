@@ -1,33 +1,34 @@
-
-
-
-
 import React, { useState } from 'react';
 import styles from '../../css/UserDashboard.module.css';
 import styleOfHeader from '../../css/SideToggle.module.css';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { MdMenu, MdClose } from 'react-icons/md';
-
+import { LiaDownloadSolid } from "react-icons/lia";
 import AllPageHeader from '../components/AllPageHeader';
+import { tabData, Exams, roadMap, skillCourses, Courses, wishlist, Assignments, Quiz, insightData, assignmentStats, mockTest, simplifiedTabs, notesStats, notesData } from '../components/data';
+
+import { MdModeEdit } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 
 const UserDashboard = () => {
     const [activeTab, setActiveTab] = useState('dashboard');
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-    const tabData = [
-        { id: 'dashboard', label: 'Dashboard' },
-        { id: 'todays-orders', label: "Today's Orders" },
-        { id: 'exams', label: 'Exams Targeting' },
-        { id: 'roadmap', label: 'Syllabus Roadmap' },
-        { id: 'mock-tests', label: 'Mock Tests' },
-        { id: 'weak-zones', label: 'Weak Zones' },
-        { id: 'skill-courses', label: 'Skill Courses' },
-    ];
+    // Simplified tabs data - only the ones you requested
 
     const handleTabClick = (tabId) => {
+        if (tabId === 'logout') {
+            // Handle logout logic here
+            console.log('Logging out...');
+            // You can redirect to login page or clear user session
+            // window.location.href = '/login';
+            return;
+        }
         setActiveTab(tabId);
         setIsDrawerOpen(false); // Close drawer on mobile after selection
     };
+
+    const navigate = useNavigate()
 
     const renderTabContent = () => {
         switch (activeTab) {
@@ -41,17 +42,17 @@ const UserDashboard = () => {
 
                         <div className={styles.statsGrid}>
                             <div className={styles.statCard}>
-                                <div className={styles.statLabel}>MISSION STATUS</div>
+                                <div className={styles.statLabel}>Enrolled Courses</div>
                                 <div className={styles.statValue}>64%</div>
                             </div>
 
                             <div className={styles.statCard}>
-                                <div className={styles.statLabel}>EXAMS PREPARING FOR</div>
+                                <div className={styles.statLabel}>Active Courses</div>
                                 <div className={styles.statValue}>3</div>
                             </div>
 
                             <div className={styles.statCard}>
-                                <div className={styles.statLabel}>LESSONS COMPLETED</div>
+                                <div className={styles.statLabel}>Complete Courses</div>
                                 <div className={styles.statValue}>32</div>
                             </div>
 
@@ -60,19 +61,16 @@ const UserDashboard = () => {
                                 <div className={styles.statValue}>14</div>
                             </div>
 
-                            <div className={styles.statCard}>
-                                <div className={styles.statLabel}>ACCURACY</div>
-                                <div className={styles.statValue}>68%</div>
-                            </div>
+
                         </div>
 
-                        <div className={styles.weakZones}>
+                        {/* <div className={styles.weakZones}>
                             <div className={styles.weakZonesTitle}>WEAK ZONES:</div>
                             <div className={styles.weakZonesList}>
                                 <span className={styles.weakZoneTag}>Maths (Arithmetic)</span>
                                 <span className={styles.weakZoneTag}>GK (Static)</span>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="mission-cta-buttons mt-4">
                             <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn">
@@ -83,271 +81,545 @@ const UserDashboard = () => {
                     </section>
                 );
 
-            case 'todays-orders':
+            case 'Profile':
                 return (
-                    <section className={styles.todaysOrders}>
-                        <h2 className={styles.headerTitle}>TODAY'S ORDERS</h2>
-                        <div className={styles.ordersGrid}>
-                            {[
-                                { title: 'Complete Reasoning: Analogy', time: '12 min' },
-                                { title: 'Take Quick Mock Test: GK', details: '20 Questions' },
-                                { title: 'Watch Lesson: English Speaking', details: 'Pronunciation Basics' },
-                                { title: 'Revise Formula Sheet', details: 'Percentage + Profit/Loss' }
-                            ].map((order, index) => (
-                                <div key={index} className={styles.orderCard}>
-                                    <div className={styles.orderInfo}>
-                                        <h4 className={styles.oderInfHeading}>{order.title}</h4>
-                                        <p>{order.details || `${order.time}`}</p>
-                                    </div>
-                                    <button className={styles.orderCTA}>Start</button>
+                    <section className={styles.dashboardHeader}>
+                        <h2 className={styles.headerTitle}>MY PROFILE</h2>
+
+                        <div className={styles.profileContainer}>
+                            <div className={styles.profileHeader}>
+                                <div className={styles.profileAvatar}>
+                                    <img src="/VEER/assets/img/logo/6997484.png" alt="User Avatar" />
+                                    <button className={styles.editAvatarBtn}><MdModeEdit /></button>
                                 </div>
-                            ))}
+                                <div className={styles.profileInfo}>
+                                    <h3 className={styles.oderInfHeading}>John Doe</h3>
+                                    <p className={styles.profileEmail}>john.doe@example.com</p>
+                                    <div className={styles.profileStats}>
+                                        <span className={styles.profileStat}>Member Since: Jan 2023</span>
+                                        <span className={styles.profileStat}>Rank: Top 15%</span>
+                                        <span className={styles.profileStat}>Streak: 42 days</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={styles.profileDetails}>
+                                <div className={styles.detailSection}>
+                                    <h4 className={styles.sectionTitle}>Personal Information</h4>
+                                    <div className={styles.preferencesGrid}>
+                                        <div className={styles.preferenceItem}>
+                                            <span className={styles.preferenceLabel}>Full Name</span>
+                                            <span className={styles.preferenceValue}>John Doe</span>
+                                        </div>
+                                        <div className={styles.preferenceItem}>
+                                            <span className={styles.preferenceLabel}>Phone Number</span>
+                                            <span className={styles.preferenceValue}>+91 9876543210</span>
+                                        </div>
+                                        <div className={styles.preferenceItem}>
+                                            <span className={styles.preferenceLabel}>Date of Birth</span>
+                                            <span className={styles.preferenceValue}>15 March 1995</span>
+                                        </div>
+                                        <div className={styles.preferenceItem}>
+                                            <span className={styles.preferenceLabel}>Location</span>
+                                            <span className={styles.preferenceValue}>New Delhi, India</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className={styles.detailSection}>
+                                    <h4 className={styles.sectionTitle}>Exam Preferences</h4>
+                                    <div className={styles.preferencesGrid}>
+                                        <div className={styles.preferenceItem}>
+                                            <span className={styles.preferenceLabel}>Primary Exam</span>
+                                            <span className={styles.preferenceValue}>SSC GD Constable</span>
+                                        </div>
+                                        <div className={styles.preferenceItem}>
+                                            <span className={styles.preferenceLabel}>Secondary Exam</span>
+                                            <span className={styles.preferenceValue}>RRB Group D</span>
+                                        </div>
+                                        <div className={styles.preferenceItem}>
+                                            <span className={styles.preferenceLabel}>Daily Study Goal</span>
+                                            <span className={styles.preferenceValue}>4 hours</span>
+                                        </div>
+                                        <div className={styles.preferenceItem}>
+                                            <span className={styles.preferenceLabel}>Preferred Time</span>
+                                            <span className={styles.preferenceValue}>Morning (6AM - 10AM)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className={styles.detailSection}>
+                                    <h4 className={styles.sectionTitle}>Account Settings</h4>
+                                    <div className={styles.settingsList}>
+                                        <div className={styles.settingItem}>
+                                            <span>Email Notifications</span>
+                                            <label className={styles.toggleSwitch}>
+                                                <input type="checkbox" defaultChecked />
+                                                <span className={styles.slider}></span>
+                                            </label>
+                                        </div>
+                                        <div className={styles.settingItem}>
+                                            <span>SMS Notifications</span>
+                                            <label className={styles.toggleSwitch}>
+                                                <input type="checkbox" />
+                                                <span className={styles.slider}></span>
+                                            </label>
+                                        </div>
+                                        <div className={styles.settingItem}>
+                                            <span>Study Reminders</span>
+                                            <label className={styles.toggleSwitch}>
+                                                <input type="checkbox" defaultChecked />
+                                                <span className={styles.slider}></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 );
 
-            case 'exams':
+            case 'Enrolled Courses':
                 return (
-                    <section className={styles.examsSection}>
-                        <h2 className={styles.headerTitle}>EXAMS YOU'RE TARGETING</h2>
-                        <div className={styles.examsGrid}>
-                            {[
-                                {
-                                    name: 'SSC GD Constable',
-                                    eligibility: '10th Pass',
-                                    difficulty: 'Easy–Moderate',
-                                    status: '48% Prepared',
-                                    buttonText: 'View Syllabus'
-                                },
-                                {
-                                    name: 'State Police – Maharashtra & Rajasthan',
-                                    eligibility: '12th Pass',
-                                    difficulty: 'Moderate',
-                                    status: '31% Prepared',
-                                    buttonText: 'View Pattern'
-                                },
-                                {
-                                    name: 'RRB Group D',
-                                    eligibility: '10th Pass',
-                                    difficulty: 'Easy',
-                                    status: '60% Prepared',
-                                    buttonText: 'Practice Mock'
-                                }
-                            ].map((exam, index) => (
-                                <div key={index} className={styles.examCard}>
-                                    <div>
-                                        <div className={styles.examHeader}>
-                                            <h4 className={styles.oderInfHeading}>{exam.name}</h4>
-                                            <span className={styles.examStatus}>{exam.status}</span>
-                                        </div>
-                                        <div className={styles.examDetails}>
-                                            <div className={styles.examDetail}>
-                                                <span>Eligibility: {exam.eligibility}</span>
-                                            </div>
-                                            <div className={styles.examDetail}>
-                                                <span>Difficulty: {exam.difficulty}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button className={styles.examButton}>{exam.buttonText} <FaArrowRightLong /></button>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                );
+                    <section className={styles.dashboardHeader}>
+                        <h2 className={styles.headerTitle}>ENROLLED COURSES</h2>
 
-            case 'roadmap':
-                return (
-                    <section className={styles.roadmapSection}>
-                        <h2 className={styles.headerTitle}>YOUR SYLLABUS ROADMAP</h2>
-                        <div className={styles.phaseCards}>
-                            {[
-                                {
-                                    title: 'PHASE 1 – FOUNDATION',
-                                    status: 'Completed 70%',
-                                    items: ['Reasoning basics', 'Arithmetic basics', 'Simple grammar', 'Static GK']
-                                },
-                                {
-                                    title: 'PHASE 2 – APPLICATION',
-                                    status: 'Completed 40%',
-                                    items: ['Mixed problem sets', 'Topic-wise mock tests', 'Speed improvement drills']
-                                },
-                                {
-                                    title: 'PHASE 3 – MASTER',
-                                    status: 'Pending',
-                                    items: ['Full-length mocks', 'Exam simulation', 'Weak-zone elimination']
-                                }
-                            ].map((phase, index) => (
-                                <div key={index} className={styles.phaseCard}>
-                                    <div className={styles.phaseHeader}>
-                                        <h4 className={styles.oderInfHeading}>{phase.title}</h4>
-                                        <span className={styles.phaseStatus}>{phase.status}</span>
-                                    </div>
-                                    <ul className={styles.phaseList}>
-                                        {phase.items.map((item, i) => (
-                                            <li key={i} className={styles.phaseItem}>{item}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
+                        <div className={styles.coursesFilter}>
+                            <div className={styles.filterTabs}>
+                                <button className={`${styles.filterTab} ${styles.activeFilterTab}`}>All Courses</button>
+                                <button className={styles.filterTab}>In Progress</button>
+                                <button className={styles.filterTab}>Completed</button>
+                                <button className={styles.filterTab}>Upcoming</button>
+                            </div>
+                            <div className={styles.filterSearch}>
+                                <input type="text" placeholder="Search courses..." />
+                            </div>
                         </div>
-                        <div className="mission-cta-buttons">
-                            <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn">
-                                <span>Generate 30-Day Plan</span>
-                                <FaArrowRightLong />
-                            </button>
-                        </div>
-                    </section>
-                );
 
-            case 'mock-tests':
-                return (
-                    <section className={styles.mockTestSection}>
-                        <h2 className={styles.headerTitle}>MOCK TEST COMMAND ROOM</h2>
-                        <div className={styles.testCards}>
-                            {[
-                                {
-                                    title: 'Full Mock Test #5',
-                                    details: '100Q / 90 min',
-                                    score: '62%',
-                                    rank: 'Top 18%'
-                                },
-                                {
-                                    title: 'Topic Test – Simplification',
-                                    details: '20Q / 30 min',
-                                    score: '75%',
-                                    rank: 'Top 25%'
-                                },
-                                {
-                                    title: 'Topic Test – Indian Constitution',
-                                    details: '20Q / 30 min',
-                                    score: '58%',
-                                    rank: 'Top 30%'
-                                }
-                            ].map((test, index) => (
-                                <div key={index} className={styles.testCard}>
-                                    <div className={styles.testHeader}>
-                                        <h4 className={styles.oderInfHeading}>{test.title}</h4>
-                                        <span className={styles.testScore}>{test.score}</span>
-                                    </div>
-                                    <div className={styles.testDetails}>
-                                        <div className={styles.testDetail}>
-                                            <span>Questions</span>
-                                            <span>{test.details.split(' / ')[0]}</span>
-                                        </div>
-                                        <div className={styles.testDetail}>
-                                            <span>Last Score</span>
-                                            <span>{test.score}</span>
-                                        </div>
-                                        <div className={styles.testDetail}>
-                                            <span>Rank</span>
-                                            <span>{test.rank}</span>
+                        <div className={styles.coursesGrid}>
+                            {Courses?.map((course, index) => (
+                                <div key={index} className={styles.courseCard}>
+                                    <div className={styles.courseHeader}>
+                                        <div className={styles.courseTitle}>
+                                            <h4 className={styles.oderInfHeading}>{course.title}</h4>
+                                            <p className={styles.courseInstructor}>By {course.instructor}</p>
                                         </div>
                                     </div>
-                                    <div className={styles.testButtons}>
-                                        <button className={styles.examButton}>
-                                            Retake <FaArrowRightLong />
+
+                                    <div className={styles.courseProgress}>
+                                        <div className={styles.progressInfo}>
+                                            <span>Progress: {course.progress}%</span>
+                                            <span>{course.lessons}</span>
+                                        </div>
+                                        <div className={styles.progressBar}>
+                                            <div
+                                                className={styles.progressFill}
+                                                style={{ width: `${course.progress}%` }}
+                                            ></div>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.courseDetails}>
+                                        <div className={styles.courseDetail}>
+                                            <span>Duration</span>
+                                            <span>{course.duration}</span>
+                                        </div>
+                                        <div className={styles.courseDetail}>
+                                            <span>Last Accessed</span>
+                                            <span>2 days ago</span>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.courseActions}>
+                                        {course.status === 'Active' && (
+                                            <button onClick={() => navigate('/Courses')} className={styles.examButton}>
+                                                Continue Course <FaArrowRightLong />
+                                            </button>
+                                        )}
+                                        {course.status === 'Upcoming' && (
+                                            // <button className={styles.examButton} disabled>
+                                            //     Starts Soon
+                                            // </button>
+
+                                            <button onClick={() => navigate('/Courses')} className={styles.examButton}>
+                                                Continue Course <FaArrowRightLong />
+                                            </button>
+                                        )}
+                                        {course.status === 'Completed' && (
+                                            // <button className={styles.examButton}>
+                                            //     View Certificate <FaArrowRightLong />
+                                            // </button>
+
+                                            <button onClick={() => navigate('/Courses')} className={styles.examButton}>
+                                                Continue Course <FaArrowRightLong />
+                                            </button>
+                                        )}
+                                        <button onClick={() => navigate('/CourseDetails')} className={styles.secondaryButton}>
+                                            View Details
                                         </button>
                                     </div>
                                 </div>
                             ))}
                         </div>
-                        <div className={styles.purchaseBanner}>
-                            <p>UNLOCK ADVANCED MOCK TESTS & ANALYTICS</p>
-                            <div className="mission-cta-buttons">
-                                <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn">
-                                    <span>Attempt New Mock Test</span>
-                                    <FaArrowRightLong />
-                                </button>
+                    </section>
+                );
+
+            case 'My Quiz Attempts':
+                return (
+                    <section className={styles.dashboardHeader}>
+                        <h2 className={styles.headerTitle}>MY QUIZ ATTEMPTS</h2>
+
+                        <div className={styles.quizStats}>
+                            <div className={styles.statCard}>
+                                <div className={styles.statLabel}>TOTAL ATTEMPTS</div>
+                                <div className={styles.statValue}>142</div>
+                            </div>
+                            <div className={styles.statCard}>
+                                <div className={styles.statLabel}>AVERAGE SCORE</div>
+                                <div className={styles.statValue}>72%</div>
+                            </div>
+                            <div className={styles.statCard}>
+                                <div className={styles.statLabel}>BEST SCORE</div>
+                                <div className={styles.statValue}>98%</div>
+                            </div>
+                            <div className={styles.statCard}>
+                                <div className={styles.statLabel}>TIME SPENT</div>
+                                <div className={styles.statValue}>45h 30m</div>
+                            </div>
+                        </div>
+
+                        <div className={styles.quizFilter}>
+                            <div className={styles.filterTabs}>
+                                <button className={`${styles.filterTab} ${styles.activeFilterTab}`}>Recent Attempts</button>
+                                <button className={styles.filterTab}>Top Scores</button>
+                                <button className={styles.filterTab}>By Subject</button>
+                                <button className={styles.filterTab}>By Difficulty</button>
+                            </div>
+                            <div className={styles.dateFilter}>
+                                <select>
+                                    <option>Last 7 days</option>
+                                    <option>Last 30 days</option>
+                                    <option>Last 3 months</option>
+                                    <option>All time</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className={styles.quizTable}>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Quiz Name</th>
+                                        <th>Date</th>
+                                        <th>Score</th>
+                                        <th>Time Taken</th>
+                                        <th>Rank</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {Quiz.map((quiz, index) => (
+                                        <tr key={index}>
+                                            <td>
+                                                <div className={styles.quizName}>
+                                                    <strong>{quiz.name}</strong>
+                                                    <span>{quiz.questions} questions</span>
+                                                </div>
+                                            </td>
+                                            <td>{quiz.date}</td>
+                                            <td>
+                                                <div className={styles.scoreCell}>
+                                                    <span className={styles.scoreValue}>{quiz.score}</span>
+                                                </div>
+                                            </td>
+                                            <td>{quiz.time}</td>
+                                            <td>
+                                                <span className={styles.rankBadge}>{quiz.rank}</span>
+                                            </td>
+                                            <td>
+                                                <div className={styles.quizActions}>
+                                                    <button className={styles.actionBtn}>Review</button>
+                                                    <button className={styles.actionBtn}>Retake</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div className={styles.performanceInsights}>
+                            <h4 className={styles.insightTitle}>Performance Insights</h4>
+                            <div className={styles.insightGrid}>
+                                {insightData.map((item, index) => (
+                                    <div key={index} className={styles.insightCard}>
+                                        <h5 className={styles.oderInfHeading}>{item.title}</h5>
+                                        <p >{item.value}</p>
+                                        <span>{item.extra}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </section>
                 );
 
-            case 'weak-zones':
+            case 'Notes':
                 return (
-                    <section className={styles.weakZonesSection}>
-                        <h2 className={styles.headerTitle}>YOUR WEAK ZONES (AI Highlight)</h2>
-                        <div className={styles.aiInsight}>
-                            <h3 className={styles.insightTitle}>AI Analysis - Priority Focus Areas</h3>
-                            <div className={styles.subjectList}>
-                                {[
-                                    { subject: 'Maths', topics: ['Percentage', 'Ratio', 'Time & Work'] },
-                                    { subject: 'GK', topics: ['Constitution Articles', 'Geography Basics'] },
-                                    { subject: 'Reasoning', topics: ['Coding–Decoding'] }
-                                ].map((subject, index) => (
-                                    <div key={index} className={styles.subjectItem}>
-                                        <div className={styles.subjectName}>
-                                            <span>{subject.subject}:</span>
-                                        </div>
-                                        <div className={styles.topicTags}>
-                                            {subject.topics.map((topic, i) => (
-                                                <span key={i} className={styles.topicTag}>{topic}</span>
-                                            ))}
-                                        </div>
+                    <section className={styles.dashboardHeader}>
+                        <div className={styles.notesHeader}>
+                            <h2 className={styles.notesMainTitle}>Notes</h2>
+                            <div className={styles.notesStats}>
+                                {notesStats.map((stat, i) => (
+                                    <div key={i} className={styles.noteStatCard}>
+                                        <div className={styles.noteStatLabel}>{stat.label}</div>
+                                        <div className={styles.noteStatValue}>{stat.value}</div>
                                     </div>
                                 ))}
                             </div>
+
                         </div>
-                        <div className="mission-cta-buttons">
+
+                        <div className={styles.notesActions}>
+                            <div className={styles.searchBox}>
+                                <input
+                                    type="text"
+                                    placeholder="Search notes..."
+                                    className={styles.searchInput}
+                                />
+                            </div>
+                            <div className={styles.notesFilter}>
+                                <button className={`${styles.filterBtn} ${styles.activeFilter}`}>All</button>
+                                <button className={styles.filterBtn}>Recent</button>
+                                <button className={styles.filterBtn}>Starred</button>
+                                <button className={`${styles.filterBtn} ${styles.newNoteBtn}`}>
+                                    + New Note
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className={styles.notesGrid}>
+                            {notesData.map(note => (
+                                <div key={note.id} className={styles.noteCard}>
+                                    <div className={styles.noteCardHeader}>
+                                        <div className={styles.noteCategory}>{note.category}</div>
+                                        <button className={styles.noteMenuBtn}>⋯</button>
+                                    </div>
+
+                                    <div className={styles.noteContent}>
+                                        <h3 className={styles.noteTitle}>{note.title}</h3>
+                                        <p className={styles.notePreview}>{note.preview}</p>
+                                    </div>
+
+                                    <div className={styles.noteFooter}>
+                                        <div className={styles.noteMeta}>
+                                            <span className={styles.notePages}>{note.pages}</span>
+                                            <span className={styles.noteDate}>{note.date}</span>
+                                        </div>
+
+                                        <div className={styles.noteActions}>
+                                            {/* {note.actions.includes("like") && (
+                                                <button className={styles.noteActionBtn}>❤️</button>
+                                            )} */}
+                                            {/* {note.actions.includes("edit") && ( */}
+                                            <button className={styles.noteActionBtn}><LiaDownloadSolid /></button>
+                                            {/* )} */}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+
+                            {/* ADD NEW NOTE CARD */}
+                            {/* <div className={`${styles.noteCard} ${styles.addNoteCard}`}>
+                                <div className={styles.addNoteContent}>
+                                    ➕
+                                    <h3 className={styles.addNoteTitle}>Create New Note</h3>
+                                    <p className={styles.addNoteSubtitle}>
+                                        Start taking notes for your studies
+                                    </p>
+                                </div>
+                            </div> */}
+                        </div>
+
+                    </section>
+                );
+
+            case 'settings':
+                return (
+                    <section className={styles.dashboardHeader}>
+                        <h2 className={styles.headerTitle}>SETTINGS</h2>
+
+                        <div className={styles.settingsContainer}>
+                            <div className={styles.settingsCategory}>
+                                <h3 className={styles.settingsCategoryTitle}>Account Settings</h3>
+                                <div className={styles.settingsList}>
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>Change Password</h4>
+                                            <p>Update your account password</p>
+                                        </div>
+                                        <button className={styles.settingsButton}>Change</button>
+                                    </div>
+
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>Two-Factor Authentication</h4>
+                                            <p>Add extra security to your account</p>
+                                        </div>
+                                        <label className={styles.toggleSwitch}>
+                                            <input type="checkbox" />
+                                            <span className={styles.slider}></span>
+                                        </label>
+                                    </div>
+
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>Delete Account</h4>
+                                            <p>Permanently delete your account and data</p>
+                                        </div>
+                                        <button className={styles.settingsButtonDelete}>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={styles.settingsCategory}>
+                                <h3 className={styles.settingsCategoryTitle}>Notification Preferences</h3>
+                                <div className={styles.settingsList}>
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>Email Notifications</h4>
+                                            <p>Receive course updates and reminders</p>
+                                        </div>
+                                        <label className={styles.toggleSwitch}>
+                                            <input type="checkbox" defaultChecked />
+                                            <span className={styles.slider}></span>
+                                        </label>
+                                    </div>
+
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>SMS Notifications</h4>
+                                            <p>Get important updates via SMS</p>
+                                        </div>
+                                        <label className={styles.toggleSwitch}>
+                                            <input type="checkbox" defaultChecked />
+                                            <span className={styles.slider}></span>
+                                        </label>
+                                    </div>
+
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>Push Notifications</h4>
+                                            <p>Browser and mobile push notifications</p>
+                                        </div>
+                                        <label className={styles.toggleSwitch}>
+                                            <input type="checkbox" defaultChecked />
+                                            <span className={styles.slider}></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={styles.settingsCategory}>
+                                <h3 className={styles.settingsCategoryTitle}>Study Preferences</h3>
+                                <div className={styles.settingsList}>
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>Daily Study Goal</h4>
+                                            <p>Set your daily study target</p>
+                                        </div>
+                                        <select className={styles.settingsSelect}>
+                                            <option>2 hours</option>
+                                            <option>3 hours</option>
+                                            <option>4 hours</option>
+                                            <option>5 hours</option>
+                                            <option>6 hours</option>
+                                        </select>
+                                    </div>
+
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>Preferred Study Time</h4>
+                                            <p>When do you prefer to study?</p>
+                                        </div>
+                                        <select className={styles.settingsSelect}>
+                                            <option>Morning (6AM - 10AM)</option>
+                                            <option>Afternoon (12PM - 4PM)</option>
+                                            <option>Evening (6PM - 10PM)</option>
+                                            <option>Night (10PM - 2AM)</option>
+                                        </select>
+                                    </div>
+
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>Study Reminders</h4>
+                                            <p>Get reminders for your study sessions</p>
+                                        </div>
+                                        <label className={styles.toggleSwitch}>
+                                            <input type="checkbox" defaultChecked />
+                                            <span className={styles.slider}></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={styles.settingsCategory}>
+                                <h3 className={styles.settingsCategoryTitle}>Privacy Settings</h3>
+                                <div className={styles.settingsList}>
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>Profile Visibility</h4>
+                                            <p>Who can see your profile?</p>
+                                        </div>
+                                        <select className={styles.settingsSelect}>
+                                            <option>Everyone</option>
+                                            <option>Only Me</option>
+                                            <option>Study Buddies Only</option>
+                                        </select>
+                                    </div>
+
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>Show Activity Status</h4>
+                                            <p>Show when you're online</p>
+                                        </div>
+                                        <label className={styles.toggleSwitch}>
+                                            <input type="checkbox" defaultChecked />
+                                            <span className={styles.slider}></span>
+                                        </label>
+                                    </div>
+
+                                    <div className={styles.settingItem}>
+                                        <div className={styles.settingInfo}>
+                                            <h4>Data Sharing</h4>
+                                            <p>Allow anonymous data for improvements</p>
+                                        </div>
+                                        <label className={styles.toggleSwitch}>
+                                            <input type="checkbox" defaultChecked />
+                                            <span className={styles.slider}></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="mission-cta-buttons mt-4">
                             <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn">
-                                <span>Fix Weak Zones</span>
+                                <span>Save All Changes</span>
                                 <FaArrowRightLong />
                             </button>
                         </div>
                     </section>
                 );
 
-            case 'skill-courses':
+            default:
                 return (
-                    <section className={styles.skillCoursesSection}>
-                        <h2 className={styles.headerTitle}>SKILL COURSES FOR CIVILIAN SUCCESS</h2>
-                        <div className={styles.courseCards}>
-                            {[
-                                {
-                                    title: 'English Speaking',
-                                    level: 'Beginner → Pro',
-                                    description: 'Master communication skills for interviews and workplace'
-                                },
-                                {
-                                    title: 'Computer Skills',
-                                    level: 'MS Office + Email Writing',
-                                    description: 'Essential digital skills for modern workplaces'
-                                },
-                                {
-                                    title: 'Corporate Etiquette',
-                                    level: 'Veteran Mentors',
-                                    description: 'Learn workplace norms and professional behavior'
-                                }
-                            ].map((course, index) => (
-                                <div key={index} className={styles.courseCard}>
-                                    <div>
-                                        <div className={styles.courseLevel}>
-                                            <span className={styles.levelBadge}>{course.level}</span>
-                                        </div>
-                                        <h4 className={styles.oderInfHeading}>{course.title}</h4>
-                                        <p className={styles.courseDescription}>{course.description}</p>
-                                    </div>
-                                    <button className={styles.examButton}>
-                                        Start Course <FaArrowRightLong />
-                                    </button>
-                                </div>
-                            ))}
-                        </div>
-                        <div className={styles.purchaseBanner}>
-                            <p>ENROLL IN PREMIUM SKILL DEVELOPMENT COURSES</p>
-                            <div className="mission-cta-buttons">
-                                <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn">
-                                    <span>Start Soft Skills Course</span>
-                                    <FaArrowRightLong />
-                                </button>
-                            </div>
-                        </div>
+                    <section className={styles.dashboardHeader}>
+                        <h1 className={styles.headerTitle}>Welcome to Your Dashboard</h1>
+                        <p className={styles.headerSubtitle}>
+                            Select a tab from the menu to get started.
+                        </p>
                     </section>
                 );
-
-            default:
-                return null;
         }
     };
 
@@ -380,63 +652,59 @@ const UserDashboard = () => {
                             </div>
 
                             {/* ===== MENU ===== */}
-                            {/* <div className={`${styleOfHeader.mainMenu2f}`}> */}
                             <nav>
-                                <ul style={{padding:'0'}}>
-
-                                    {tabData.map((tab) => (
+                                <ul style={{ padding: '0' }}>
+                                    {simplifiedTabs.map((tab) => (
                                         <li key={tab.id}
                                             onClick={() => handleTabClick(tab.id)}
                                             className={` ${activeTab === tab.id ? styles.activeTab : styles.inActiveTab}`}>
                                             {tab.label}
                                         </li>
                                     ))}
-
-
                                 </ul>
                             </nav>
-                            {/* </div> */}
-
-
                         </div>
                     </div>
                 </aside>
 
-
-
                 {/* Desktop Tabs Navigation */}
-                <div className={styles.tabsContainer}>
-                    <div className={styles.tabs}>
-                        {tabData.map((tab) => (
-                            <button
-                                key={tab.id}
-                                className={`${styles.tabButton} ${activeTab === tab.id ? styles.activeTabForWeb : ''}`}
-                                onClick={() => setActiveTab(tab.id)}
-                            >
-                                {tab.label}
-                            </button>
-                        ))}
+                <div className={styles.MainConOfTab}>
+                    <div className={styles.tabsContainer}>
+                        <div className={styles.tabs}>
+                            {simplifiedTabs.map((tab) => (
+                                <button
+                                    key={tab.id}
+                                    className={`${styles.tabButton} ${activeTab === tab.id ? styles.activeTabForWeb : ''} ${tab.id === 'logout' ? styles.logoutTab : ''}`}
+                                    onClick={() => handleTabClick(tab.id)}
+                                >
+                                    <span className="tabIcon">{tab.icon}</span>
+                                    {tab.label}
+                                </button>
+                            ))}
+                        </div>
                     </div>
-                </div>
 
+                    <div className={styles.mobileDrawerCon}>
+                        <div className={styles.mobileDrawerBox}>
+                            <h4 className={styles.oderInfHeading}> {activeTab === 'dashboard' ? 'Dashboard' :
+                                activeTab === 'Profile' ? 'My Profile' :
+                                    activeTab === 'Enrolled Courses' ? 'Courses' :
+                                        activeTab === 'My Quiz Attempts' ? 'My Quiz Attempts' :
+                                            activeTab === 'Assignments' ? 'Assignments' :
+                                                activeTab === 'settings' ? 'Settings' : 'Dashboard'}</h4>
+                            <button
+                                className={styles.mobileDrawerToggle}
+                                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+                            >
+                                {isDrawerOpen ? <MdClose style={{ fontSize: '25px' }} /> : <MdMenu style={{ fontSize: '25px' }} />}
+                            </button>
+                        </div>
+                    </div>
 
-                <div className={styles.mobileDrawerBox}>
-
-                    <h4 className={styles.oderInfHeading}> {activeTab}</h4>
-
-
-                    <button
-                        className={styles.mobileDrawerToggle}
-                        onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-                    >
-                        {isDrawerOpen ? <MdClose style={{ fontSize: '25px' }} /> : <MdMenu style={{ fontSize: '25px' }} />}
-                        {/* <span>Menu</span> */}
-                    </button>
-                </div>
-
-                {/* Tab Content */}
-                <div className={styles.tabContent}>
-                    {renderTabContent()}
+                    {/* Tab Content */}
+                    <div className={styles.tabContent}>
+                        {renderTabContent()}
+                    </div>
                 </div>
             </div>
         </>

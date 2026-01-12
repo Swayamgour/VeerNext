@@ -26,12 +26,12 @@
 .dashboardHeader {
 
     border-radius: 20px;
-    padding: 3rem;
+    /* padding: 3rem; */
     margin-bottom: 3rem;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    /* border: 1px solid rgba(212, 175, 55, 0.3); */
     position: relative;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(85, 107, 47, 0.08);
+    /* box-shadow: 0 20px 60px rgba(85, 107, 47, 0.08); */
     backdrop-filter: blur(10px);
 }
 
@@ -68,7 +68,7 @@
 .headerTitle {
 
     font-size: 2rem;
-    margin-bottom: 1rem;
+
     position: relative;
     line-height: 1.2;
     color: var(--clr-theme-1);
@@ -76,6 +76,7 @@
     font-family: var(--headline-font);
     font-weight: 700;
     letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 .oderInfHeading {
@@ -197,7 +198,7 @@
 
 .weakZonesTitle {
     color: var(--clr-theme-1);
-    margin-bottom: 1rem;
+
     font-size: 1.1rem;
     font-weight: 600;
     display: flex;
@@ -317,20 +318,7 @@
     position: relative;
 }
 
-.sectionTitle::before {
-    content: '';
-    /* width: 30px;
-    height: 30px; */
-    /* background: linear-gradient(135deg,
-            var(--clr-theme-1) 0%,
-            var(--clr-theme-2) 100%); */
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1rem;
-}
+
 
 .ordersGrid {
     display: grid;
@@ -501,14 +489,14 @@
 .examButton {
     background: var(--primary-color);
     color: white;
-    padding: 1rem 1.5rem;
+    /* padding:  ; */
     border: none;
     /* border-radius: 10px; */
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
-    font-size: 1rem;
+    width: 50%;
+    /* font-size: 1rem; */
     position: relative;
     overflow: hidden;
     display: flex;
@@ -516,6 +504,7 @@
     align-items: center;
     justify-content: center;
     /* max-width: 300px; */
+    font-size: 14px;
 }
 
 .examButton:hover {
@@ -759,6 +748,8 @@
     margin-bottom: 1.5rem;
     font-size: 1.3rem;
     font-family: var(--headline-font);
+    font-weight: 700;
+    letter-spacing: 1px;
     /* color: var(--clr-common-white); */
 }
 
@@ -820,7 +811,7 @@
 .subjectName {
     color: var(--clr-theme-1);
     font-weight: 600;
-    margin-bottom: 1rem;
+
     font-size: 1.1rem;
     display: flex;
     justify-content: space-between;
@@ -889,7 +880,7 @@
 }
 
 .courseCard::after {
-    content: '🔥';
+    content: '';
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -921,7 +912,7 @@
 .courseTitle {
     font-size: 1.6rem;
     color: var(--clr-theme-1);
-    margin-bottom: 1rem;
+
     font-family: var(--headline-font);
     line-height: 1.3;
 }
@@ -956,6 +947,17 @@
 
 
 /* Tabs Styles */
+
+
+.MainConOfTab {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+
+
+}
+
+
 .tabsContainer {
     background: white;
     border-radius: 12px;
@@ -963,11 +965,24 @@
     margin-bottom: 2rem;
     padding: 1rem;
     overflow-x: auto;
+    width: 20%;
+    position: sticky;
+    top: 0;
+
+}
+
+.tabContent {
+    /* background: white; */
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
 }
 
 .tabs {
     display: flex;
     gap: 1rem;
+    flex-direction: column;
     min-width: min-content;
 }
 
@@ -981,6 +996,7 @@
     white-space: nowrap;
     transition: all 0.3s ease;
     color: #666;
+    text-align: start;
 }
 
 .tabButton:hover {
@@ -1020,12 +1036,7 @@
     color: white;
 }
 
-.tabContent {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -1041,11 +1052,11 @@
 }
 
 @media (max-width: 768px) {
-    .dashboardContainer {
+    /* .dashboardContainer {
         padding: 1.5rem;
-    }
+    } */
 
-    .dashboardHeader,
+    /* .dashboardHeader, */
     .todaysOrders,
     .examsSection,
     .roadmapSection,
@@ -1081,11 +1092,32 @@
         width: 100%;
         justify-content: center;
     }
+
+    .MainConOfTab {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+    }
+
+
+    .tabsContainer {
+        /* padding: 1rem; */
+
+        width: 100%;
+
+    }
+
+    .tabContent {
+        /* padding: 1rem; */
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
 
-    .dashboardHeader,
+    /* .dashboardHeader, */
     .todaysOrders,
     .examsSection,
     .roadmapSection,
@@ -1126,7 +1158,7 @@
     .tabContent {
         background: white;
         border-radius: 12px;
-        padding: 0rem;
+        padding: 1rem;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 }
@@ -1144,7 +1176,7 @@
 
 /* Mobile Drawer Toggle Button */
 
-.mobileDrawerBox {
+.mobileDrawerCon {
     display: none;
 }
 
@@ -1276,8 +1308,14 @@
         display: none;
     }
 
-    .mobileDrawerToggle .mobileDrawerBox {
-        display: flex;
+    .mobileDrawerToggle {
+        display: block;
+    }
+
+
+    .mobileDrawerCon {
+        display: block;
+        /* display: flex; */
     }
 
     /* .dashboardContainer {
@@ -1316,3 +1354,1512 @@
         font-size: 0.95rem;
     }
 }
+
+
+/* Profile Section Styles */
+.profileSection {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 60px rgba(85, 107, 47, 0.08);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* .profileContainer {
+    max-width: 900px;
+    margin: 0 auto;
+} */
+
+.profileHeader {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.profileAvatar {
+    text-align: center;
+    position: relative;
+}
+
+.profileAvatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--clr-theme-2);
+
+}
+
+.editAvatarBtn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.2rem .4rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+}
+
+.editAvatarBtn:hover {
+    background: var(--secondary-color);
+}
+
+.profileName {
+    font-size: 2rem;
+    color: var(--clr-theme-1);
+    margin-bottom: 0.5rem;
+}
+
+.profileEmail {
+    color: #666;
+
+    font-size: 1.1rem;
+}
+
+.profileStats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.profileStat {
+    background: rgba(212, 175, 55, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--clr-theme-1);
+    font-weight: 500;
+}
+
+.detailSection {
+    margin-bottom: 2.5rem;
+}
+
+.detailSection h4 {
+    color: var(--clr-theme-1);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.detailGrid,
+.preferencesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+
+    .detailGrid,
+    .preferencesGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.detailItem,
+.preferenceItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detailLabel,
+.preferenceLabel {
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detailValue,
+.preferenceValue {
+    color: var(--clr-theme-1);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.settingsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.settingItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.settingItem:hover {
+    background: #f0f0f0;
+}
+
+.toggleSwitch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggleSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--primary-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* Enrolled Courses Section */
+.enrolledCoursesSection {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 60px rgba(85, 107, 47, 0.08);
+}
+
+.coursesFilter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filterTabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filterTab {
+    padding: 0.6rem 1.5rem;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.activeFilterTab {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.filterSearch input {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.coursesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.courseCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.courseCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.courseHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* margin-bottom: 1rem; */
+}
+
+.statusBadge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.statusBadge.active {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+}
+
+.statusBadge.completed {
+    background: rgba(33, 150, 243, 0.1);
+    color: #2196F3;
+}
+
+.statusBadge.upcoming {
+    background: rgba(255, 152, 0, 0.1);
+    color: #FF9800;
+}
+
+.courseInstructor {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+/* .courseProgress {
+    margin: 1.5rem 0;
+} */
+
+.progressInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.progressBar {
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.courseDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.courseDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.courseDetail span:first-child {
+    color: #666;
+}
+
+.courseActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.secondaryButton {
+    padding: 0.8rem 1.5rem;
+    background: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    /* border-radius: 8px; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    width: 50%;
+}
+
+.secondaryButton:hover {
+    background: var(--secondary-color);
+    color: var(--clr-common-white);
+    border: none;
+}
+
+/* Wishlist Section */
+.wishlistSection {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 60px rgba(85, 107, 47, 0.08);
+}
+
+.wishlistStats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.wishlistGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.wishlistItem {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.wishlistItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.priorityBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4444;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.itemHeader {}
+
+.itemCategory {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--clr-theme-1);
+    padding: 0.2rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.itemRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0.8rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.ratingStars {
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+.ratingValue {
+    color: #666;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.studentCount {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.itemPricing {
+    margin: 1.5rem 0;
+}
+
+.priceInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.currentPrice {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-theme-1);
+}
+
+.originalPrice {
+    font-size: 1rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.discount {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.deadline {
+    color: #ff4444;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.itemActions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Quiz Attempts Section */
+.quizAttemptsSection {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 60px rgba(85, 107, 47, 0.08);
+}
+
+.quizStats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.quizFilter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dateFilter select {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    min-width: 150px;
+}
+
+.quizTable {
+    overflow-x: auto;
+    margin-bottom: 2.5rem;
+}
+
+.quizTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.quizTable th {
+    background: rgba(212, 175, 55, 0.1);
+    padding: 1rem;
+    text-align: left;
+    color: var(--clr-theme-1);
+    font-weight: 600;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.quizTable td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.quizName {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.quizName span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.scoreCell {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.rankBadge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(33, 150, 243, 0.1);
+    color: #2196F3;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.quizActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.actionBtn {
+    padding: 0.4rem 1rem;
+    background: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.actionBtn:hover {
+    background: rgba(85, 107, 47, 0.1);
+}
+
+.performanceInsights {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(85, 107, 47, 0.05));
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.insightGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.insightCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.insightCard h5 {
+    color: var(--clr-theme-1);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.insightCard p {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.insightCard span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Assignments Section */
+.assignmentsSection {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 60px rgba(85, 107, 47, 0.08);
+}
+
+.assignmentsHeader {
+    margin-bottom: 2.5rem;
+}
+
+.assignmentsStats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.assignmentsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.assignmentCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.assignmentCard.pending {
+    border-left: 4px solid #2196F3;
+}
+
+.assignmentCard.overdue {
+    border-left: 4px solid #ff4444;
+}
+
+.assignmentCard.submitted {
+    border-left: 4px solid #FF9800;
+}
+
+.assignmentCard.graded {
+    border-left: 4px solid #4CAF50;
+}
+
+.assignmentCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.assignmentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.assignmentCourse {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--clr-theme-1);
+    padding: 0.2rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.assignmentPoints {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.pointsBadge {
+    background: rgba(33, 150, 243, 0.1);
+    color: #2196F3;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.difficultyBadge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.difficultyBadge.easy {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+}
+
+.difficultyBadge.medium {
+    background: rgba(255, 152, 0, 0.1);
+    color: #FF9800;
+}
+
+.difficultyBadge.hard {
+    background: rgba(244, 67, 54, 0.1);
+    color: #F44336;
+}
+
+.assignmentDetails {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.detailItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.detailItem span:first-child {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.detailItem span:last-child {
+    color: #333;
+    font-weight: 500;
+}
+
+.dueDate {
+    color: #ff4444 !important;
+    font-weight: 600 !important;
+}
+
+.gradeValue {
+    color: #4CAF50 !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+}
+
+.assignmentStatus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.statusText {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.assignmentFeedback {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.feedbackHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.gradeDisplay {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.pointsEarned {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.feedbackText {
+    color: #333;
+
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .coursesGrid,
+    .wishlistGrid,
+    .assignmentsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .profileHeader {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .coursesFilter,
+    .quizFilter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filterSearch input {
+        width: 100%;
+    }
+}
+
+/* Settings Section Styles */
+.settingsSection {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 60px rgba(85, 107, 47, 0.08);
+}
+
+/* .settingsContainer {
+    max-width: 900px;
+    margin: 0 auto;
+} */
+
+.settingsCategory {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.settingsCategory:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.settingsCategoryTitle {
+    color: var(--clr-theme-1);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--headline-font);
+    font-weight: 600;
+}
+
+.settingsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.settingItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.settingItem:hover {
+    background: #f0f0f0;
+}
+
+.settingInfo {
+    flex: 1;
+}
+
+.settingInfo h4 {
+    color: var(--clr-theme-1);
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.settingInfo p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.settingsButton {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.settingsButton:hover {
+    background: var(--secondary-color);
+}
+
+.settingsButtonDelete {
+    padding: 0.5rem 1rem;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.settingsButtonDelete:hover {
+    background: #cc0000;
+}
+
+.settingsSelect {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    min-width: 180px;
+    cursor: pointer;
+}
+
+.settingsSelect:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Logout Tab Style */
+.logoutTab {
+    color: #ff4444 !important;
+}
+
+.logoutTab:hover {
+    background: #ff4444 !important;
+    color: white !important;
+}
+
+/* Additional Styles for Better UI */
+.settingItem .toggleSwitch {
+    margin-left: 1rem;
+}
+
+/* Settings Section Styles */
+.settingsSection {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 60px rgba(85, 107, 47, 0.08);
+}
+
+/* .settingsContainer {
+    max-width: 900px;
+    margin: 0 auto;
+} */
+
+.settingsCategory {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.settingsCategory:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.settingsCategoryTitle {
+    color: var(--clr-theme-1);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--headline-font);
+    font-weight: 600;
+}
+
+.settingsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.settingItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.settingItem:hover {
+    background: #f0f0f0;
+}
+
+.settingInfo {
+    flex: 1;
+}
+
+.settingInfo h4 {
+    color: var(--clr-theme-1);
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.settingInfo p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.settingsButton {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.settingsButton:hover {
+    background: var(--secondary-color);
+}
+
+.settingsButtonDelete {
+    padding: 0.5rem 1rem;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.settingsButtonDelete:hover {
+    background: #cc0000;
+}
+
+.settingsSelect {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    min-width: 180px;
+    cursor: pointer;
+}
+
+.settingsSelect:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Logout Tab Style */
+.logoutTab {
+    color: #ff4444 !important;
+}
+
+.logoutTab:hover {
+    background: #ff4444 !important;
+    color: white !important;
+}
+
+/* Additional Styles for Better UI */
+.settingItem .toggleSwitch {
+    margin-left: 1rem;
+}
+
+
+.tabButton {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+}
+
+.tabIcon {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.activeTab .tabIcon {
+    color: var(--secondary-color);
+}
+
+
+/* Notes Section Styles */
+.notesSection {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 60px rgba(85, 107, 47, 0.08);
+}
+
+.notesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.notesMainTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-theme-1);
+    font-family: var(--headline-font);
+    margin: 0;
+}
+
+.notesStats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.noteStatCard {
+    background: linear-gradient(135deg,
+            rgba(212, 175, 55, 0.1) 0%,
+            rgba(85, 107, 47, 0.1) 100%);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    min-width: 120px;
+    text-align: center;
+}
+
+.noteStatLabel {
+    color: var(--clr-theme-1);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.noteStatValue {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--clr-theme-1);
+    line-height: 1;
+}
+
+.notesActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.searchBox {
+    flex: 1;
+    max-width: 400px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--clr-theme-2);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.notesFilter {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: white;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--clr-theme-1);
+}
+
+.activeFilter {
+    background: var(--clr-theme-2);
+    color: white;
+    border-color: var(--clr-theme-2);
+}
+
+.newNoteBtn {
+    background: linear-gradient(135deg,
+            var(--clr-theme-1) 0%,
+            var(--clr-theme-2) 100%);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+}
+
+.filterBtn:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--clr-theme-2);
+}
+
+.newNoteBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(85, 107, 47, 0.3);
+}
+
+/* Notes Grid */
+.notesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.noteCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.noteCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--clr-theme-2);
+}
+
+.noteCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.noteCategory {
+    background: linear-gradient(135deg,
+            rgba(212, 175, 55, 0.1) 0%,
+            rgba(85, 107, 47, 0.1) 100%);
+    color: var(--clr-theme-1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.noteMenuBtn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.noteMenuBtn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--clr-theme-1);
+}
+
+.noteContent {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.noteTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--clr-theme-1);
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+.notePreview {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.noteFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.noteMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.notePages {
+    color: var(--clr-theme-1);
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.notePages::before {
+    content: "📄";
+    font-size: 0.8rem;
+}
+
+.noteDate {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.noteActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.noteActionBtn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--clr-theme-1);
+}
+
+.noteActionBtn:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--clr-theme-2);
+    color: var(--clr-theme-2);
+}
+
+/* Add Note Card */
+.addNoteCard {
+    background: linear-gradient(135deg,
+            rgba(212, 175, 55, 0.05) 0%,
+            rgba(85, 107, 47, 0.05) 100%);
+    border: 2px dashed rgba(212, 175, 55, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.addNoteCard:hover {
+    background: linear-gradient(135deg,
+            rgba(212, 175, 55, 0.1) 0%,
+            rgba(85, 107, 47, 0.1) 100%);
+    border-color: var(--clr-theme-2);
+    transform: translateY(-5px);
+}
+
+.addNoteContent {
+    text-align: center;
+    color: var(--clr-theme-1);
+}
+
+.addNoteCard svg {
+    color: var(--clr-theme-2);
+    margin-bottom: 1rem;
+}
+
+.addNoteTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.addNoteSubtitle {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .notesHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .notesStats {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .noteStatCard {
+        flex: 1;
+        min-width: auto;
+    }
+
+    .notesActions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .searchBox {
+        max-width: 100%;
+    }
+
+    .notesGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .notesSection {
+        padding: 1.5rem;
+    }
+
+    .notesStats {
+        flex-direction: column;
+    }
+
+    .noteStatCard {
+        width: 100%;
+    }
+
+    .notesFilter {
+        justify-content: center;
+    }
+}
+
+

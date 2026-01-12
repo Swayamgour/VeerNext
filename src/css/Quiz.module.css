@@ -1,0 +1,1005 @@
+/* Quiz Section Styles */
+.quizSection {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 60px rgba(85, 107, 47, 0.08);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Start Screen */
+.quizStartScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.quizInfoCard {
+    background: linear-gradient(135deg,
+            rgba(212, 175, 55, 0.05) 0%,
+            rgba(85, 107, 47, 0.05) 100%);
+    border-radius: 16px;
+    padding: 3rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.quizDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.detailItem {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detailLabel {
+    color: var(--clr-theme-1);
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.detailValue {
+    color: var(--clr-theme-1);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.quizInstructions {
+    text-align: left;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.quizInstructions h3 {
+    color: var(--clr-theme-1);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.quizInstructions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quizInstructions li {
+    padding: 0.5rem 0;
+    color: #666;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.quizInstructions li:before {
+    content: "✓";
+    color: var(--clr-theme-2);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.startQuizBtn {
+    background: linear-gradient(135deg,
+            var(--clr-theme-1) 0%,
+            var(--clr-theme-2) 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+}
+
+.startQuizBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(85, 107, 47, 0.3);
+}
+
+/* Quiz Header */
+.quizHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.1);
+}
+
+.quizTitleSection {
+    flex: 1;
+    min-width: 0;
+}
+
+.quizMainTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--clr-theme-1);
+    font-family: var(--headline-font);
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.questionProgress {
+    color: var(--clr-theme-1);
+    opacity: 0.8;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.timerWrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.timerSvg {
+    transform: rotate(-90deg);
+}
+
+.timerBg {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.08);
+    stroke-width: 8;
+}
+
+.timerProgress {
+    fill: none;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 314;
+    /* 2πr (2 * 3.14 * 50) */
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear, stroke 0.5s ease;
+}
+
+.timerCenter {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timerText {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--clr-theme-1);
+    font-family: monospace;
+}
+
+.timerLabel {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.timerSvg {
+    transform: rotate(-90deg) scaleX(-1); /* ✅ CLOCKWISE */
+}
+
+/* Quiz Content */
+.quizContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.questionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.questionMeta {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.difficultyBadge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.difficultyBadge.easy {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.difficultyBadge.medium {
+    background: rgba(255, 152, 0, 0.1);
+    color: #FF9800;
+    border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.difficultyBadge.hard {
+    background: rgba(244, 67, 54, 0.1);
+    color: #F44336;
+    border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.questionMarks {
+    background: rgba(33, 150, 243, 0.1);
+    color: #2196F3;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(33, 150, 243, 0.3);
+    white-space: nowrap;
+}
+
+.questionCategory {
+    color: var(--clr-theme-1);
+    font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.questionNumber {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--clr-theme-1);
+    white-space: nowrap;
+}
+
+/* Question Text Container */
+.questionTextCon {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.questionText {
+    flex: 1;
+    min-width: 0;
+}
+
+.questionText h3 {
+    color: var(--clr-theme-1);
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Navigation Buttons */
+.navButtons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.navBtn {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    height: fit-content;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+}
+
+.navBtnText {
+    display: inline-block;
+}
+
+.prevBtn {
+    background: white;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    color: var(--clr-theme-1);
+}
+
+.nextBtn {
+    background: linear-gradient(135deg,
+            var(--clr-theme-1) 0%,
+            var(--clr-theme-2) 100%);
+    color: white;
+    border: none;
+}
+
+.navBtn:hover:not(.disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(85, 107, 47, 0.2);
+}
+
+.navBtn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Options Container */
+.optionsContainer {
+    margin-bottom: 2rem;
+}
+
+.optionsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.optionCard {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 1rem;
+    height: 100%;
+    min-height: 70px;
+    box-sizing: border-box;
+}
+
+.optionCard:hover {
+    border-color: var(--clr-theme-2);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(85, 107, 47, 0.1);
+}
+
+.optionCard.selectedOption {
+    border-color: var(--clr-theme-2);
+    background: rgba(212, 175, 55, 0.05);
+    box-shadow: 0 4px 12px rgba(85, 107, 47, 0.15);
+}
+
+.optionRadio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.radioCircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--clr-theme-1);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.radioCircleSelected {
+    background: var(--clr-theme-2);
+    color: white;
+    border-color: var(--clr-theme-2);
+}
+
+.optionText {
+    flex: 1;
+    color: var(--clr-theme-1);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: 0;
+}
+
+/* Question Navigation */
+.questionNavigation {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 1.5rem;
+    margin-top: auto;
+    justify-content: space-between;
+}
+
+.questionPaletteContainer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem 0;
+}
+
+.questionPalette {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(212, 175, 55, 0.05);
+    border-radius: 12px;
+    min-width: min-content;
+    justify-content: flex-start;
+}
+
+.questionDot {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--clr-theme-1);
+    flex-shrink: 0;
+}
+
+.questionDot:hover {
+    border-color: var(--clr-theme-2);
+    transform: scale(1.1);
+}
+
+.questionDot.currentQuestion {
+    background: var(--clr-theme-2);
+    color: white;
+    border-color: var(--clr-theme-2);
+}
+
+.questionDot.answeredQuestion {
+    background: rgba(76, 175, 80, 0.1);
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.progressInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progressText {
+    text-align: center;
+    color: var(--clr-theme-1);
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Quiz Footer */
+.quizFooter {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(212, 175, 55, 0.1);
+}
+
+.quizActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.quitBtn,
+.submitBtn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 140px;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnText {
+    white-space: nowrap;
+}
+
+.quitBtn {
+    background: white;
+    border: 2px solid #ff4444;
+    color: #ff4444;
+}
+
+.quitBtn:hover {
+    background: #ff4444;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.2);
+}
+
+.submitBtn {
+    background: linear-gradient(135deg,
+            #4CAF50 0%,
+            #2E7D32 100%);
+    color: white;
+    border: none;
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+/* Large Desktop: 1200px and above */
+@media (min-width: 1200px) {
+    .quizSection {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop: 992px to 1199px */
+@media (max-width: 1199px) {
+    .questionText h3 {
+        font-size: 1.3rem;
+    }
+
+    .optionCard {
+        padding: 1rem;
+    }
+
+    .navBtn {
+        padding: 0.7rem 1rem;
+        min-width: 110px;
+    }
+}
+
+/* Tablet: 768px to 991px */
+@media (max-width: 991px) {
+    .quizSection {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .quizHeader {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .quizTitleSection {
+        text-align: center;
+    }
+
+    .quizTimer {
+        justify-content: center;
+    }
+
+    .timerCircle {
+        width: 90px;
+        height: 90px;
+    }
+
+    .timerText {
+        font-size: 1.3rem;
+    }
+
+    .questionHeader {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .questionMeta {
+        justify-content: center;
+        order: 2;
+    }
+
+    .questionNumber {
+        text-align: center;
+        order: 1;
+    }
+
+    .questionTextCon {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+
+    .questionText h3 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .navButtons {
+        width: 100%;
+        justify-content: center;
+        order: 3;
+    }
+
+    .navBtn {
+        flex: 1;
+        max-width: 200px;
+    }
+
+    .optionsGrid {
+        gap: 0.8rem;
+    }
+
+    .optionCard {
+        min-height: 65px;
+        padding: 0.8rem 1rem;
+    }
+
+    .radioCircle {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .optionText {
+        font-size: 0.95rem;
+    }
+
+    .questionDot {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .quizActions {
+        justify-content: center;
+    }
+
+    .quitBtn,
+    .submitBtn {
+        flex: 0 1 auto;
+        min-width: 160px;
+    }
+}
+
+/* Mobile Landscape: 576px to 767px */
+@media (max-width: 767px) {
+    .quizSection {
+        padding: 1.25rem;
+        border-radius: 14px;
+    }
+
+    .quizMainTitle {
+        font-size: 1.5rem;
+    }
+
+    .questionProgress {
+        font-size: 0.9rem;
+    }
+
+    .timerCircle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .timerText {
+        font-size: 1.2rem;
+    }
+
+    .timerLabel {
+        font-size: 0.75rem;
+    }
+
+    .difficultyBadge,
+    .questionMarks {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .questionCategory {
+        font-size: 0.85rem;
+        max-width: 120px;
+    }
+
+    .questionNumber {
+        font-size: 1rem;
+    }
+
+    .questionText h3 {
+        font-size: 1.15rem;
+        line-height: 1.4;
+    }
+
+    .optionsGrid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .optionCard {
+        min-height: 60px;
+        padding: 0.75rem 1rem;
+    }
+
+    .radioCircle {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+
+    .optionText {
+        font-size: 0.9rem;
+    }
+
+    .navBtn {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.9rem;
+        min-width: 100px;
+    }
+
+    .questionPalette {
+        padding: 0.75rem;
+        gap: 0.4rem;
+    }
+
+    .questionDot {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+
+    .progressText {
+        font-size: 0.85rem;
+    }
+
+    .quitBtn,
+    .submitBtn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+        min-width: 140px;
+    }
+}
+
+/* Mobile Portrait: 320px to 575px */
+@media (max-width: 575px) {
+    .quizSection {
+        padding: 1rem;
+        border-radius: 12px;
+        min-height: auto;
+    }
+
+    .quizInfoCard {
+        padding: 1.5rem 1rem;
+    }
+
+    .quizDetails {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .detailItem {
+        padding: 1rem;
+    }
+
+    .quizMainTitle {
+        font-size: 1.3rem;
+    }
+
+    .questionProgress {
+        font-size: 0.85rem;
+    }
+
+    .timerCircle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .timerText {
+        font-size: 1.1rem;
+    }
+
+    .timerLabel {
+        font-size: 0.7rem;
+    }
+
+    .questionMeta {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .difficultyBadge,
+    .questionMarks,
+    .questionCategory {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .questionNumber {
+        font-size: 0.9rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .questionText h3 {
+        font-size: 1.1rem;
+        line-height: 1.35;
+    }
+
+    .questionTextCon {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .navButtons {
+        gap: 0.75rem;
+    }
+
+    .navBtn {
+        padding: 0.6rem 0.7rem;
+        font-size: 0.85rem;
+        min-width: 90px;
+    }
+
+    .navBtnText {
+        font-size: 0.85rem;
+    }
+
+    .optionsContainer {
+        margin-bottom: 1.5rem;
+    }
+
+    .optionCard {
+        min-height: 55px;
+        padding: 0.6rem 0.8rem;
+        gap: 0.75rem;
+    }
+
+    .radioCircle {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+
+    .optionText {
+        font-size: 0.85rem;
+    }
+
+    .questionNavigation {
+        gap: 1rem;
+    }
+
+    .questionPaletteContainer {
+        padding: 0.25rem 0;
+    }
+
+    .questionPalette {
+        padding: 0.6rem;
+        gap: 0.35rem;
+    }
+
+    .questionDot {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+
+    .progressText {
+        font-size: 0.8rem;
+    }
+
+    .quizFooter {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .quizActions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    .quitBtn,
+    .submitBtn {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    .btnText {
+        font-size: 0.85rem;
+    }
+}
+
+/* Small Mobile: 320px and below */
+@media (max-width: 320px) {
+    .quizSection {
+        padding: 0.75rem;
+        border-radius: 10px;
+    }
+
+    .quizMainTitle {
+        font-size: 1.2rem;
+    }
+
+    .timerCircle {
+        width: 65px;
+        height: 65px;
+    }
+
+    .timerText {
+        font-size: 1rem;
+    }
+
+    .questionText h3 {
+        font-size: 1rem;
+    }
+
+    .optionCard {
+        min-height: 50px;
+        padding: 0.5rem 0.6rem;
+    }
+
+    .radioCircle {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+
+    .optionText {
+        font-size: 0.8rem;
+    }
+
+    .navBtn {
+        padding: 0.5rem 0.6rem;
+        min-width: 80px;
+        font-size: 0.8rem;
+    }
+
+    .questionDot {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+}

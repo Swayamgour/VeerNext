@@ -61,6 +61,8 @@ import ComingSoonPage from './pages/ComingSoonPage';
 import { Toaster } from "react-hot-toast";
 import VeerNXTReport from './pages/careerTransition/VeerNXTReport';
 import HomeRegFrom from './pages/components/HomeRegFrom';
+import Quiz from './pages/components/Quiz';
+// import { Quiz } from './pages/components/data';
 
 
 
@@ -89,8 +91,9 @@ function App() {
         reverseOrder={false}
         gutter={8}
       />
-      <Layout>
-        <Routes>
+      <Routes>
+        {/* <Layout> */}
+        <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           {/* <Route path="/VEER" element={<Home />} /> */}
           <Route path="/Courses" element={<Courses />} />
@@ -126,8 +129,10 @@ function App() {
           <Route path="/VeerNXTReport" element={<VeerNXTReport />} />
           <Route path="/HomeRegFrom" element={<HomeRegFrom />} />
 
-        </Routes>
-      </Layout>
+
+        </Route>
+        <Route path="/Quiz" element={<Quiz />} />
+      </Routes>
     </>
 
   );

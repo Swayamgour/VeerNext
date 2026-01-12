@@ -83,6 +83,7 @@ const CourseDetails = () => {
                                                 <span>{lecture.status}</span>
                                             </div>
                                         </div>
+                                        <button className='start_Quiz'>Start Quiz</button>
                                     </li>
                                 ))}
                             </ul>
@@ -534,6 +535,16 @@ const CourseDetails = () => {
                 .trail-end span {
                     color: white;
                     font-weight: 600;
+                }
+                .start_Quiz{
+                font-size:12px;
+                    color: var(--clr-theme-3);
+                    border: 1px solid var(--clr-theme-3) ;
+                    padding: 3px 8px;
+                    border-radius:3px;
+                    cursor:pointer;
+
+
                 }
             `}</style>
         </>
