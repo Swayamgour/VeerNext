@@ -62,6 +62,7 @@ import { Toaster } from "react-hot-toast";
 import VeerNXTReport from './pages/careerTransition/VeerNXTReport';
 import HomeRegFrom from './pages/components/HomeRegFrom';
 import Quiz from './pages/components/Quiz';
+import ScrollToTop from './pages/components/ScrollToTop';
 // import { Quiz } from './pages/components/data';
 
 
@@ -91,48 +92,51 @@ function App() {
         reverseOrder={false}
         gutter={8}
       />
+
+      <ScrollToTop />
       <Routes>
-        {/* <Layout> */}
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/VEER" element={<Home />} /> */}
-          <Route path="/Courses" element={<Courses />} />
-          <Route path="/CourseDetails" element={<CourseDetails />} />
-          <Route path="/Profile" element={<UserDashboard />} />
-          <Route path="/CareerTransition" element={<Career />} />
-          <Route path="/FinancialGuidance" element={<FinancialGuidance />} />
-          <Route path="/CommunityPage" element={<CommunityPage />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/ContactUS" element={<ContactUs />} />
-          <Route path="/FinancialPlanningPlatform" element={<FinancialPlanningPlatform />} />
-          <Route path="/MoneyPlanView" element={<MoneyPlanView />} />
+
+        <Route path="/" element={<Layout><Home /></Layout>} />
+        {/* <Route path="/VEER" element={ <Layout><Home /></Layout>} /> */}
+        <Route path="/Courses" element={<Layout><Courses /></Layout>} />
+        <Route path="/CourseDetails" element={<Layout><CourseDetails /></Layout>} />
+        <Route path="/Profile" element={<Layout><UserDashboard /></Layout>} />
+        <Route path="/CareerTransition" element={<Layout><Career /></Layout>} />
+        <Route path="/FinancialGuidance" element={<Layout><FinancialGuidance /></Layout>} />
+        <Route path="/CommunityPage" element={<Layout><CommunityPage /></Layout>} />
+        <Route path="/About" element={<Layout><About /></Layout>} />
+        <Route path="/Login" element={<Layout><Login /></Layout>} />
+        <Route path="/ContactUS" element={<Layout><ContactUs /></Layout>} />
+        <Route path="/FinancialPlanningPlatform" element={<Layout><FinancialPlanningPlatform /></Layout>} />
+        <Route path="/MoneyPlanView" element={<Layout><MoneyPlanView /></Layout>} />
 
 
-          <Route path="/StartMissionPage" element={<StartMissionPage />} />
-          <Route path="/FinancialCommandPage" element={<FinancialCommandPage />} />
-          <Route path="/ViewExamsPage" element={<ViewExamsPage />} />
-          <Route path="/CareerReport" element={<CareerReport />} />
-          <Route path="/DownloadReportPage" element={<DownloadReportPage />} />
-          <Route path="/GenerateReportPage" element={<GenerateReportPage />} />
-          <Route path="/GenerateCareerReportPage" element={<GenerateCareerReportPage />} />
-          <Route path="/GetStartedBenefitsPage" element={<GetStartedBenefitsPage />} />
-          <Route path="/ExamOpportunitiesPage" element={<ExamOpportunitiesPage />} />
-          <Route path="/FreeCareerReportPage" element={<FreeCareerReportPage />} />
-          <Route path="/GrowthWarriorPlanPage" element={<GrowthWarriorPlanPage />} />
-          <Route path="/BalancedPatriotPlanPage" element={<BalancedPatriotPlanPage />} />
-          <Route path="/VeerNxtCommunityPage" element={<VeerNxtCommunityPage />} />
-          <Route path="/FinancialLearningBootcampPage" element={<FinancialLearningBootcampPage />} />
-          <Route path="/JoinCommunityPage" element={<JoinCommunityPage />} />
-          <Route path="/IndianArmySSCTechDetails" element={<IndianArmySSCTechDetails />} />
-          <Route path="/ComingSoon" element={<ComingSoonPage />} />
-          <Route path="/VeerNXTReport" element={<VeerNXTReport />} />
-          <Route path="/HomeRegFrom" element={<HomeRegFrom />} />
-
-
-        </Route>
+        <Route path="/StartMissionPage" element={<Layout><StartMissionPage /></Layout>} />
+        <Route path="/FinancialCommandPage" element={<Layout><FinancialCommandPage /></Layout>} />
+        <Route path="/ViewExamsPage" element={<Layout><ViewExamsPage /></Layout>} />
+        <Route path="/CareerReport" element={<Layout><CareerReport /></Layout>} />
+        <Route path="/DownloadReportPage" element={<Layout><DownloadReportPage /></Layout>} />
+        <Route path="/GenerateReportPage" element={<Layout><GenerateReportPage /></Layout>} />
+        <Route path="/GenerateCareerReportPage" element={<Layout><GenerateCareerReportPage /></Layout>} />
+        <Route path="/GetStartedBenefitsPage" element={<Layout><GetStartedBenefitsPage /></Layout>} />
+        <Route path="/ExamOpportunitiesPage" element={<Layout><ExamOpportunitiesPage /></Layout>} />
+        <Route path="/FreeCareerReportPage" element={<Layout><FreeCareerReportPage /></Layout>} />
+        <Route path="/GrowthWarriorPlanPage" element={<Layout><GrowthWarriorPlanPage /></Layout>} />
+        <Route path="/BalancedPatriotPlanPage" element={<Layout><BalancedPatriotPlanPage /></Layout>} />
+        <Route path="/VeerNxtCommunityPage" element={<Layout><VeerNxtCommunityPage /></Layout>} />
+        <Route path="/FinancialLearningBootcampPage" element={<Layout><FinancialLearningBootcampPage /></Layout>} />
+        <Route path="/JoinCommunityPage" element={<Layout><JoinCommunityPage /></Layout>} />
+        <Route path="/IndianArmySSCTechDetails" element={<Layout><IndianArmySSCTechDetails /></Layout>} />
+        <Route path="/ComingSoon" element={<Layout><ComingSoonPage /></Layout>} />
+        <Route path="/VeerNXTReport" element={<Layout><VeerNXTReport /></Layout>} />
+        <Route path="/HomeRegFrom" element={<Layout><HomeRegFrom /></Layout>} />
         <Route path="/Quiz" element={<Quiz />} />
       </Routes>
+      {/* </Layout> */}
+
+      {/* <Routes>
+       
+      </Routes> */}
     </>
 
   );

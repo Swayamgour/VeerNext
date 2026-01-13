@@ -627,45 +627,47 @@ const UserDashboard = () => {
         <>
             <AllPageHeader props='profile' />
 
+            <aside className={`${styleOfHeader.fix} ${isDrawerOpen ? styleOfHeader.infoOpen : ""}`}>
+                <div className={`${styleOfHeader.sideInfo} ${styleOfHeader.sideInfoArmy}`}>
+                    <div className={styleOfHeader.sideInfoContent}>
+
+
+                        {/* ===== HEADER ===== */}
+                        <div className={`${styleOfHeader.offsetWidget} ${styleOfHeader.offsetHeader} ${styleOfHeader.mb20}`}>
+                            <div className={styleOfHeader.row}>
+                                <div className={styleOfHeader.col9}>
+                                    <div className={styleOfHeader.offsetLogo}>
+                                        <img src="/VEER/assets/img/logo/logo.png" alt="Logo" />
+                                    </div>
+                                </div>
+                                <div className={styleOfHeader.col3}>
+                                    <button  onClick={() => setIsDrawerOpen(false)} className={styleOfHeader.sideInfoClose} >
+                                        <i className="fal fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* ===== MENU ===== */}
+                        <nav>
+                            <ul style={{ padding: '0' }}>
+                                {simplifiedTabs.map((tab) => (
+                                    <li key={tab.id}
+                                        onClick={() => handleTabClick(tab.id)}
+                                        className={` ${activeTab === tab.id ? styles.activeTab : styles.inActiveTab}`}>
+                                        {tab.label}
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
             <div className={styles.dashboardContainer}>
                 {/* Mobile Drawer Toggle Button */}
 
-                <aside className={`${styleOfHeader.fix} ${isDrawerOpen ? styleOfHeader.infoOpen : ""}`}>
-                    <div className={`${styleOfHeader.sideInfo} ${styleOfHeader.sideInfoArmy}`}>
-                        <div className={styleOfHeader.sideInfoContent}>
 
-
-                            {/* ===== HEADER ===== */}
-                            <div className={`${styleOfHeader.offsetWidget} ${styleOfHeader.offsetHeader} ${styleOfHeader.mb20}`}>
-                                <div className={styleOfHeader.row}>
-                                    <div className={styleOfHeader.col9}>
-                                        <div className={styleOfHeader.offsetLogo}>
-                                            <img src="/VEER/assets/img/logo/logo.png" alt="Logo" />
-                                        </div>
-                                    </div>
-                                    <div className={styleOfHeader.col3}>
-                                        <button onClick={() => setIsDrawerOpen(false)} className={styleOfHeader.sideInfoClose} >
-                                            <i className="fal fa-times"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* ===== MENU ===== */}
-                            <nav>
-                                <ul style={{ padding: '0' }}>
-                                    {simplifiedTabs.map((tab) => (
-                                        <li key={tab.id}
-                                            onClick={() => handleTabClick(tab.id)}
-                                            className={` ${activeTab === tab.id ? styles.activeTab : styles.inActiveTab}`}>
-                                            {tab.label}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </aside>
 
                 {/* Desktop Tabs Navigation */}
                 <div className={styles.MainConOfTab}>

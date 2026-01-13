@@ -1186,7 +1186,7 @@
     display: none;
     /* position: fixed; */
 
-    z-index: 1000;
+    /* z-index: ; */
     background: var(--primary-color);
     color: white;
     border: none;
@@ -1315,6 +1315,7 @@
 
     .mobileDrawerCon {
         display: block;
+        width: 100%;
         /* display: flex; */
     }
 
@@ -1352,6 +1353,10 @@
     .drawerTabButton {
         padding: 0.8rem 1.2rem;
         font-size: 0.95rem;
+    }
+
+    .dashboardContainer {
+        padding: 1rem;
     }
 }
 
@@ -1966,7 +1971,7 @@ input:checked+.slider:before {
 
 .performanceInsights {
     background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(85, 107, 47, 0.05));
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 12px;
     border: 1px solid rgba(212, 175, 55, 0.2);
 }
@@ -2285,6 +2290,7 @@ input:checked+.slider:before {
 .settingInfo p {
     color: #666;
     font-size: 0.9rem;
+    width: 70%;
 }
 
 .settingsButton {
@@ -2861,5 +2867,3 @@ input:checked+.slider:before {
         justify-content: center;
     }
 }
-
-

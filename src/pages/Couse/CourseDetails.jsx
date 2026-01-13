@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { lectures, resources } from '../components/data';
 import AllPageHeader from '../components/AllPageHeader';
 
 const CourseDetails = () => {
     const [activeLecture, setActiveLecture] = useState(0);
+
+    const navigate = useNavigate()
 
 
 
@@ -83,7 +85,7 @@ const CourseDetails = () => {
                                                 <span>{lecture.status}</span>
                                             </div>
                                         </div>
-                                        <button className='start_Quiz'>Start Quiz</button>
+                                        <button onClick={() => navigate('/Quiz')} className='start_Quiz'>Start Quiz</button>
                                     </li>
                                 ))}
                             </ul>
