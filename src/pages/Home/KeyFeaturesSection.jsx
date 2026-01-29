@@ -1,4 +1,5 @@
 import React from 'react';
+import { featuresData } from '../components/data';
 
 
 
@@ -25,38 +26,8 @@ const FeatureCard = ({ imageSrc, title, subtitle }) => {
  * Main Key Features Section Component
  */
 const KeyFeaturesSection = () => {
-    const featuresData = [
-        {
-            imageSrc: '/VEER/assets/img/icons/exam-brief.png',
-            title: 'Clean Exam Briefs',
-            subtitle: 'Only what matters. Nothing more.',
-        },
-        {
-            imageSrc: '/VEER/assets/img/icons/learning.png',
-            title: 'Complete Learning System',
-            subtitle: 'Videos, quizzes, mock tests.',
-        },
-        {
-            imageSrc: '/VEER/assets/img/icons/resume.png',
-            title: 'CV Builder',
-            subtitle: 'Convert military experience to civilian roles.',
-        },
-        {
-            imageSrc: '/VEER/assets/img/icons/interview.png',
-            title: 'Interview Simulator',
-            subtitle: 'AI-powered + human mentoring.',
-        },
-        {
-            imageSrc: '/VEER/assets/img/icons/business-plan.png',
-            title: 'Financial Planner',
-            subtitle: 'Secure your Sewa Nidhi.',
-        },
-        {
-            imageSrc: '/VEER/assets/img/icons/ved.png',
-            title: 'Veteran-Led, Discipline-Driven',
-            subtitle: 'By veterans, for veterans.',
-        },
-    ];
+  
+
 
     return (
         <section className="features-area pt-70 pb-70 p-relative bg-white z-index-2">
@@ -75,7 +46,7 @@ const KeyFeaturesSection = () => {
 
                 <div className="features-inner p-relative">
                     <div className="row">
-                        {featuresData.map((feature, index) => (
+                        {featuresData?.map((feature, index) => (
                             <FeatureCard
                                 key={index}
                                 imageSrc={feature.imageSrc}

@@ -122,14 +122,7 @@ const AboutArea = () => {
     );
 };
 
-// Example Usage of the component:
 
-// const MyPage = () => (
-//     <AboutArea
-//         veteransHelped={1250}
-//         successfulTransitions={350}
-//     />
-// );
 
 
 export default AboutArea;

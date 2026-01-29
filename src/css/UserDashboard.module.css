@@ -2867,3 +2867,472 @@ input:checked+.slider:before {
         justify-content: center;
     }
 }
+
+
+/* Subscription Section Styles */
+.subscriptionHeader {
+    margin-bottom: 2.5rem;
+}
+
+.subscriptionStatus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 992px) {
+    .subscriptionStatus {
+        grid-template-columns: 1fr;
+    }
+}
+
+.currentPlanCard {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 2px solid var(--clr-theme-2);
+    box-shadow: 0 8px 32px rgba(85, 107, 47, 0.1);
+}
+
+.planHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.planInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.planName {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--clr-theme-1);
+    margin: 0;
+}
+
+.planBadge {
+    background: linear-gradient(135deg, var(--clr-theme-1), var(--clr-theme-2));
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    max-width: fit-content;
+}
+
+.planPrice {
+    text-align: right;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-theme-1);
+    display: block;
+}
+
+.billingCycle {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.planDetails {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detailRow:last-child {
+    border-bottom: none;
+}
+
+.detailRow span:first-child {
+    color: #666;
+    font-weight: 500;
+}
+
+.detailRow span:last-child {
+    color: var(--clr-theme-1);
+    font-weight: 600;
+}
+
+.statusActive {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.planActions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.primaryButton {
+    background: linear-gradient(135deg, var(--clr-theme-1), var(--clr-theme-2));
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(85, 107, 47, 0.3);
+}
+
+.secondaryButton {
+    background: white;
+    color: #ff4444;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #ff4444;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+    background: #ff4444;
+    color: white;
+}
+
+/* Usage Stats */
+.usageStats {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+.statProgress {
+    margin-top: 1rem;
+}
+
+.progressBar {
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 4px;
+}
+
+/* Plans Section */
+.plansSection {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+.plansGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.planCard {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.planCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.basicPlan {
+    border-color: #ddd;
+}
+
+.premiumPlan {
+    border-color: var(--clr-theme-2);
+    transform: scale(1.05);
+}
+
+.activePlan {
+    border: 2px solid var(--clr-theme-2);
+}
+
+.annualPlan {
+    border-color: #2196F3;
+}
+
+.planCardHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.planCardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-theme-1);
+    margin-bottom: 0.5rem;
+}
+
+.planCardPrice {
+    margin-bottom: 0.5rem;
+}
+
+.amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--clr-theme-1);
+}
+
+.period {
+    color: #666;
+    font-size: 1rem;
+}
+
+.planCardDesc {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.planFeatures {
+    margin-bottom: 2rem;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.featureIcon {
+    color: #4CAF50;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.featureIconDisabled {
+    color: #ccc;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.featureDisabled {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.planButton {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.planButton:hover {
+    background: var(--secondary-color);
+}
+
+.planButtonActive {
+    width: 100%;
+    padding: 1rem;
+    background: #f0f0f0;
+    color: #666;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: not-allowed;
+}
+
+/* Billing Section */
+.billingSection {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.downloadButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.downloadButton:hover {
+    background: #e0e0e0;
+}
+
+.billingTable {
+    overflow-x: auto;
+}
+
+.billingTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.billingTable th {
+    background: #f9f9f9;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--clr-theme-1);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.billingTable td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.statusPaid {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.invoiceButton {
+    padding: 0.4rem 1rem;
+    background: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.invoiceButton:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* FAQ Section */
+.faqSection {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+.faqList {
+    margin-top: 1.5rem;
+}
+
+.faqItem {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid var(--clr-theme-2);
+}
+
+.faqQuestion {
+    color: var(--clr-theme-1);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.faqAnswer {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plansGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .premiumPlan {
+        transform: none;
+    }
+
+    .planActions {
+        flex-direction: column;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sectionHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .downloadButton {
+        width: 100%;
+        justify-content: center;
+    }
+}

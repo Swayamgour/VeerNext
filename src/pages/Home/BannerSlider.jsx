@@ -170,18 +170,11 @@ const BannerSlider = () => {
 
 
 
-                                {/* <div style={{ marginTop: '40px' }} className="mission-cta-buttons">
-                                    <button onClick={toggleOffsetContent} className="mission-btn fill-btn">
-                                        <span>Start Your Journey</span>
-                                        <i class="fas fa-rocket btn-icon"></i>
-                                    </button>
-                                </div> */}
+                                
 
                                 <DialogboxReg />
 
-                                {/* <HomeRegFrom
-                                    isOffsetOpen={isOffsetOpen}
-                                    toggleOffsetContent={toggleOffsetContent} /> */}
+                               
 
 
                             </div>

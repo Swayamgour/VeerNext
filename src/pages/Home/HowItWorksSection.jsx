@@ -1,4 +1,5 @@
 import React from 'react';
+import { workflowSteps } from '../components/data';
 
 // --- Placeholder Asset Import ---
 // import '/VEER/assets/img/about/banner-1.webp' from '/VEER/assets/img/about/banner-1.webp'; // Replace with actual path
@@ -29,51 +30,7 @@ const TimelineStep = ({ stepNumber, iconClass, title, description, isVictory = f
  * Main HowItWorksSection Component
  */
 const HowItWorksSection = () => {
-    const workflowSteps = [
-        {
-            stepNumber: '01',
-            title: 'Profile Scan',
-            description: 'Tell us your education, goals, and preferred locations — takes just 30 seconds.',
-            iconClass: 'fas fa-user-check',
-        },
-        {
-            stepNumber: '02',
-            title: 'Mission Assignment',
-            description: 'We recommend your best-fit exams and essential financial actions.',
-            iconClass: 'fas fa-tasks',
-        },
-        {
-            stepNumber: '03',
-            title: 'Training Plan',
-            description: 'Daily tasks, lessons, and practice tests — like your PT schedule.',
-            iconClass: 'fas fa-calendar-alt',
-        },
-        {
-            stepNumber: '04',
-            title: 'Government Exam Prep',
-            description: 'Clean, structured, syllabus-wise exam preparation.',
-            iconClass: 'fas fa-graduation-cap',
-        },
-        {
-            stepNumber: '05',
-            title: 'Interview & CV',
-            description: 'Convert service experience into corporate language.',
-            iconClass: 'fas fa-microphone-alt',
-        },
-        {
-            stepNumber: '06',
-            title: 'Prosperity Activation',
-            description: 'Build savings, invest smartly, protect your financial future.',
-            iconClass: 'fas fa-chart-line',
-        },
-        {
-            stepNumber: '07',
-            title: 'Victory',
-            description: "Get a job. Build your life. Secure your family's future.",
-            iconClass: 'fas fa-trophy',
-            isVictory: true,
-        },
-    ];
+
 
     // Note on Parallax: The background image needs to be set up either via CSS or a JavaScript library
     // that reads the data-background attribute or a style object.
@@ -111,7 +68,7 @@ const HowItWorksSection = () => {
                         {/* Timeline Steps */}
                         <div className="col-12">
                             <div className="vtx-timeline">
-                                {workflowSteps.map((step) => (
+                                {workflowSteps?.map((step) => (
                                     <TimelineStep
                                         key={step.stepNumber}
                                         stepNumber={step.stepNumber}

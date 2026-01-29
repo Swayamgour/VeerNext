@@ -5,46 +5,13 @@ import { Navigation, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
+import { slidesData } from "../components/data";
 
 const DashboardSlider = () => {
     const swiperRef = useRef(null);
     const [activeSlide, setActiveSlide] = useState(0);
     const [isWOWLoaded, setIsWOWLoaded] = useState(false);
 
-    const slidesData = [
-        {
-            id: 1,
-            title: "Personalized Dashboard",
-            description:
-                ' Your customized mission control center with real-time progress tracking, personalized recommendations, and smart notifications tailored to your career goals.',
-            ctaText: "Start Your Journey",
-            bgClass: "slide-1-bg",
-        },
-        {
-            id: 2,
-            title: "Live Exam Calendar",
-            description:
-                "Track all government exam dates, application deadlines, and preparation timeline with automated reminders and smart scheduling to optimize your study plan.",
-            ctaText: "See Platform Demo",
-            bgClass: "slide-2-bg",
-        },
-        {
-            id: 3,
-            title: "Financial Portfolio Tracker",
-            description:
-                "Monitor your Sewa Nidhi investments, savings, and financial goals with expert guidance on smart allocation and long-term wealth building strategies.",
-            ctaText: "See Platform Demo",
-            bgClass: "slide-3-bg",
-        },
-        {
-            id: 4,
-            title: "Job Match Suggestions",
-            description:
-                "AI-powered job recommendations based on your profile and skills, with personalized match scores and direct application links to top employers.",
-            ctaText: "See Platform Demo",
-            bgClass: "slide-4-bg",
-        },
-    ];
 
     /* WOW INIT — unchanged */
     useEffect(() => {
@@ -126,7 +93,7 @@ const DashboardSlider = () => {
                         onSlideChange={handleSlideChange}
                         className="swiper "
                     >
-                        {slidesData.map((slide) => (
+                        {slidesData?.map((slide) => (
                             <SwiperSlide key={slide.id}>
                                 <div className={`vtx-slide-bg ${slide.bgClass}`}></div>
                                 <div className="vtx-slide-content">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { offerings } from '../components/data';
 
 // Flaticon replacement: Assuming flaticon-001-bullet is a decorative icon, replaced with a simple star.
 // Assuming flaticon-040-right is a right arrow, replaced with fas fa-arrow-right.
@@ -10,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 const PriceCard = ({ iconClass, title, text, tagText, buttonText, buttonLink = "#" }) => {
     const navigate = useNavigate()
     return (
-        <div  className="col-lg-4 col-md-6">
+        <div className="col-lg-4 col-md-6">
             <div className="price-card price-card-default">
                 <div className="price-card-icon">
                     <i className={iconClass}></i>
@@ -35,33 +36,7 @@ const PriceCard = ({ iconClass, title, text, tagText, buttonText, buttonLink = "
  * Main Offer Section Component
  */
 const OfferSection = () => {
-    const offerings = [
-        {
-            iconClass: 'fas fa-briefcase',
-            title: 'Career Transition',
-            text: 'Access 500+ central & state govt exams, AI-powered career mapping, VR interview prep, CV building, soft skills & English training.',
-            tagText: 'Explore Exams',
-            buttonText: 'Explore Exams',
-            link: '/CareerTransition', // Replace with actual link
 
-        },
-        {
-            iconClass: 'fas fa-shield-alt',
-            title: 'Grow Your Sewa Nidhi',
-            text: 'Smart investment guidance, insurance, loans, mutual funds, entrepreneurship support—maximize your ₹8-10 lakh package.',
-            tagText: 'Plan Your Finances',
-            buttonText: 'Plan Your Finances',
-            link: '/FinancialGuidance', // Replace with actual link
-        },
-        {
-            iconClass: 'fas fa-users',
-            title: 'Connect & Thrive',
-            text: 'Join 10,000+ veterans, access global mentors, peer support, exclusive job boards, and industry networking events.',
-            tagText: 'Join Community',
-            buttonText: 'Join Community',
-            link: '/CommunityPage', // Replace with actual link
-        },
-    ];
 
     return (
         <section className="element fix pt-15 pb-25 bg-white z-index-2">

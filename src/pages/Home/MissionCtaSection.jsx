@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ctaButtons } from '../components/data';
 
 /**
  * MissionCtaSection Component
@@ -7,29 +8,7 @@ import { useNavigate } from 'react-router-dom';
  */
 const MissionCtaSection = ({ onStartMissionClick, onViewExamsClick, onFinancialCommandClick }) => {
     // Define the button data for easy mapping and clean rendering
-    const ctaButtons = [
-        {
-            text: 'Start My Mission',
-            className: 'fill-btn',
-            icon: 'fas fa-rocket',
-            link: '/StartMissionPage', // Replace with actual URL
-            // onClick: onStartMissionClick,
-        },
-        {
-            text: 'View Exams',
-            className: 'border-btn',
-            icon: 'fas fa-search',
-            link: '/ViewExamsPage', // Replace with actual URL
-            // onClick: onViewExamsClick,
-        },
-        {
-            text: 'Financial Command',
-            className: 'border-btn',
-            icon: 'fas fa-chart-line',
-            link: '/FinancialCommandPage', // Replace with actual URL
-            // onClick: onFinancialCommandClick,
-        },
-    ];
+   
 
     const navigate = useNavigate()
 
@@ -50,7 +29,7 @@ const MissionCtaSection = ({ onStartMissionClick, onViewExamsClick, onFinancialC
                             </p>
 
                             <div className="mission-cta-buttons wow fadeInUp" data-wow-delay=".3s">
-                                {ctaButtons.map((button, index) => (
+                                {ctaButtons?.map((button, index) => (
                                     <div className="mission-cta-buttons">
                                         <button  onClick={() => navigate(`${button?.link}`)} className={`mission-btn ${button.className}`}>
                                             <span>{button.text}</span>

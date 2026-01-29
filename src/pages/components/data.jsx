@@ -15,6 +15,7 @@ import {
     FaUniversity,
     FaAward,
     FaMoneyBillWave,
+    FaCreditCard
 
 } from 'react-icons/fa';
 
@@ -1211,10 +1212,16 @@ const simplifiedTabs = [
         icon: <FaCog />
     },
     {
+        id: 'subscription',
+        label: 'My Subscription',
+        icon: <FaCreditCard />
+    },
+    {
         id: 'logout',
         label: 'Logout',
         icon: <FaSignOutAlt />
-    }
+    },
+
 ];
 
 
@@ -1278,12 +1285,179 @@ const notesStats = [
 ];
 
 
+const offerings = [
+    {
+        iconClass: 'fas fa-briefcase',
+        title: 'Career Transition',
+        text: 'Access 500+ central & state govt exams, AI-powered career mapping, VR interview prep, CV building, soft skills & English training.',
+        tagText: 'Explore Exams',
+        buttonText: 'Explore Exams',
+        link: '/CareerTransition', // Replace with actual link
 
+    },
+    {
+        iconClass: 'fas fa-shield-alt',
+        title: 'Grow Your Sewa Nidhi',
+        text: 'Smart investment guidance, insurance, loans, mutual funds, entrepreneurship support—maximize your ₹8-10 lakh package.',
+        tagText: 'Plan Your Finances',
+        buttonText: 'Plan Your Finances',
+        link: '/FinancialGuidance', // Replace with actual link
+    },
+    {
+        iconClass: 'fas fa-users',
+        title: 'Connect & Thrive',
+        text: 'Join 10,000+ veterans, access global mentors, peer support, exclusive job boards, and industry networking events.',
+        tagText: 'Join Community',
+        buttonText: 'Join Community',
+        link: '/CommunityPage', // Replace with actual link
+    },
+];
+
+
+const workflowSteps = [
+    {
+        stepNumber: '01',
+        title: 'Profile Scan',
+        description: 'Tell us your education, goals, and preferred locations — takes just 30 seconds.',
+        iconClass: 'fas fa-user-check',
+    },
+    {
+        stepNumber: '02',
+        title: 'Mission Assignment',
+        description: 'We recommend your best-fit exams and essential financial actions.',
+        iconClass: 'fas fa-tasks',
+    },
+    {
+        stepNumber: '03',
+        title: 'Training Plan',
+        description: 'Daily tasks, lessons, and practice tests — like your PT schedule.',
+        iconClass: 'fas fa-calendar-alt',
+    },
+    {
+        stepNumber: '04',
+        title: 'Government Exam Prep',
+        description: 'Clean, structured, syllabus-wise exam preparation.',
+        iconClass: 'fas fa-graduation-cap',
+    },
+    {
+        stepNumber: '05',
+        title: 'Interview & CV',
+        description: 'Convert service experience into corporate language.',
+        iconClass: 'fas fa-microphone-alt',
+    },
+    {
+        stepNumber: '06',
+        title: 'Prosperity Activation',
+        description: 'Build savings, invest smartly, protect your financial future.',
+        iconClass: 'fas fa-chart-line',
+    },
+    {
+        stepNumber: '07',
+        title: 'Victory',
+        description: "Get a job. Build your life. Secure your family's future.",
+        iconClass: 'fas fa-trophy',
+        isVictory: true,
+    },
+];
+
+
+const slidesData = [
+    {
+        id: 1,
+        title: "Personalized Dashboard",
+        description:
+            ' Your customized mission control center with real-time progress tracking, personalized recommendations, and smart notifications tailored to your career goals.',
+        ctaText: "Start Your Journey",
+        bgClass: "slide-1-bg",
+    },
+    {
+        id: 2,
+        title: "Live Exam Calendar",
+        description:
+            "Track all government exam dates, application deadlines, and preparation timeline with automated reminders and smart scheduling to optimize your study plan.",
+        ctaText: "See Platform Demo",
+        bgClass: "slide-2-bg",
+    },
+    {
+        id: 3,
+        title: "Financial Portfolio Tracker",
+        description:
+            "Monitor your Sewa Nidhi investments, savings, and financial goals with expert guidance on smart allocation and long-term wealth building strategies.",
+        ctaText: "See Platform Demo",
+        bgClass: "slide-3-bg",
+    },
+    {
+        id: 4,
+        title: "Job Match Suggestions",
+        description:
+            "AI-powered job recommendations based on your profile and skills, with personalized match scores and direct application links to top employers.",
+        ctaText: "See Platform Demo",
+        bgClass: "slide-4-bg",
+    },
+];
+
+const featuresData = [
+    {
+        imageSrc: '/VEER/assets/img/icons/exam-brief.png',
+        title: 'Clean Exam Briefs',
+        subtitle: 'Only what matters. Nothing more.',
+    },
+    {
+        imageSrc: '/VEER/assets/img/icons/learning.png',
+        title: 'Complete Learning System',
+        subtitle: 'Videos, quizzes, mock tests.',
+    },
+    {
+        imageSrc: '/VEER/assets/img/icons/resume.png',
+        title: 'CV Builder',
+        subtitle: 'Convert military experience to civilian roles.',
+    },
+    {
+        imageSrc: '/VEER/assets/img/icons/interview.png',
+        title: 'Interview Simulator',
+        subtitle: 'AI-powered + human mentoring.',
+    },
+    {
+        imageSrc: '/VEER/assets/img/icons/business-plan.png',
+        title: 'Financial Planner',
+        subtitle: 'Secure your Sewa Nidhi.',
+    },
+    {
+        imageSrc: '/VEER/assets/img/icons/ved.png',
+        title: 'Veteran-Led, Discipline-Driven',
+        subtitle: 'By veterans, for veterans.',
+    },
+];
+
+
+const ctaButtons = [
+    {
+        text: 'Start My Mission',
+        className: 'fill-btn',
+        icon: 'fas fa-rocket',
+        link: '/StartMissionPage', // Replace with actual URL
+        // onClick: onStartMissionClick,
+    },
+    {
+        text: 'View Exams',
+        className: 'border-btn',
+        icon: 'fas fa-search',
+        link: '/ViewExamsPage', // Replace with actual URL
+        // onClick: onViewExamsClick,
+    },
+    {
+        text: 'Financial Command',
+        className: 'border-btn',
+        icon: 'fas fa-chart-line',
+        link: '/FinancialCommandPage', // Replace with actual URL
+        // onClick: onFinancialCommandClick,
+    },
+];
 
 
 
 export {
     benefits, interestsList, stats, tracks, lectures, resources, examsData, examCategories, successStories, benefitsOf,
     tabData, Exams, roadMap, skillCourses, Courses, wishlist, Assignments, Quiz, insightData, assignmentStats, mockTest, simplifiedTabs,
-    notesData, notesStats
+    notesData, notesStats, offerings, workflowSteps, slidesData, featuresData , ctaButtons
 };
