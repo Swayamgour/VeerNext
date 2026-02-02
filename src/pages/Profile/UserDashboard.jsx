@@ -643,6 +643,10 @@ const UserDashboard = () => {
                                         <span>15 Jan 2024</span>
                                     </div>
                                     <div className={styles.detailRow}>
+                                        <span>End Date</span>
+                                        <span>15 Feb 2024</span>
+                                    </div>
+                                    <div className={styles.detailRow}>
                                         <span>Next Billing Date</span>
                                         <span>15 Feb 2024</span>
                                     </div>
@@ -671,7 +675,7 @@ const UserDashboard = () => {
                             {/* Usage Statistics */}
                             <div className={styles.usageStats}>
                                 <h4 className={styles.sectionTitle}>Usage This Month</h4>
-                                <div className={styles.statsGrid}>
+                                <div className={styles.statsGrids_usages}>
                                     <div className={styles.statCard}>
                                         <div className={styles.statLabel}>Mock Tests Taken</div>
                                         <div className={styles.statValue}>14/20</div>
@@ -694,7 +698,7 @@ const UserDashboard = () => {
                                         </div>
                                     </div>
 
-                                    <div className={styles.statCard}>
+                                    {/* <div className={styles.statCard}>
                                         <div className={styles.statLabel}>Storage Used</div>
                                         <div className={styles.statValue}>1.2/5 GB</div>
                                         <div className={styles.statProgress}>
@@ -703,7 +707,7 @@ const UserDashboard = () => {
                                             </div>
                                             <span>24% used</span>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -746,9 +750,11 @@ const UserDashboard = () => {
                                         </div>
                                     </div>
 
-                                    <button className={styles.planButton}>
-                                        Choose Basic
-                                    </button>
+                                    <div className={styles.Btn_Container}>
+                                        <button className={styles.planButton}>
+                                            Choose Basic
+                                        </button>
+                                    </div>
                                 </div>
 
                                 {/* Premium Plan (Current) */}
@@ -790,9 +796,11 @@ const UserDashboard = () => {
                                         </div>
                                     </div>
 
-                                    <button className={styles.planButtonActive}>
-                                        Current Plan
-                                    </button>
+                                    <div className={styles.Btn_Container}>
+                                        <button className={styles.planButtonActive}>
+                                            Current Plan
+                                        </button>
+                                    </div>
                                 </div>
 
                                 {/* Annual Plan */}
@@ -829,9 +837,11 @@ const UserDashboard = () => {
                                         </div>
                                     </div>
 
-                                    <button className={styles.planButton}>
-                                        Choose Annual
-                                    </button>
+                                    <div className={styles.Btn_Container}>
+                                        <button className={styles.planButton}>
+                                            Choose Annual
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

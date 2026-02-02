@@ -4731,6 +4731,11 @@ only screen and (min-width: 576px) and (max-width: 767px),
     z-index: -1;
 }
 
+.bd-section-title{
+    color: var(--primary-color
+    );
+}
+
 .contact-content .bd-section-title {
     color: var(--clr-common-white);
 }

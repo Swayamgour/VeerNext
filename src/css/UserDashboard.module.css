@@ -113,6 +113,12 @@
     gap: 2rem;
     margin-bottom: 3rem;
 }
+.statsGrids_usages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    /* margin-bottom: 3rem; */
+}
 
 .statCard {
     background: #f0f0f0;
@@ -3098,9 +3104,9 @@ input:checked+.slider:before {
 }
 
 .planCardHeader {
-    text-align: center;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
+    /* text-align: center; */
+    /* margin-bottom: 2rem;
+    padding-bottom: 1.5rem; */
     border-bottom: 1px solid #eee;
 }
 
@@ -3132,7 +3138,7 @@ input:checked+.slider:before {
 }
 
 .planFeatures {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .featureItem {
@@ -3160,7 +3166,16 @@ input:checked+.slider:before {
     text-decoration: line-through;
 }
 
+.Btn_Container {
+    position: absolute;
+    bottom: 2%;
+    width: 80%;
+    margin: 0  auto;
+}
+
 .planButton {
+    /* width: fit-content; */
+
     width: 100%;
     padding: 1rem;
     background: var(--primary-color);
@@ -3178,6 +3193,8 @@ input:checked+.slider:before {
 
 .planButtonActive {
     width: 100%;
+    /* position: absolute;
+    bottom: 2%; */
     padding: 1rem;
     background: #f0f0f0;
     color: #666;

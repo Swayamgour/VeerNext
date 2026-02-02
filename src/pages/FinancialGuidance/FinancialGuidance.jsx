@@ -968,15 +968,15 @@ function FinancialGuidance() {
 
                             <Swiper
                                 direction="vertical"
-                                modules={[Autoplay, Pagination]}
+                                modules={[ Pagination]}
                                 slidesPerView={1}
                                 spaceBetween={30}
                                 loop={true}
                                 pagination={{ clickable: true }}
-                                autoplay={{
-                                    delay: 2000,
-                                    disableOnInteraction: false,
-                                }}
+                                // autoplay={{
+                                //     delay: 2000,
+                                //     disableOnInteraction: false,
+                                // }}
                                 style={{
                                     height: "480px",
                                 }}

@@ -174,7 +174,7 @@
     background: var(--card-bg);
     border-radius: 12px;
     box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--clr-common-border);
 }
 
 .formCard {
@@ -185,7 +185,7 @@
     text-align: center;
     margin-bottom: 25px;
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--clr-common-border);
 }
 
 .formHeader h3 {
@@ -227,7 +227,7 @@
 /* Standard Input Field */
 .formGroup input {
     padding: 10px 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--clr-common-border);
     border-radius: 6px;
     font-size: 14px;
     background: var(--light-bg);
@@ -249,7 +249,7 @@
 /* Standard Select Dropdown */
 .formGroup select {
     padding: 10px 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--clr-common-border);
     border-radius: 6px;
     font-size: 14px;
     background: var(--light-bg);
@@ -347,7 +347,7 @@
     flex-direction: column;
     gap: 12px;
     padding-top: 20px;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--clr-common-border);
     margin-top: 30px;
 }
 
@@ -376,7 +376,7 @@
     padding: 8px 10px;
     border-radius: 6px;
     background: var(--clr-bg-1);
-    border: 1px dashed var(--border-color);
+    border: 1px dashed var(--clr-common-border);
     font-size: 13px;
     display: flex;
     align-items: center;
@@ -415,7 +415,7 @@
 .reactSelect__control {
     min-height: 38px !important;
     border-radius: 6px !important;
-    border: 1px solid var(--border-color) !important;
+    border: 1px solid var(--clr-common-border) !important;
     background: var(--light-bg) !important;
     box-shadow: none !important;
     transition: all 0.2s ease !important;
@@ -500,7 +500,7 @@
 .reactSelect__menu {
     border-radius: 8px !important;
     box-shadow: var(--shadow-md) !important;
-    border: 1px solid var(--border-color) !important;
+    border: 1px solid var(--clr-common-border) !important;
     margin-top: 4px !important;
     z-index: 9999 !important;
     background: var(--light-bg) !important;
