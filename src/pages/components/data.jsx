@@ -1201,16 +1201,16 @@ const simplifiedTabs = [
         label: 'My Quiz Attempts',
         icon: <FaClipboardList />
     },
-    {
-        id: 'Notes',
-        label: 'Notes',
-        icon: <FaTasks />
-    },
-    {
-        id: 'settings',
-        label: 'Settings',
-        icon: <FaCog />
-    },
+    // {
+    //     id: 'Notes',
+    //     label: 'Notes',
+    //     icon: <FaTasks />
+    // },
+    // {
+    //     id: 'settings',
+    //     label: 'Settings',
+    //     icon: <FaCog />
+    // },
     {
         id: 'subscription',
         label: 'My Subscription',
@@ -1398,32 +1398,32 @@ const slidesData = [
 
 const featuresData = [
     {
-        imageSrc: '/VEER/assets/img/icons/exam-brief.png',
+        imageSrc: '/assets/img/icons/exam-brief.png',
         title: 'Clean Exam Briefs',
         subtitle: 'Only what matters. Nothing more.',
     },
     {
-        imageSrc: '/VEER/assets/img/icons/learning.png',
+        imageSrc: '/assets/img/icons/learning.png',
         title: 'Complete Learning System',
         subtitle: 'Videos, quizzes, mock tests.',
     },
     {
-        imageSrc: '/VEER/assets/img/icons/resume.png',
+        imageSrc: '/assets/img/icons/resume.png',
         title: 'CV Builder',
         subtitle: 'Convert military experience to civilian roles.',
     },
     {
-        imageSrc: '/VEER/assets/img/icons/interview.png',
+        imageSrc: '/assets/img/icons/interview.png',
         title: 'Interview Simulator',
         subtitle: 'AI-powered + human mentoring.',
     },
     {
-        imageSrc: '/VEER/assets/img/icons/business-plan.png',
+        imageSrc: '/assets/img/icons/business-plan.png',
         title: 'Financial Planner',
         subtitle: 'Secure your Sewa Nidhi.',
     },
     {
-        imageSrc: '/VEER/assets/img/icons/ved.png',
+        imageSrc: '/assets/img/icons/ved.png',
         title: 'Veteran-Led, Discipline-Driven',
         subtitle: 'By veterans, for veterans.',
     },

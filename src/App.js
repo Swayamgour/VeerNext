@@ -63,6 +63,8 @@ import VeerNXTReport from './pages/careerTransition/VeerNXTReport';
 import HomeRegFrom from './pages/components/HomeRegFrom';
 import Quiz from './pages/components/Quiz';
 import ScrollToTop from './pages/components/ScrollToTop';
+import AdminLogin from './adminLogin/AdminLogin';
+import AdminDashBoard from './adminLogin/AdminDashBoard';
 // import { Quiz } from './pages/components/data';
 
 
@@ -100,7 +102,7 @@ function App() {
         {/* <Route path="/VEER" element={ <Layout><Home /></Layout>} /> */}
         <Route path="/Courses" element={<Layout><Courses /></Layout>} />
         <Route path="/CourseDetails" element={<Layout><CourseDetails /></Layout>} />
-        <Route path="/Profile" element={<Layout><UserDashboard /></Layout>} />
+        <Route path="/UserDashboard" element={<Layout><UserDashboard /></Layout>} />
         <Route path="/CareerTransition" element={<Layout><Career /></Layout>} />
         <Route path="/FinancialGuidance" element={<Layout><FinancialGuidance /></Layout>} />
         <Route path="/CommunityPage" element={<Layout><CommunityPage /></Layout>} />
@@ -109,6 +111,7 @@ function App() {
         <Route path="/ContactUS" element={<Layout><ContactUs /></Layout>} />
         <Route path="/FinancialPlanningPlatform" element={<Layout><FinancialPlanningPlatform /></Layout>} />
         <Route path="/MoneyPlanView" element={<Layout><MoneyPlanView /></Layout>} />
+
 
 
         <Route path="/StartMissionPage" element={<Layout><StartMissionPage /></Layout>} />
@@ -131,6 +134,8 @@ function App() {
         <Route path="/VeerNXTReport" element={<Layout><VeerNXTReport /></Layout>} />
         <Route path="/HomeRegFrom" element={<Layout><HomeRegFrom /></Layout>} />
         <Route path="/Quiz" element={<Quiz />} />
+        <Route path="/Admin" element={<AdminLogin />} />
+        <Route path="/AdminDashBoard" element={<> <AdminDashBoard /> </>} />
       </Routes>
       {/* </Layout> */}
 

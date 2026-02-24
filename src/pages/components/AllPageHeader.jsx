@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function AllPageHeader(props) {
 
@@ -8,13 +9,14 @@ function AllPageHeader(props) {
         window.scrollTo(0, 0);
     }, []);
 
+    const navigate = useNavigate()
 
     return (
         <>
             <section
                 className="page-title-area"
                 style={{
-                    backgroundImage: "url('/VEER/assets/img/bg/page-title-bg.webp')",
+                    backgroundImage: "url('/assets/img/bg/page-title-bg.webp')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     position: 'relative',
@@ -22,7 +24,7 @@ function AllPageHeader(props) {
                 }}
             >
                 <div className="page-title-shape">
-                    <img className="shape-cube" src="/VEER/assets/img/shape/cube-shape.png" alt="cube shape" />
+                    <img className="shape-cube" src="/assets/img/shape/cube-shape.png" alt="cube shape" />
                 </div>
                 <div className="container">
                     <div className="row justify-content-center">
@@ -35,7 +37,7 @@ function AllPageHeader(props) {
                                     <ul style={{ padding: '0' }} className="trail-items">
                                         <li className="trail-item trail-begin">
                                             {/* <Link to="/"> */}
-                                            <span>home</span>
+                                            <span style={{cursor:'pointer'}} onClick={() =>navigate('/')}>home</span>
                                             {/* </Link> */}
                                         </li>
                                         <li className="trail-item trail-end">

@@ -11,14 +11,19 @@ import "swiper/css";
 
 // import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from 'react-redux';
+import { store } from './redux/Store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/VEER" >
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+
+      <BrowserRouter basename="/" >
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

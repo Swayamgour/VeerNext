@@ -20,7 +20,7 @@ const VeerGear = ({ setIsModalOpen }) => {
           <div className={styles.gearTitle}>
             <div className="section-subtitle">
               VeerGear Official Store
-              <img src="/VEER/assets/img/icons/icon-2/bullet.png" alt="bullet" />
+              <img src="/assets/img/icons/icon-2/bullet.png" alt="bullet" />
             </div>
             <h2 className="section-title">Wear Your Pride. Live Your Identity.</h2>
             <p className={styles.partnership}>In partnership with <strong>Olive Planet</strong></p>

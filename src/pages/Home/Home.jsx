@@ -8,8 +8,12 @@ import DashboardSlider from './DashboardSlider'
 import KeyFeaturesSection from './KeyFeaturesSection'
 import MissionCtaSection from './MissionCtaSection'
 import Footer from '../Footer'
+import { useCheckTokenQuery } from '../../redux/api'
 
 function Home() {
+
+    const { data } = useCheckTokenQuery()
+
     return (
         <div>
             {/* <HeaderHome /> */}

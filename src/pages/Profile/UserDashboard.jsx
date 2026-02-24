@@ -91,7 +91,7 @@ const UserDashboard = () => {
                         <div className={styles.profileContainer}>
                             <div className={styles.profileHeader}>
                                 <div className={styles.profileAvatar}>
-                                    <img src="/VEER/assets/img/logo/6997484.png" alt="User Avatar" />
+                                    <img src="/assets/img/logo/6997484.png" alt="User Avatar" />
                                     <button className={styles.editAvatarBtn}><MdModeEdit /></button>
                                 </div>
                                 <div className={styles.profileInfo}>
@@ -365,253 +365,253 @@ const UserDashboard = () => {
                     </section>
                 );
 
-            case 'Notes':
-                return (
-                    <section className={styles.dashboardHeader}>
-                        <div className={styles.notesHeader}>
-                            <h2 className={styles.notesMainTitle}>Notes</h2>
-                            <div className={styles.notesStats}>
-                                {notesStats.map((stat, i) => (
-                                    <div key={i} className={styles.noteStatCard}>
-                                        <div className={styles.noteStatLabel}>{stat.label}</div>
-                                        <div className={styles.noteStatValue}>{stat.value}</div>
-                                    </div>
-                                ))}
-                            </div>
+            // case 'Notes':
+            //     return (
+            //         <section className={styles.dashboardHeader}>
+            //             <div className={styles.notesHeader}>
+            //                 <h2 className={styles.notesMainTitle}>Notes</h2>
+            //                 <div className={styles.notesStats}>
+            //                     {notesStats.map((stat, i) => (
+            //                         <div key={i} className={styles.noteStatCard}>
+            //                             <div className={styles.noteStatLabel}>{stat.label}</div>
+            //                             <div className={styles.noteStatValue}>{stat.value}</div>
+            //                         </div>
+            //                     ))}
+            //                 </div>
 
-                        </div>
+            //             </div>
 
-                        <div className={styles.notesActions}>
-                            <div className={styles.searchBox}>
-                                <input
-                                    type="text"
-                                    placeholder="Search notes..."
-                                    className={styles.searchInput}
-                                />
-                            </div>
-                            <div className={styles.notesFilter}>
-                                <button className={`${styles.filterBtn} ${styles.activeFilter}`}>All</button>
-                                <button className={styles.filterBtn}>Recent</button>
-                                <button className={styles.filterBtn}>Starred</button>
-                                <button className={`${styles.filterBtn} ${styles.newNoteBtn}`}>
-                                    + New Note
-                                </button>
-                            </div>
-                        </div>
+            //             <div className={styles.notesActions}>
+            //                 <div className={styles.searchBox}>
+            //                     <input
+            //                         type="text"
+            //                         placeholder="Search notes..."
+            //                         className={styles.searchInput}
+            //                     />
+            //                 </div>
+            //                 <div className={styles.notesFilter}>
+            //                     <button className={`${styles.filterBtn} ${styles.activeFilter}`}>All</button>
+            //                     <button className={styles.filterBtn}>Recent</button>
+            //                     <button className={styles.filterBtn}>Starred</button>
+            //                     <button className={`${styles.filterBtn} ${styles.newNoteBtn}`}>
+            //                         + New Note
+            //                     </button>
+            //                 </div>
+            //             </div>
 
-                        <div className={styles.notesGrid}>
-                            {notesData.map(note => (
-                                <div key={note.id} className={styles.noteCard}>
-                                    <div className={styles.noteCardHeader}>
-                                        <div className={styles.noteCategory}>{note.category}</div>
-                                        <button className={styles.noteMenuBtn}>⋯</button>
-                                    </div>
+            //             <div className={styles.notesGrid}>
+            //                 {notesData.map(note => (
+            //                     <div key={note.id} className={styles.noteCard}>
+            //                         <div className={styles.noteCardHeader}>
+            //                             <div className={styles.noteCategory}>{note.category}</div>
+            //                             <button className={styles.noteMenuBtn}>⋯</button>
+            //                         </div>
 
-                                    <div className={styles.noteContent}>
-                                        <h3 className={styles.noteTitle}>{note.title}</h3>
-                                        <p className={styles.notePreview}>{note.preview}</p>
-                                    </div>
+            //                         <div className={styles.noteContent}>
+            //                             <h3 className={styles.noteTitle}>{note.title}</h3>
+            //                             <p className={styles.notePreview}>{note.preview}</p>
+            //                         </div>
 
-                                    <div className={styles.noteFooter}>
-                                        <div className={styles.noteMeta}>
-                                            <span className={styles.notePages}>{note.pages}</span>
-                                            <span className={styles.noteDate}>{note.date}</span>
-                                        </div>
+            //                         <div className={styles.noteFooter}>
+            //                             <div className={styles.noteMeta}>
+            //                                 <span className={styles.notePages}>{note.pages}</span>
+            //                                 <span className={styles.noteDate}>{note.date}</span>
+            //                             </div>
 
-                                        <div className={styles.noteActions}>
-                                            {/* {note.actions.includes("like") && (
-                                                <button className={styles.noteActionBtn}>❤️</button>
-                                            )} */}
-                                            {/* {note.actions.includes("edit") && ( */}
-                                            <button className={styles.noteActionBtn}><LiaDownloadSolid /></button>
-                                            {/* )} */}
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
+            //                             <div className={styles.noteActions}>
+            //                                 {/* {note.actions.includes("like") && (
+            //                                     <button className={styles.noteActionBtn}>❤️</button>
+            //                                 )} */}
+            //                                 {/* {note.actions.includes("edit") && ( */}
+            //                                 <button className={styles.noteActionBtn}><LiaDownloadSolid /></button>
+            //                                 {/* )} */}
+            //                             </div>
+            //                         </div>
+            //                     </div>
+            //                 ))}
 
-                            {/* ADD NEW NOTE CARD */}
-                            {/* <div className={`${styles.noteCard} ${styles.addNoteCard}`}>
-                                <div className={styles.addNoteContent}>
-                                    ➕
-                                    <h3 className={styles.addNoteTitle}>Create New Note</h3>
-                                    <p className={styles.addNoteSubtitle}>
-                                        Start taking notes for your studies
-                                    </p>
-                                </div>
-                            </div> */}
-                        </div>
+            //                 {/* ADD NEW NOTE CARD */}
+            //                 {/* <div className={`${styles.noteCard} ${styles.addNoteCard}`}>
+            //                     <div className={styles.addNoteContent}>
+            //                         ➕
+            //                         <h3 className={styles.addNoteTitle}>Create New Note</h3>
+            //                         <p className={styles.addNoteSubtitle}>
+            //                             Start taking notes for your studies
+            //                         </p>
+            //                     </div>
+            //                 </div> */}
+            //             </div>
 
-                    </section>
-                );
+            //         </section>
+            //     );
 
-            case 'settings':
-                return (
-                    <section className={styles.dashboardHeader}>
-                        <h2 className={styles.headerTitle}>SETTINGS</h2>
+            // case 'settings':
+            //     return (
+            //         <section className={styles.dashboardHeader}>
+            //             <h2 className={styles.headerTitle}>SETTINGS</h2>
 
-                        <div className={styles.settingsContainer}>
-                            <div className={styles.settingsCategory}>
-                                <h3 className={styles.settingsCategoryTitle}>Account Settings</h3>
-                                <div className={styles.settingsList}>
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>Change Password</h4>
-                                            <p>Update your account password</p>
-                                        </div>
-                                        <button className={styles.settingsButton}>Change</button>
-                                    </div>
+            //             <div className={styles.settingsContainer}>
+            //                 <div className={styles.settingsCategory}>
+            //                     <h3 className={styles.settingsCategoryTitle}>Account Settings</h3>
+            //                     <div className={styles.settingsList}>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>Change Password</h4>
+            //                                 <p>Update your account password</p>
+            //                             </div>
+            //                             <button className={styles.settingsButton}>Change</button>
+            //                         </div>
 
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>Two-Factor Authentication</h4>
-                                            <p>Add extra security to your account</p>
-                                        </div>
-                                        <label className={styles.toggleSwitch}>
-                                            <input type="checkbox" />
-                                            <span className={styles.slider}></span>
-                                        </label>
-                                    </div>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>Two-Factor Authentication</h4>
+            //                                 <p>Add extra security to your account</p>
+            //                             </div>
+            //                             <label className={styles.toggleSwitch}>
+            //                                 <input type="checkbox" />
+            //                                 <span className={styles.slider}></span>
+            //                             </label>
+            //                         </div>
 
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>Delete Account</h4>
-                                            <p>Permanently delete your account and data</p>
-                                        </div>
-                                        <button className={styles.settingsButtonDelete}>Delete</button>
-                                    </div>
-                                </div>
-                            </div>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>Delete Account</h4>
+            //                                 <p>Permanently delete your account and data</p>
+            //                             </div>
+            //                             <button className={styles.settingsButtonDelete}>Delete</button>
+            //                         </div>
+            //                     </div>
+            //                 </div>
 
-                            <div className={styles.settingsCategory}>
-                                <h3 className={styles.settingsCategoryTitle}>Notification Preferences</h3>
-                                <div className={styles.settingsList}>
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>Email Notifications</h4>
-                                            <p>Receive course updates and reminders</p>
-                                        </div>
-                                        <label className={styles.toggleSwitch}>
-                                            <input type="checkbox" defaultChecked />
-                                            <span className={styles.slider}></span>
-                                        </label>
-                                    </div>
+            //                 <div className={styles.settingsCategory}>
+            //                     <h3 className={styles.settingsCategoryTitle}>Notification Preferences</h3>
+            //                     <div className={styles.settingsList}>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>Email Notifications</h4>
+            //                                 <p>Receive course updates and reminders</p>
+            //                             </div>
+            //                             <label className={styles.toggleSwitch}>
+            //                                 <input type="checkbox" defaultChecked />
+            //                                 <span className={styles.slider}></span>
+            //                             </label>
+            //                         </div>
 
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>SMS Notifications</h4>
-                                            <p>Get important updates via SMS</p>
-                                        </div>
-                                        <label className={styles.toggleSwitch}>
-                                            <input type="checkbox" defaultChecked />
-                                            <span className={styles.slider}></span>
-                                        </label>
-                                    </div>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>SMS Notifications</h4>
+            //                                 <p>Get important updates via SMS</p>
+            //                             </div>
+            //                             <label className={styles.toggleSwitch}>
+            //                                 <input type="checkbox" defaultChecked />
+            //                                 <span className={styles.slider}></span>
+            //                             </label>
+            //                         </div>
 
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>Push Notifications</h4>
-                                            <p>Browser and mobile push notifications</p>
-                                        </div>
-                                        <label className={styles.toggleSwitch}>
-                                            <input type="checkbox" defaultChecked />
-                                            <span className={styles.slider}></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>Push Notifications</h4>
+            //                                 <p>Browser and mobile push notifications</p>
+            //                             </div>
+            //                             <label className={styles.toggleSwitch}>
+            //                                 <input type="checkbox" defaultChecked />
+            //                                 <span className={styles.slider}></span>
+            //                             </label>
+            //                         </div>
+            //                     </div>
+            //                 </div>
 
-                            <div className={styles.settingsCategory}>
-                                <h3 className={styles.settingsCategoryTitle}>Study Preferences</h3>
-                                <div className={styles.settingsList}>
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>Daily Study Goal</h4>
-                                            <p>Set your daily study target</p>
-                                        </div>
-                                        <select className={styles.settingsSelect}>
-                                            <option>2 hours</option>
-                                            <option>3 hours</option>
-                                            <option>4 hours</option>
-                                            <option>5 hours</option>
-                                            <option>6 hours</option>
-                                        </select>
-                                    </div>
+            //                 <div className={styles.settingsCategory}>
+            //                     <h3 className={styles.settingsCategoryTitle}>Study Preferences</h3>
+            //                     <div className={styles.settingsList}>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>Daily Study Goal</h4>
+            //                                 <p>Set your daily study target</p>
+            //                             </div>
+            //                             <select className={styles.settingsSelect}>
+            //                                 <option>2 hours</option>
+            //                                 <option>3 hours</option>
+            //                                 <option>4 hours</option>
+            //                                 <option>5 hours</option>
+            //                                 <option>6 hours</option>
+            //                             </select>
+            //                         </div>
 
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>Preferred Study Time</h4>
-                                            <p>When do you prefer to study?</p>
-                                        </div>
-                                        <select className={styles.settingsSelect}>
-                                            <option>Morning (6AM - 10AM)</option>
-                                            <option>Afternoon (12PM - 4PM)</option>
-                                            <option>Evening (6PM - 10PM)</option>
-                                            <option>Night (10PM - 2AM)</option>
-                                        </select>
-                                    </div>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>Preferred Study Time</h4>
+            //                                 <p>When do you prefer to study?</p>
+            //                             </div>
+            //                             <select className={styles.settingsSelect}>
+            //                                 <option>Morning (6AM - 10AM)</option>
+            //                                 <option>Afternoon (12PM - 4PM)</option>
+            //                                 <option>Evening (6PM - 10PM)</option>
+            //                                 <option>Night (10PM - 2AM)</option>
+            //                             </select>
+            //                         </div>
 
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>Study Reminders</h4>
-                                            <p>Get reminders for your study sessions</p>
-                                        </div>
-                                        <label className={styles.toggleSwitch}>
-                                            <input type="checkbox" defaultChecked />
-                                            <span className={styles.slider}></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>Study Reminders</h4>
+            //                                 <p>Get reminders for your study sessions</p>
+            //                             </div>
+            //                             <label className={styles.toggleSwitch}>
+            //                                 <input type="checkbox" defaultChecked />
+            //                                 <span className={styles.slider}></span>
+            //                             </label>
+            //                         </div>
+            //                     </div>
+            //                 </div>
 
-                            <div className={styles.settingsCategory}>
-                                <h3 className={styles.settingsCategoryTitle}>Privacy Settings</h3>
-                                <div className={styles.settingsList}>
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>Profile Visibility</h4>
-                                            <p>Who can see your profile?</p>
-                                        </div>
-                                        <select className={styles.settingsSelect}>
-                                            <option>Everyone</option>
-                                            <option>Only Me</option>
-                                            <option>Study Buddies Only</option>
-                                        </select>
-                                    </div>
+            //                 <div className={styles.settingsCategory}>
+            //                     <h3 className={styles.settingsCategoryTitle}>Privacy Settings</h3>
+            //                     <div className={styles.settingsList}>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>Profile Visibility</h4>
+            //                                 <p>Who can see your profile?</p>
+            //                             </div>
+            //                             <select className={styles.settingsSelect}>
+            //                                 <option>Everyone</option>
+            //                                 <option>Only Me</option>
+            //                                 <option>Study Buddies Only</option>
+            //                             </select>
+            //                         </div>
 
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>Show Activity Status</h4>
-                                            <p>Show when you're online</p>
-                                        </div>
-                                        <label className={styles.toggleSwitch}>
-                                            <input type="checkbox" defaultChecked />
-                                            <span className={styles.slider}></span>
-                                        </label>
-                                    </div>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>Show Activity Status</h4>
+            //                                 <p>Show when you're online</p>
+            //                             </div>
+            //                             <label className={styles.toggleSwitch}>
+            //                                 <input type="checkbox" defaultChecked />
+            //                                 <span className={styles.slider}></span>
+            //                             </label>
+            //                         </div>
 
-                                    <div className={styles.settingItem}>
-                                        <div className={styles.settingInfo}>
-                                            <h4>Data Sharing</h4>
-                                            <p>Allow anonymous data for improvements</p>
-                                        </div>
-                                        <label className={styles.toggleSwitch}>
-                                            <input type="checkbox" defaultChecked />
-                                            <span className={styles.slider}></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            //                         <div className={styles.settingItem}>
+            //                             <div className={styles.settingInfo}>
+            //                                 <h4>Data Sharing</h4>
+            //                                 <p>Allow anonymous data for improvements</p>
+            //                             </div>
+            //                             <label className={styles.toggleSwitch}>
+            //                                 <input type="checkbox" defaultChecked />
+            //                                 <span className={styles.slider}></span>
+            //                             </label>
+            //                         </div>
+            //                     </div>
+            //                 </div>
+            //             </div>
 
-                        <div className="mission-cta-buttons mt-4">
-                            <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn">
-                                <span>Save All Changes</span>
-                                <FaArrowRightLong />
-                            </button>
-                        </div>
-                    </section>
-                );
+            //             <div className="mission-cta-buttons mt-4">
+            //                 <button style={{ border: '1px solid var(--primary-color)' }} className="mission-btn fill-btn">
+            //                     <span>Save All Changes</span>
+            //                     <FaArrowRightLong />
+            //                 </button>
+            //             </div>
+            //         </section>
+            //     );
 
             case 'subscription':
                 return (
@@ -983,7 +983,7 @@ const UserDashboard = () => {
                             <div className={styleOfHeader.row}>
                                 <div className={styleOfHeader.col9}>
                                     <div className={styleOfHeader.offsetLogo}>
-                                        <img src="/VEER/assets/img/logo/logo.png" alt="Logo" />
+                                        <img src="/assets/img/logo/logo.png" alt="Logo" />
                                     </div>
                                 </div>
                                 <div className={styleOfHeader.col3}>

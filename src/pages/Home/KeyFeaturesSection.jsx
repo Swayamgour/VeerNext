@@ -37,7 +37,7 @@ const KeyFeaturesSection = () => {
                     <div className="bd-section-subtitle">
                         Built for Soldiers. Designed for Success.
                         {/* <i className="fas fa-star"></i> Replaced flaticon-001-bullet with a star */}
-                           <img src={'/VEER/assets/img/icons/icon-2/bullet.png'} />
+                           <img src={'/assets/img/icons/icon-2/bullet.png'} />
                     </div>
                     <h3 className="bd-section-title mb-60 ">
                         Key Features

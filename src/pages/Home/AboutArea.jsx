@@ -8,12 +8,12 @@ const AboutArea = () => {
         {
             count: '1250 ',
             label: 'Veterans Helped',
-            iconClass: '/VEER/assets/img/icons/riot-police.png',
+            iconClass: '/assets/img/icons/riot-police.png',
         },
         {
             count: '350 ',
             label: 'Successful Transitions',
-            iconClass: '/VEER/assets/img/icons/check.png',
+            iconClass: '/assets/img/icons/check.png',
         },
     ];
 
@@ -35,7 +35,7 @@ const AboutArea = () => {
 
                     {/* Decorative Shape */}
                     <div className="about-area-shape">
-                        <img className="about-shape-1" src={'/VEER/assets/img/shape/x-frame.png'} alt="X-Frame shape" />
+                        <img className="about-shape-1" src={'/assets/img/shape/x-frame.png'} alt="X-Frame shape" />
                     </div>
 
                     <div className="row align-items-center">
@@ -48,11 +48,11 @@ const AboutArea = () => {
                                         className="about-thumb about-thumb-1 p-relative wow fadeInLeft"
                                         data-wow-delay=".3s"
                                     >
-                                        <img src={'/VEER/assets/img/about/abt2.webp'} alt="About VeerNXT" />
+                                        <img src={'/assets/img/about/abt2.webp'} alt="About VeerNXT" />
                                         <div className="panel wow"></div>
                                     </div>
                                     <div className="facility-shape-wrapper">
-                                        <img className="about-shape shape-1" src={'/VEER/assets/img/shape/round-1.png'} alt="Round shape" />
+                                        <img className="about-shape shape-1" src={'/assets/img/shape/round-1.png'} alt="Round shape" />
                                     </div>
                                 </div>
                             </div>

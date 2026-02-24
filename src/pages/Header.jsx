@@ -2,12 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SidebarMenu from './components/SidebarMenu';
 import SideToggle from './components/SideToggle';
+import { useProfileQuery } from '../redux/api';
 
 const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
     const navigate = useNavigate();
     const [openDropdown, setOpenDropdown] = useState(null);
 
     // console.log(showSticky)
+
+    const { data } = useProfileQuery()
+
+    
 
 
     return (
@@ -23,7 +28,7 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
                                 <div className="header-main-left header-main-left-header2">
                                     <div onClick={() => navigate('/')} className="header-logo header2-logo">
                                         <div className="logo-white">
-                                            <img src="/VEER/assets/img/logo/logo.png" alt="logo-img" />
+                                            <img src="/assets/img/logo/logo.png" alt="logo-img" />
                                         </div>
                                     </div>
                                 </div>
@@ -33,25 +38,7 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
                                         <nav>
                                             <ul className='m-0'>
                                                 <li onClick={() => navigate('/')}>Home</li>
-                                                {/* <li onClick={() => navigate('/Courses')}>Services</li> */}
 
-                                                {/* <li className="cs-nav-item-dropdown">
-                                                    <span className="cs-nav-item-link">Services</span>
-
-                                                    <ul className="cs-nav-submenu">
-                                                        <li style={{ color: 'var(--primary-color)', fontSize: '13px' }} onClick={() => navigate('/CareerTransition')}>
-                                                            <span>Career Transition</span>
-                                                        </li>
-                                                        <li style={{ color: 'var(--primary-color)', fontSize: '13px' }} onClick={() => navigate('/FinancialGuidance')}>
-                                                            <span>Financial Guidance</span>
-                                                        </li>
-                                                        <li style={{ color: 'var(--primary-color)', fontSize: '13px' }} onClick={() => navigate('/CommunityPage')}>
-                                                            <span>Connect And Thrive</span>
-                                                        </li>
-                                                    </ul>
-                                                </li> */}
-
-                                                {/* {console.log(openDropdown)} */}
 
                                                 <li
                                                     className={`cs-nav-item-dropdown ${openDropdown === 'services' ? 'open' : ''}`}
@@ -98,36 +85,19 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
 
                                                 <li onClick={() => navigate('/About')}>About us</li>
                                                 <li onClick={() => navigate('/ContactUS')}>Contact us</li>
+                                                {!data && <li onClick={() => navigate('/Login')}>Login</li>}
+                                                {data && <li onClick={() => navigate('/UserDashboard')}>Profile</li>}
                                                 {/* <li onClick={() => navigate('/Profile')}>Login</li> */}
-                                                <li
+                                                {/* <li
                                                     className={`cs-nav-item-dropdown ${openDropdown === 'login' ? 'open' : ''}`}
                                                     onMouseEnter={() => setOpenDropdown('login')}
                                                     onMouseLeave={() => setOpenDropdown(null)}
                                                 >
-                                                    <span className="cs-nav-item-link">Login</span>
+                                                    {!data && <span className="cs-nav-item-link">Login</span>}
+                                                    {data && <span className="cs-nav-item-link">Profile</span>}
 
-                                                    <ul className="cs-nav-submenu">
-                                                        <li
-                                                            style={{ color: 'var(--primary-color)', fontSize: '13px' }}
-                                                            onClick={() => {
-                                                                navigate('/login');
-                                                                setOpenDropdown(null); // 🔥 CLOSE dropdown
-                                                            }}
-                                                        >
-                                                            <span>Student Login</span>
-                                                        </li>
 
-                                                        <li
-                                                            style={{ color: 'var(--primary-color)', fontSize: '13px' }}
-                                                            onClick={() => {
-                                                                navigate('/Profile');
-                                                                setOpenDropdown(null); // 🔥 CLOSE dropdown
-                                                            }}
-                                                        >
-                                                            <span>Profile</span>
-                                                        </li>
-                                                    </ul>
-                                                </li>
+                                                </li> */}
 
                                             </ul>
                                         </nav>
@@ -135,11 +105,11 @@ const Header = ({ toggleOffsetContent, toggleSideToggle, showSticky }) => {
 
                                     <div className="menu-bar">
                                         <button className="offset-btn d-none d-xl-inline-block" onClick={toggleOffsetContent}>
-                                            <img src="/VEER/assets/img/icons/side-toggle.png" alt="toggle" />
+                                            <img src="/assets/img/icons/side-toggle.png" alt="toggle" />
                                         </button>
 
                                         <button className="side-toggle d-xl-none" onClick={toggleSideToggle}>
-                                            <img src="/VEER/assets/img/icons/side-toggle.png" alt="toggle" />
+                                            <img src="/assets/img/icons/side-toggle.png" alt="toggle" />
                                         </button>
                                     </div>
                                 </div>

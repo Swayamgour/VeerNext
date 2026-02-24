@@ -27,7 +27,7 @@ const Header = ({ setIsModalOpen }) => {
       <div className="container">
         <nav className={styles.navbar}>
           <div className={styles.logoWhite}>
-            <img src="/VEER/assets/img/logo/logo-white.png" alt="VEER-NXT" className={styles.logoImg} />
+            <img src="/assets/img/logo/logo-white.png" alt="VEER-NXT" className={styles.logoImg} />
           </div>
           
           <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>

@@ -52,7 +52,7 @@ const Footer = () => {
             <footer
                 className="footer1-bg footer-sticky"
                 style={{
-                    backgroundImage: "url('/VEER/assets/img/about/foot-bg.webp')",
+                    backgroundImage: "url('/assets/img/about/foot-bg.webp')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
@@ -69,7 +69,7 @@ const Footer = () => {
                                 <div className="footer-widget footer1-widget footer1-widget1 mb-40">
                                     <div className="footer-logo footer1-logo">
                                         <a href="/">
-                                            <img src="/VEER/assets/img/logo/logo.png" alt="VeerNXT Logo" />
+                                            <img src="/assets/img/logo/logo.png" alt="VeerNXT Logo" />
                                         </a>
                                     </div>
                                     <p className="mb-25">

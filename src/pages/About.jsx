@@ -8,12 +8,12 @@ function About() {
         {
             count: "1250",
             label: "Veterans Helped",
-            iconClass: "/VEER/assets/img/icons/riot-police.png",
+            iconClass: "/assets/img/icons/riot-police.png",
         },
         {
             count: "350",
             label: "Successful Transitions",
-            iconClass: "/VEER/assets/img/icons/check.png",
+            iconClass: "/assets/img/icons/check.png",
         },
     ];
 
@@ -66,7 +66,7 @@ function About() {
                                         className="about-thumb about-thumb-1 p-relative wow fadeInLeft"
                                         data-wow-delay=".3s"
                                     >
-                                        <img src="/VEER/assets/img/about/abt2.webp" alt="img" />
+                                        <img src="/assets/img/about/abt2.webp" alt="img" />
                                         <div className="panel wow"></div>
                                     </div>
                                 </div>

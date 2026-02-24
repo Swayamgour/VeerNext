@@ -1,0 +1,144 @@
+/* pages/RegisterPage.module.css */
+.registerPage {
+    min-height: 100vh;
+    background-color: #f5f7fa;
+}
+
+.pageHeader {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.2s;
+}
+
+.backLink:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.headerMain {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.headerIcon {
+    font-size: 48px;
+    opacity: 0.9;
+}
+
+.headerMain h1 {
+    font-size: 32px;
+    margin: 0 0 8px 0;
+}
+
+.headerMain p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.registerWrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px 30px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 1024px) {
+    .registerWrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.registerInfo {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    position: sticky;
+    top: 30px;
+}
+
+.registerInfo h2 {
+    color: #1e3c72;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 24px;
+}
+
+.infoCards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.infoCard {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid #2a5298;
+}
+
+.infoCard h3 {
+    color: #333;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+}
+
+.infoCard ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.infoCard li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    padding-left: 20px;
+    position: relative;
+}
+
+.infoCard li:before {
+    content: "•";
+    color: #2a5298;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.infoCard strong {
+    color: #1e3c72;
+}
+
+.registerFormContainer {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}

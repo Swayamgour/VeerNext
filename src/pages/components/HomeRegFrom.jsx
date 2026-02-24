@@ -76,7 +76,7 @@ const HomeRegFrom = ({ open, handleClose }) => {
                     {/* RIGHT IMAGE */}
                     <div className="offset-thumb">
                         <img
-                            src="/VEER/assets/img/about/bg-9.webp"
+                            src="/assets/img/about/bg-9.webp"
                             alt="about"
                         />
                     </div>
